@@ -37,24 +37,25 @@ header{
 .login{
     margin-right: 150px;
     border: solid 1px transparent;
-    
+
 }
 .login button{
-    padding: 0px 25px;
-    border-radius: 5px;
+    padding: 5px 35px;
+    border: transparent;
+    border-radius: 20px;
     transition: 0.7s ease;
 }
 .login button:hover{
     color: #f0f0f0;
     background-color: black;
     cursor: pointer;
-
 }
+
 .nowshowing-image{
     position: relative;
-    width:100%;
-    min-height:650px;                     
-    display: flex;                          
+    width: 100%;
+    min-height: 650px;                     
+    display: flex;                        
     align-items: center;                     
     background:url(/images/godzilla.jpg) no-repeat;
     background-attachment: fixed;
@@ -102,7 +103,7 @@ font-size: 20px;
     margin-bottom: -5px;
 }
 .first-category{
-    height: 100vh;
+    min-height: 100vh;
 }
 .content {
     display: flex;
@@ -143,7 +144,7 @@ font-size: 20px;
     margin-top: 0px;
 }
 .card:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     opacity: 0.85;
     cursor: pointer;
 }
@@ -154,4 +155,78 @@ font-size: 20px;
     font-weight: 500;
 }
 
+footer {
+    margin-top: 0px;
+    background-color: #f0f0f0;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 15px;
+
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -10px;
+}
+
+.footer-icons a{
+    text-decoration: none;
+    padding: 15px;
+    background-color: #f0f0f0;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.footer-icons i{
+    font-size: 1.8em;
+    color: purple;
+    opacity: 0.9;
+    
+}
+
+.footer-icons a:hover {
+    background-color: purple;
+    transform: scale(1.05);
+}
+
+.footer-icons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footer-nav {
+    margin: 30px;
+    margin-bottom: -1px;
+    margin-top: 5px;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-nav ul li a{
+    color: purple;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+.footer-nav ul li a:hover {
+    color: black;
+    opacity: 1;
+}
+
+.footer-bottom {
+    color: purple;
+    background-color: #f0f0f0;
+    text-align:center;
+}
 
