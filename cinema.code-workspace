@@ -1,12 +1,12 @@
 {
 	"folders": [
 		{
-			"name": "Cojee",
+			"name": "cinema",
 			"path": "."
 		}
 	],
 	"settings": {
 		"liveServer.settings.port": 5501,
-		"liveServer.settings.multiRootWorkspaceName": "Cojee"
+		"liveServer.settings.multiRootWorkspaceName": "cinema"
 	}
 }
