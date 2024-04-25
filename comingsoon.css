@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+header{
+    background-color: black;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 9vh;
+    
+}
+.logo{
+    color:#f0f0f0;
+    margin-left: 50px;
+}
+
+.navigation a{
+    padding-right: 20px;
+    text-decoration: none;
+    color: #f0f0f0;
+    transition: 0.2s ease;
+
+}
+.navigation a:hover{
+    color: #952a80;
+}
+.login{
+    margin-right: 150px;
+    border: solid 1px transparent;
+
+}
+.login button{
+    padding: 5px 35px;
+    border: transparent;
+    border-radius: 20px;
+    transition: 0.7s ease;
+}
+.login button:hover{
+    color: #f0f0f0;
+    background-color: black;
+    cursor: pointer;
+}
+
+
+.first-category{
+    min-height: 100vh;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    background-color:#ececec;
+    border: 1px solid #fff;
+    min-height: 10em;
+    width: 20em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+    
+}
+.image-one img{
+    width: 100%;
+}
+
+.card-name{
+    margin-left: 10px;
+    
+}
+
+.more-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+   
+}
+.card-list{
+    margin-right: 150px;
+    margin-top: 0px;
+}
+.card:hover{
+    transform: scale(1.05);
+    opacity: 0.85;
+    cursor: pointer;
+}
+.first-logo{
+    font-size: 45px;
+    margin-left: 170px;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+footer {
+    margin-top: 0px;
+    background-color: #f0f0f0;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 15px;
+
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -10px;
+}
+
+.footer-icons a{
+    text-decoration: none;
+    padding: 15px;
+    background-color: #f0f0f0;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.footer-icons i{
+    font-size: 1.8em;
+    color: purple;
+    opacity: 0.9;
+    
+}
+
+.footer-icons a:hover {
+    background-color: purple;
+    transform: scale(1.05);
+}
+
+.footer-icons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footer-nav {
+    margin: 30px;
+    margin-bottom: -1px;
+    margin-top: 5px;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-nav ul li a{
+    color: purple;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+.footer-nav ul li a:hover {
+    color: black;
+    opacity: 1;
+}
+
+.footer-bottom {
+    color: purple;
+    background-color: #f0f0f0;
+    text-align:center;
+}
+
