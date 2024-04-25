@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+      }
+
+      .left-section,
+      .right-section {
+        flex: 1;
+        padding: 20px;
+      }
+
+      .left-section {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .right-section {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      #signin {
+        border-radius: 5px;
+        align-items: flex-start;
+        font-family: "Co Headline";
+        box-sizing: border-box;
+        width: 200px;
+        height: 42px;
+        font-weight: 400;
+        font-size: 16px;
+        cursor: pointer;
+        display: block;
+        background: #a02d8a;
+        margin: 0 auto;
+        padding: 9px 20px;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        border: 0px; 
+        margin: auto;
+        
+      }
+      #email{
+    background: #F3F3F3;
+    border-radius: 5px;
+    padding: 0px 20px;
+    border: 0px;
+    width: 130%;
+    margin-bottom: 10px;
+    color: #171717;
+    font-size: 14px;
+    margin-top: 10px;
+    height: 46px;
+    margin-right: 100px;
+    
+}
+        h3{
+            font-size: calc(1.3rem + .6vw);
+        }
+        p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <h2>CinemaName</h2>
+        </div>
+        <nav class="navigation">
+            <a href="#">Now Showing</a>
+            <a href="#">Cinemas</a>
+            <a href="#">Coming Soon</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="login">
+            <button id="loginButton"><i class="fas fa-user"></i> Login</button>
+        </div>
+    </header>
+    <div class="body">
+        <div class="container">
+            <div class="left-section">
+                <div class="a">
+                    <div class="a1">
+                        <h3 style="text-align: center; font-weight: 600">Contact information</h3>
+                    </div>
+                    <div class="maintagcontact"><img src="https://rnscinemas.net/public/ui/images/contact/map.png" width="30"> &nbsp; 21 Ahmed Oraby, El Mohandesseen, Giza, Egypt</div>
+                    <div class="maintagcontact"><img src="https://rnscinemas.net/public/ui/images/contact/message.png" width="30"> &nbsp; fkhghdakfkhsfsk@gmail.com</div>
+                </div>
+                <div class="right-section ">
+                    <div class="pss reset">
+                        <h3>Forgot password?</h3>
+                    </div>
+                    <p>We will send a password to your Email</p>
+                    <form method="POST" action="https://rnscinemas.net/en/password/email" class="register-form" id="login-form">
+                        <input type="hidden" name="_token" value="pWq4HX8tMeM8xB9QO4YlZLjRhZ6wedVNy0jEgqsq">
+                        <div class="form-group">
+                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                            <input type="email" name="email" id="email" class="rns-form-element" value="" placeholder="Your Email" />
+                        </div>
+                        <div class="form-group form-button" style="margin-bottom: 7px;">
+                            <input type="submit" name="signin" id="signin" class="btn_primary" value="Reset Your Password" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <hr style="opacity: 0.5" />
+        <div class="footer-container">
+            <div class="footer-icons">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Refunds & Exchanges</a></li>
+                    <li><a href="">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 All right reserved by CinemaName</p>
+        </div>
+    </footer>
+</body>
+</html>
