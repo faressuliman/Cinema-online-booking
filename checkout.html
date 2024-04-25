@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>checkout</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 100vh;
+      }
+
+      header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: black;
+      }
+
+      .website-col {
+        margin-top: 100px;
+      }
+      #customer_email,
+      #customer_phone,
+      #customer_name {
+        background: #f3f3f3;
+        border-radius: 5px;
+        padding: 0px 20px;
+        border: 0px;
+        width: 400px;
+        margin-bottom: 10px;
+        color: #171717;
+        font-size: 14px;
+        margin-top: 10px;
+        height: 46px;
+      }
+      #payloadbutton {
+        border-radius: 5px;
+        align-items: flex-start;
+        font-family: "Co Headline";
+        box-sizing: border-box;
+        width: 250px;
+        height: 42px;
+        font-weight: 400;
+        font-size: 16px;
+        cursor: pointer;
+        display: block;
+        background: #a02d8a;
+        margin: 0 auto;
+        padding: 9px 20px;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        border: 0px;
+        text-decoration: none;
+      }
+
+      .payment-method {
+        display: flex;
+        align-items: center;
+      }
+
+      .payment-method img {
+        margin-right: 10px;
+        max-height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <h2>CinemaName</h2>
+        </div>
+        <nav class="navigation">
+          <a href="#">Now Showing</a>
+          <a href="#">Cinemas</a>
+          <a href="#">Coming Soon</a>
+          <a href="#">Contact</a>
+        </nav>
+        <div class="login">
+          <button id="loginButton"><i class="fas fa-user"></i> Login</button>
+        </div>
+      </header>
+
+      <div class="col-12 col-xl-9 col-lg-8 col-md-12 website-col">
+        <div class="clearfix"></div>
+        <div id="real_checkout" style="">
+          <div class="animate__animated animate__fadeIn">
+            <div class="checkout_login" class="">
+                <div style="margin-top: 50px;" class="title pt-3">
+                  <b style="font-size: 20px">Your Information</b>
+                </div>
+                <div class="row mt-1">
+                  <div class="col-md-12 col-sm-12">
+                    <input
+                      type="text"
+                      name="customer_name"
+                      id="customer_name"
+                      value=""
+                      class="rns-form-element"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <input
+                      type="text"
+                      name="customer_phone"
+                      id="customer_phone"
+                      required
+                      value=""
+                      class="rns-form-element"
+                      placeholder="Phone Number"
+                    />
+                    <label id="egyphone" for="egyphone"></label>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <input
+                      type="text"
+                      name="customer_email"
+                      id="customer_email"
+                      readonly
+                      required
+                      value=""
+                      class="rns-form-element"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                  <div class="title mt-3 mb-4">
+                    <b style="font-size: 20px">Payment Method</b>
+                  </div>
+                  <div class="row checkout_notes p-3 pt-0 pb-2 mb-3">
+                    <div class="col-12">
+                      <label class="payment-method">
+                        <input
+                          name="payment_method_1"
+                          id="payment_method_1"
+                          value="1"
+                          type="radio"
+                          checked="true"
+                        />
+                        <div>
+                          <h5 style="margin-top: 40px">Credit/Debit Card</h5>
+                          <img
+                            class="checkout_image_card"
+                            src="https://rnscinemas.net/public/ui/images/checkout/cards.jpg"
+                          />
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row checkout_notes p-3 pt-0 pb-2 mb-3">
+                    <div class="col-12">
+                      <label class="payment-method">
+                        <input
+                          name="payment_method_1"
+                          id="payment_method_3"
+                          value="22"
+                          type="radio"
+                        />
+                        <div>
+                          <h5 style="margin-top: 40px">Vodafone Cash</h5>
+                          <img
+                            class="checkout_image_card"
+                            src="https://rnscinemas.net/public/ui/images/checkout/vfc.jpg"
+                          />
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row checkout_notes p-3 pt-0 pb-2 mb-3">
+                    <div class="col-12">
+                      <label class="payment-method">
+                        <input
+                          name="payment_method_1"
+                          id="payment_method_2"
+                          value="2"
+                          type="radio"
+                        />
+                        <div>
+                          <h5 style="margin-top: 40px">Mobile Wallet</h5>
+                          <img
+                            class="checkout_image_card"
+                            src="https://rnscinemas.net/public/ui/images/checkout/all_wallets.jpg"
+                          />
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row checkout_notes p-3 pt-0 pb-2 mb-3">
+                    <div class="col-12">
+                      <label class="payment-method">
+                        <input
+                          name="payment_method_1"
+                          id="payment_method_4"
+                          value="4"
+                          type="radio"
+                        />
+                        <div>
+                          <h5 style="margin-top: 40px">Cash by Fawry</h5>
+                          <img
+                            class="checkout_image_card"
+                            src="https://rnscinemas.net/public/ui/images/checkout/fawry.jpg"
+                          />
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div
+                    id="payment_notes_pp"></div>
+                  <div class="col-md-12 col-sm-12 pt-3 pb-3 text-center">
+                    <div id="payloadbutton">
+                      <a
+                        class="btn_light booking-confirm-btn booking-confirm-btn-dark"
+                        style="color: white; text-decoration: none"
+                        href="#"
+                        >Pay Now 145.00 EGP
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <hr style="opacity: 0.5" />
+      <div class="footer-container">
+        <div class="footer-icons">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="">About us</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Refunds & Exchanges</a></li>
+            <li><a href="">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 All right reserved by CinemaName</p>
+      </div>
+    </footer>
+  </body>
+</html>
