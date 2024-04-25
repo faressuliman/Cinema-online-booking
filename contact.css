@@ -7,10 +7,11 @@
     box-sizing: border-box;
     scroll-behavior: smooth; 
 }
+
 header{
     background-color: black;
     width: 100%;
-    position: fixed;
+    position: static;
     z-index: 999;
     display: flex;
     justify-content: space-between;
@@ -19,6 +20,7 @@ header{
     height: 9vh;
     
 }
+
 .logo{
     color:#f0f0f0;
     margin-left: 50px;
@@ -51,113 +53,135 @@ header{
     cursor: pointer;
 }
 
-.nowshowing-image{
-    position: relative;
-    width: 100%;
-    min-height: 650px;                     
-    display: flex;                        
-    align-items: center;                     
-    background:url(/images/godzilla.jpg) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-.info{
+.contact-container {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    margin-top:190px ;
-    margin-left: 150px;
-    
+    margin-bottom: -300px;
+    position: relative;
 }
-.info strong{
-    margin-top:20px ;
-    font-size: 50px;
-    color: #be73b0;
-    margin-left: -9px;
-    font-family:Arial, Helvetica, sans-serif;
-}
-.info .booknow {
-margin-top: 20px;
-margin-left: -9px;
-height: 39px;
-width: 200px;
 
-
-border-radius: 5px;
-border: solid transparent;
-background-color: #a82c8c;
-transition: 0.7s ease;
-font-size: 20px;
-}
-.info .booknow:hover{
-    color:white;
-    background-color: black;
-    cursor: pointer;
-    transform:translateY(5px)
-}
-.info div{
-    letter-spacing: 1px;
-    color: #a82c8c;
-    font-size: 19px;
-    margin-bottom: -5px;
-}
-.first-category{
-    min-height: 100vh;
-}
-.content {
+.contact-information {
+    border-top: 5px solid #f0f0f0;
+    border-right: 5px solid #f0f0f0;
+    height: 90vh;
+    width: 100vh;
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.card{
-    background-color:#ececec;
-    border: 1px solid #fff;
-    min-height: 10em;
-    width: 20em;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 20px;
-    transition: 0.7s ease;
-    
-}
-.image-one img{
-    width: 100%;
 }
 
-.card-name{
-    margin-left: 10px;
-    
+.h1 {
+    margin-top: 100px;
+    margin-left: 350px;
+    font-weight: 400;
 }
 
-.more-info{
+#p1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 70px;
+    margin-left: 308px;
+    text-align: center;
+}
+
+#p2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 181px;
+    text-align: center;
+}
+
+.contact-information i {
+    text-align: center;
+    color: purple;
+    font-size: 1.4em;
+}
+
+.contact-us {
+    border-top: 5px solid #f0f0f0;
+    min-height: 10vh;
+    width: 100vh;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    margin-left: 50px;
     justify-content: space-between;
-    margin-left: 10px;
-   
 }
-.card-list{
-    margin-right: 150px;
-    margin-top: 0px;
+
+.contact-us h1 {
+    margin-top: 95.5px;
+    font-weight: 400;
 }
-.card:hover{
-    transform: scale(1.05);
-    opacity: 0.85;
+
+.contact-form form{
+    margin-bottom: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form select{
+    margin-top: 49px;
+    width: 65%;
+    padding: 10px 0px 10px 25px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.name {
+    margin-top: 20px;
+    width: 65%;
+    padding: 10px 0px 10px 25px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.email {
+    margin-top: 20px;
+    width: 32.5%;
+    padding: 10px 0px 10px 25px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.phone {
+    width: 32.5%;
+    padding: 10px 0px 10px 25px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+textarea {
+    margin-top: 20px;
+    width: 65%;
+    height: 150px;
+    padding: 10px 0px 10px 25px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.contact-form button {
+    margin-top: 50px;
+    padding: 10px;
+    width: 25%;
+    border: transparent;
+    background-color: purple;
+    color: white;
+    transition: 0.7s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-20px);
+    background-color: hsl(300, 100%, 34%);
     cursor: pointer;
-}
-.first-logo{
-    font-size: 45px;
-    margin-left: 170px;
-    margin-top: 15px;
-    font-weight: 500;
 }
 
 footer {
-    margin-top: 0px;
     background-color: #f0f0f0;
+    position: absolute;
+    bottom: 5000px;
 }
 
 .footer-container {
