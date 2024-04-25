@@ -1,160 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Cinema</title>
-   
-</head>
+  </head>
 
-
-
-<body>
+  <body>
     <header>
-        <div class="logo">
-            <h2>CinemaName</h2>
-        </div>
-        <nav class="navigation">
-            <a href="#">Now Showing</a>
-            <a href="#">Cinemas</a>
-            <a href="#">Coming Soon</a>
-            <a href="#">Contact</a>
-        </nav>
-        <div class="login">
-            <button  id="loginButton"><i class="fas fa-user"></i> Login</button>
-        </div>
+      <div class="logo">
+        <h2>CinemaName</h2>
+      </div>
+      <nav class="navigation">
+        <a href="#">Now Showing</a>
+        <a href="#">Cinemas</a>
+        <a href="#">Coming Soon</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="login">
+        <button id="loginButton"><i class="fas fa-user"></i> Login</button>
+        <button id="languageButton">
+          <i class="fas fa-user"></i> language
+        </button>
+      </div>
     </header>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("loginButton").addEventListener("click", function() {
-                window.location.href = "https://youtube.com" ;
-            });
-        });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("loginButton")
+          .addEventListener("click", function () {
+            window.location.href = "loginpage.html";
+          });
+      });
     </script>
-    
-<section class="nowshowing-image">
-    <div class="info">
-<div>Now Showing</div>
-<strong>Godzila x Kong: The New Empire</strong>
-<button id="booknow" class="booknow">
-    Book Now
-</button>
-</div>
-</section>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("booknow").addEventListener("click", function() {
-            window.location.href = "https://instagram.com" ;
-        });
-    });
-</script>
 
+    <section class="nowshowing-image">
+      <div class="info">
+        <div>Now Showing</div>
+        <strong>Godzila x Kong: The New Empire</strong>
+        <button id="booknow" class="booknow">Book Now</button>
+      </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("booknow")
+          .addEventListener("click", function () {
+            window.location.href = "https://instagram.com";
+          });
+      });
+    </script>
 
-<section class="first-category">
-<div class="first-logo">
-    Now Showing
-</div>
-<div class="content">
-    <div class="card">
-        <div class="image-one"><img src="/images/1.jpg" ></div>
-        <strong class="card-name">
-            The Nun
-        </strong>
-        <div class="more-info">
+    <section class="first-category">
+      <div class="first-logo">Now Showing</div>
+      <div class="content">
+        <div class="card">
+          <div class="image-one"><img src="/images/1.jpg" /></div>
+          <strong class="card-name"> The Nun </strong>
+          <div class="more-info">
             Horror
             <ul class="card-list">
-                <li>Rated +18</li>
+              <li>Rated +18</li>
             </ul>
+          </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="image-one"><img src="/images/2.jpg" ></div>
-        <strong class="card-name">
-            Dune 2
-        </strong>
-        <div class="more-info">
+        <div class="card">
+          <div class="image-one"><img src="/images/2.jpg" /></div>
+          <strong class="card-name"> Dune 2 </strong>
+          <div class="more-info">
             Action
             <ul class="card-list">
-                <li>Rated +18</li>
+              <li>Rated +18</li>
             </ul>
+          </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="image-one"><img src="/images/3.jpg" ></div>
-        <strong class="card-name">
-            Oppenheimer
-        </strong>
-        <div class="more-info">
+        <div class="card">
+          <div class="image-one"><img src="/images/3.jpg" /></div>
+          <strong class="card-name"> Oppenheimer </strong>
+          <div class="more-info">
             Thriller
             <ul class="card-list">
-                <li>Rated +18</li>
+              <li>Rated +18</li>
             </ul>
+          </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="image-one"><img src="/images/4.jpg" ></div>
-        <strong class="card-name">
-            Civil War
-        </strong>
-        <div class="more-info">
+        <div class="card">
+          <div class="image-one"><img src="/images/4.jpg" /></div>
+          <strong class="card-name"> Civil War </strong>
+          <div class="more-info">
             Action
             <ul class="card-list">
-                <li>Rated +18</li>
+              <li>Rated +18</li>
             </ul>
+          </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="image-one"><img src="/images/5.jpg" ></div>
-        <strong class="card-name">
-            Kung Fu Panda 4
-        </strong>
-        <div class="more-info">
+        <div class="card">
+          <div class="image-one"><img src="/images/5.jpg" /></div>
+          <strong class="card-name"> Kung Fu Panda 4 </strong>
+          <div class="more-info">
             Action
             <ul class="card-list">
-                <li>Rated +12</li>
+              <li>Rated +12</li>
             </ul>
+          </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="image-one"><img src="/images/8.jpg" ></div>
-        <strong class="card-name">
-            Django Unchained
-        </strong>
-        <div class="more-info">
+        <div class="card">
+          <div class="image-one"><img src="/images/8.jpg" /></div>
+          <strong class="card-name"> Django Unchained </strong>
+          <div class="more-info">
             Action
             <ul class="card-list">
-                <li>Rated +18</li>
+              <li>Rated +18</li>
             </ul>
+          </div>
         </div>
-    </div>
-    
-</div>
-</section>
+      </div>
+    </section>
 
-<footer>
-    <hr style="opacity: 0.5;">
-    <div class="footer-container">
+    <footer>
+      <hr style="opacity: 0.5" />
+      <div class="footer-container">
         <div class="footer-icons">
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-tiktok"></i></a>
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-tiktok"></i></a>
         </div>
         <div class="footer-nav">
-            <ul>
-                <li><a href="">About us</a></li>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Refunds & Exchanges</a></li>
-                <li><a href="">Terms of Service</a></li>
-            </ul>
+          <ul>
+            <li><a href="">About us</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Refunds & Exchanges</a></li>
+            <li><a href="">Terms of Service</a></li>
+          </ul>
         </div>
-    </div>
-    <div class="footer-bottom">
+      </div>
+      <div class="footer-bottom">
         <p>&copy; 2024 All right reserved by CinemaName</p>
-    </div>
-</footer>
-    
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
