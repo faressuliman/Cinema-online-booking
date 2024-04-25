@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign In</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left-section,
+        .right-section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .left-section {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .right-section {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        #register {
+            border-radius: 5px;
+            align-items: flex-start;
+            font-family: "Co Headline";
+            box-sizing: border-box;
+            width: 250px;
+            height: 42px;
+            font-weight: 400;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            background: #a02d8a;
+            margin: 0 auto;
+            padding: 9px 20px;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            border: 0px;
+        }
+
+        #email,
+        #password,
+        #name,
+        #mobile,
+        #password_confirmation {
+            background: #f3f3f3;
+            border-radius: 5px;
+            padding: 0px 20px;
+            border: 0px;
+            width: 100%;
+            margin-bottom: 10px;
+            color: #171717;
+            font-size: 14px;
+            margin-top: 10px;
+            height: 46px;
+        }
+
+        .social-login {
+            text-align: center;
+        }
+
+        .social_login {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .social_login li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-icon {
+            width: 20px; 
+            height: auto;
+            margin: 5px;
+            display: block;
+        }
+
+        .no-bullet {
+            list-style-type: none;
+        }
+
+        .purple-link {
+            color: purple;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h2>CinemaName</h2>
+    </div>
+    <nav class="navigation">
+        <a href="#">Now Showing</a>
+        <a href="#">Cinemas</a>
+        <a href="#">Coming Soon</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="login">
+        <button id="loginButton"><i class="fas fa-user"></i> Login</button> 
+    </div>
+</header>
+<div class="the_body m-0 p-0">
+    <div class="container">
+        <div class="left-section">
+            <div>
+                <h3>Join us today and experience the magic of cinema like never before!</h3>
+                <div class="maintagcontact" style="width: 100%; text-align: center">
+                    <img src="https://rnscinemas.net/public/ui/images/chair.jpg" width="265"/>
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 website-col p-5 ">
+                <div class="maintag mb-3">
+                    <h3>Create An Account</h3>
+                </div>
+                <form method="POST" action="createAcc.html" class="register-form" id="login-form">
+                    <input type="hidden" name="_token" value="gVUxyMDO2kypA58qWyWSBbhZS52G5WMiD99H0Tid">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="name"></label> 
+                            <input type="text" name="name" class="rns-form-element" id="name" value="" placeholder="Your Name" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="mobile"></label> 
+                            <input type="text" name="mobile" class="rns-form-element" id="mobile" value="" placeholder="Your Mobile Number" />
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="email"></label>
+                            <input type="email" name="email" class="rns-form-element" id="email" value="" placeholder="Your Email" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="pass"></label>
+                            <input type="password" name="password" class="rns-form-element" id="password" value="" placeholder="Your Password" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="re-pass"></label> 
+                            <input type="password" class="rns-form-element" name="password_confirmation" id="password_confirmation" placeholder="Repeat your password" />
+                        </div>
+                    </div>
+                    <div class="form-group form-button" style="margin-bottom: 7px;">
+                        <input type="submit" name="register" id="register" class="btn_primary" value="Register" />
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 text-center mb-2 sub_notes">
+                        Do you have an account? <a href="loginPage.html" class="purple-link">Login Now</a> 
+                    </div>
+                    <div class="col-md-12 col-sm-12 text-center sub_notes mt-2">
+                        <div class="social-login">
+                            <ul class="social_login">
+                                <li class="pt-1 orc"><b><span style="color: purple;">OR CONNECT WITH</span></b></li>
+                                <li>
+                                    <a href="https://google.com">
+                                        <img src="https://rnscinemas.net/public/ui/images/checkout/google.png" class="social-icon" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com">
+                                        <img src="https://rnscinemas.net/public/ui/images/checkout/twitter.png" class="social-icon" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <hr style="opacity: 0.5" />
+    <div class="footer-container">
+        <div class="footer-icons">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-nav">
+            <ul>
+                <li><a href="">About us</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Refunds & Exchanges</a></li>
+                <li><a href="">Terms of Service</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 All right reserved by CinemaName</p>
+    </div>
+</footer>
+</body>
+</html>
