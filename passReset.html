@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="passReset.css" />
-    <title>Document</title>
+    <title>Password Reset</title>
 
 </head>
 <body>
@@ -17,16 +17,15 @@
         </div>
 
       <nav class="navigation">
-        <a href="#">Now Showing</a>
-        <a href="#">Cinemas</a>
+        <a href="home.html">Now Showing</a>
         <a href="comingsoon.html">Coming Soon</a>
         <a href="contact.html">Contact</a>
       </nav>
       <div class="login">
         <button id="loginButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
-        <button id="loginButton"><i class="fas fa-userr"></i> Login</button>
+        <button id="loginButton"><i class="fas fa-user"></i> Login</button>
         <button id="languageButton">
-          <i class="fas fa-userr"></i> language
+            <i class="fas fa-globe"></i> Language
         </button>
       </div>
 
@@ -34,15 +33,16 @@
     <div class="body">
         <div class="container">
             <div class="left-section">
-                <div class="a">
-                    <div class="a1">
-                        <h3 style="text-align: center; font-weight: 600">Contact information</h3>
-                    </div>
-                    <div class="maintagcontact"><img src="https://rnscinemas.net/public/ui/images/contact/map.png" width="30"> &nbsp; 21 Ahmed Oraby, El Mohandesseen, Giza, Egypt</div>
-                    <div class="maintagcontact"><img src="https://rnscinemas.net/public/ui/images/contact/message.png" width="30"> &nbsp; fkhghdakfkhsfsk@gmail.com</div>
+                <div class="inner-content">
+                    <h1 style="text-align: center;">Contact Information</h1>
+                    <p id="p1"><i class="fas fa-map-marker-alt"></i> 23rd street, Somewhere, Alexandria, Egypt.</p>
+                    <p id="p2"><i class="far fa-envelope"></i> cinemabooking@gmail.com</p> 
                 </div>
-                <div class="right-section ">
-                    <div class="pss reset">
+                
+            </div>
+            <div class="right-section ">
+                <div class="inside-content">
+                    <div class="pss-reset">
                         <h3>Forgot password?</h3>
                     </div>
                     <p>We will send a password to your Email</p>
@@ -52,11 +52,13 @@
                             <label for="email"><i class="zmdi zmdi-email"></i></label>
                             <input type="email" name="email" id="email" class="rns-form-element" value="" placeholder="Your Email" />
                         </div>
-                        <div class="form-group form-button" style="margin-bottom: 7px;">
+                        <div class="form-group form-button" style="margin-top: 7px; margin-left: 100px;">
                             <input type="submit" name="signin" id="signin" class="btn_primary" value="Reset Your Password" />
                         </div>
                     </form>
+
                 </div>
+                
             </div>
         </div>
     </div>
@@ -78,7 +80,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 All right reserved by CinemaName</p>
+            <p style="color: purple;">&copy; 2024 All right reserved by CinemaName</p>
         </div>
     </footer>
 </body>

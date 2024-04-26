@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="createAcc.css" />
-    <title>Sign In</title>
+    <title>Sign Up</title>
     
 </head>
 <body>
@@ -17,16 +17,15 @@
         </div>
 
       <nav class="navigation">
-        <a href="#">Now Showing</a>
-        <a href="#">Cinemas</a>
+        <a href="home.html">Now Showing</a>
         <a href="comingsoon.html">Coming Soon</a>
         <a href="contact.html">Contact</a>
       </nav>
       <div class="login">
-        <button id="loginButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
-        <button id="loginButton"><i class="fas fa-userr"></i> Login</button>
+        <button id="loginButton"> MY ACCOUNT</button>
+        <button id="loginButton"><i class="fas fa-user"></i> Login</button>
         <button id="languageButton">
-          <i class="fas fa-userr"></i> language
+            <i class="fas fa-globe"></i> Language
         </button>
       </div>
 
@@ -35,21 +34,21 @@
     <div class="container">
         <div class="left-section">
             <div>
-                <h3>Join us today and experience the magic of cinema like never before!</h3>
+                <p style="margin-left: 250px; font-weight: 600;">Join us today and experience the magic of cinema like never before!</p>
                 <div class="maintagcontact" style="width: 100%; text-align: center">
-                    <img src=chair.jpg width="265"/>
+                    <img src=images/chair.jpg width="265"/>
                 </div>
             </div>
         </div>
         <div class="right-section">
-            <div class="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 website-col p-5 ">
+            <div class="signup-container">
                 <div class="maintag mb-3">
-                    <h3>Create An Account</h3>
+                    <h3 style="padding-bottom: 15px;">Create An Account</h3>
                 </div>
                 <form method="POST" action="createAcc.html" class="register-form" id="login-form">
                     <input type="hidden" name="_token" value="gVUxyMDO2kypA58qWyWSBbhZS52G5WMiD99H0Tid">
                     <div class="row">
-                        <div class="form-group col-md-6">
+                        <div class="your-name">
                             <label for="name"></label> 
                             <input type="text" name="name" class="rns-form-element" id="name" value="" placeholder="Your Name" />
                         </div>
@@ -70,12 +69,12 @@
                             <input type="password" class="rns-form-element" name="password_confirmation" id="password_confirmation" placeholder="Repeat your password" />
                         </div>
                     </div>
-                    <div class="form-group form-button" style="margin-bottom: 7px;">
+                    <div class="form-group form-button" style="margin-bottom: 15px; margin-top: 10px;">
                         <input type="submit" name="register" id="register" class="btn_primary" value="Register" />
                     </div>
                 </form>
                 <div class="row">
-                    <div class="col-md-12 col-sm-12 text-center mb-2 sub_notes">
+                    <div class="col-md-12 col-sm-12 text-center mb-2 sub_notes" style="margin-left: 100px; margin-bottom: 20px;">
                         Do you have an account? <a href="loginPage.html" class="purple-link">Login Now</a> 
                     </div>
                     <div class="col-md-12 col-sm-12 text-center sub_notes mt-2">
@@ -118,7 +117,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2024 All right reserved by CinemaName</p>
+        <p style="color: purple;">&copy; 2024 All right reserved by CinemaName</p>
     </div>
 </footer>
 </body>

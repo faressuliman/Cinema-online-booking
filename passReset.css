@@ -1,80 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  .container {
-    display: flex;
-    height: 100vh;
-  }
-
-  .left-section,
-  .right-section {
-    flex: 1;
-    padding: 20px;
-  }
-
-  .left-section {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .right-section {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  #signin {
-    border-radius: 5px;
-    align-items: flex-start;
-    font-family: "Co Headline";
-    box-sizing: border-box;
-    width: 200px;
-    height: 42px;
-    font-weight: 400;
-    font-size: 16px;
-    cursor: pointer;
-    display: block;
-    background: #a02d8a;
-    margin: 0 auto;
-    padding: 9px 20px;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    border: 0px; 
-    margin: auto;
-    
-  }
-  #email{
-background: #F3F3F3;
-border-radius: 5px;
-padding: 0px 20px;
-border: 0px;
-width: 130%;
-margin-bottom: 10px;
-color: #171717;
-font-size: 14px;
-margin-top: 10px;
-height: 46px;
-margin-right: 100px;
-
-}
-    h3{
-        font-size: calc(1.3rem + .6vw);
-    }
-    p {
-display: block;
-margin-block-start: 1em;
-margin-block-end: 1em;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
-unicode-bidi: isolate;
-}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
@@ -84,16 +7,23 @@ unicode-bidi: isolate;
     box-sizing: border-box;
     scroll-behavior: smooth; 
 }
-header{
+
+body {
+    margin-bottom: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+header {
     background-color: white;
     width: 100%;
-    position:absolute;
+    position: absolute;
     z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     height: 9vh;
+
     
 }
 .logo{
@@ -138,111 +68,133 @@ header{
     cursor: pointer;
 }
 
-.nowshowing-image{
-    position: relative;
-    width: 100%;
-    min-height: 650px;                     
-    display: flex;                        
-    align-items: center;                     
-    background:url(/images/godzilla.jpg) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-.info{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    margin-top:190px ;
-    margin-left: 150px;
-    
-}
-.info strong{
-    margin-top:20px ;
-    font-size: 50px;
-    color: #be73b0;
-    margin-left: -9px;
-    font-family:Arial, Helvetica, sans-serif;
-}
-.info .booknow {
-margin-top: 20px;
-margin-left: -9px;
-height: 39px;
-width: 200px;
-border-radius: 5px;
-border: solid transparent;
-background-color: #a82c8c;
-transition: 0.7s ease;
-font-size: 20px;
-}
-.info .booknow:hover{
-    color:white;
-    background-color: black;
-    cursor: pointer;
-    transform:translateY(5px)
-}
-.info div{
-    letter-spacing: 1px;
-    color: #a82c8c;
-    font-size: 19px;
-    margin-bottom: -5px;
-}
-.first-category{
-    min-height: 100vh;
-}
-.content {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.card{
-    background-color:#ececec;
-    border: 1px solid #fff;
-    min-height: 10em;
-    width: 20em;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 20px;
-    transition: 0.7s ease;
-    
-}
-.image-one img{
-    width: 100%;
-}
 
-.card-name{
-    margin-left: 10px;
-    
-}
-
-.more-info{
+.container {
     display: flex;
-    flex-direction: row;
+    height: 100vh;
+  }
+
+  .left-section,
+  .right-section {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .left-section {
+    background-color: white;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    border-right: 5px grey; 
+    border-top: 3px solid #f0f0f0;
+    border-right: 3px solid #f0f0f0;
+    margin-top: 87px;
+  }
+
+  .inner-content {
     margin-left: 10px;
-   
+    margin-top: 50px;
+    margin-bottom: 600px;
+  }
+
+  .inner-content h1 {
+    margin-top: 90px;
+    margin-left: 290px;
+    font-weight: 400;
 }
-.card-list{
-    margin-right: 150px;
-    margin-top: 0px;
+
+#p1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 70px;
+    margin-left: 300px;
+    text-align: center;
 }
-.card:hover{
-    transform: scale(1.05);
-    opacity: 0.85;
+
+#p2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 180px;
+    text-align: center;
+}
+
+.inner-content i {
+    text-align: center;
+    color: purple;
+    font-size: 1.4em;
+}
+
+.right-section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 87px;
+    border-top: 3px solid #f0f0f0;
+  }
+
+.inside-content {
+    margin-bottom: 120px;
+    margin-right: 400px;
+    margin-bottom: 455px;
+}
+
+#signin {
+    border-radius: 5px;
+    align-items: flex-start;
+    font-family: "Co Headline";
+    box-sizing: border-box;
+    width: 200px;
+    height: 42px;
+    font-weight: 400;
+    font-size: 16px;
     cursor: pointer;
+    display: block;
+    background: #a02d8a;
+    margin: 0 auto;
+    padding: 9px 20px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border: 0px; 
+    margin: auto;
+    
 }
-.first-logo{
-    font-size: 45px;
-    margin-left: 170px;
-    margin-top: 15px;
-    font-weight: 500;
+
+#email{
+        background: #F3F3F3;
+    border-radius: 5px;
+    padding: 0px 20px;
+    border: 0px;
+    width: 130%;
+    margin-bottom: 10px;
+    color: #171717;
+    font-size: 14px;
+    margin-top: 10px;
+    height: 46px;
+    margin-right: 100px;
+
 }
+    h3{
+        font-size: calc(1.3rem + .6vw);
+    }
+    p {
+display: block;
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+unicode-bidi: isolate;
+}
+
 
 footer {
     margin-top: 0px;
     background-color: #f0f0f0;
+    margin-bottom: 0;
 }
 
 .footer-container {

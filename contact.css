@@ -73,8 +73,8 @@ body{
 }
 
 .contact-information {
-    border-top: 5px solid #f0f0f0;
-    border-right: 5px solid #f0f0f0;
+    border-top: 3px solid #f0f0f0;
+    border-right: 3px solid #f0f0f0;
     min-width: 50%;
     max-width: 50%; 
     display: flex;
@@ -110,7 +110,7 @@ body{
 }
 
 .contact-us {
-    border-top: 5px solid #f0f0f0;
+    border-top: 3px solid #f0f0f0;
     min-width: 50%;
     max-width: 50%; 
     display: flex;
@@ -203,10 +203,8 @@ body {
 
 
 footer {
+    margin-top: 0px;
     background-color: #f0f0f0;
-    padding: 15px;
-    margin-top: auto;
-    width: 100%;
 }
 
 .footer-container {
