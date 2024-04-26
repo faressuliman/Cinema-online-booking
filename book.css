@@ -9,7 +9,7 @@
     overflow-x: none;
 }
 header{
-    background-color: black;
+    background-color: white;
     width: 100%;
     z-index: 999;
     display: flex;
@@ -28,7 +28,7 @@ header{
 .navigation a{
     padding-right: 20px;
     text-decoration: none;
-    color: #f0f0f0;
+    color: black;
     transition: 0.2s ease;
 
 }
@@ -40,11 +40,21 @@ header{
     border: solid 1px transparent;
 
 }
+.navigation a,
+.logo h2,
+.footer-bottom p {
+        color: black;
+}
+
 .login button{
-    padding: 5px 35px;
-    border: transparent;
-    border-radius: 20px;
-    transition: 0.7s ease;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 13px;
+    width: 140px;
+    text-align: center;
+    margin-left: 0px;
+    background-color: transparent;
 }
 .login button:hover{
     color: #f0f0f0;
