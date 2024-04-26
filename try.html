@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <nav class=" navbar navbar-expand-lg nav-dark  ">
+        <div class="container">
+
+            <a class="navbar-brand" href="https://rnscinemas.net/en">
+			<img class="no-mobile animate__animated animate__fadeInTopLeft" style="width: 125px;" src="https://rnscinemas.net/public/ui/images/logo.png">
+			<img class="animate__animated animate__fadeInTopLeft no-disktop mobile_main_icon" src="https://rnscinemas.net/public/ui/images/logo_mobile.png">
+			</a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+               <div class="hamburger-toggle">
+                  <div class="hamburger">
+				                          <image src="https://rnscinemas.net/public/ui/images/menu.png" class="menu-image animate__animated animate__fadeInTopLeft" style="z-index:999999999;">
+				                       </div>
+               </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <div class="no-disktop menu_header">
+                    <div class="container">
+                        <div class=""><a href="https://rnscinemas.net/en"><img src="https://rnscinemas.net/public/ui/images/ico.png" class="mobile_icon"></a></div>
+                        <div class=""><a href="javascript:hideMenu();"><img src="https://rnscinemas.net/public/ui/images/close.svg" class="close_icon"></a></div>
+                    </div>
+                </div>
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item animate__animated animate__fadeInTopLeft">
+                        <a class="nav-link" title="Now Showing" href="https://rnscinemas.net/en">Now Showing</a>
+                    </li>
+                    <li class="nav-item animate__animated animate__fadeInTopLeft">
+                        <a class="nav-link" title="Cinemas" href="https://rnscinemas.net/en/cinemas">Cinemas</a>
+                    </li>
+                    <li class="nav-item animate__animated animate__fadeInTopLeft">
+                        <a class="nav-link" title="Coming Soon" href="https://rnscinemas.net/en/coming-soon">Coming Soon</a>
+                    </li>
+                    <li class="nav-item animate__animated animate__fadeInTopLeft">
+                        <a class="nav-link" title="Contact" href="https://rnscinemas.net/en/contact">Contact</a>
+                    </li>
+                    <li class="nav-item animate__animated animate__fadeInTopLeft noarrowx">
+                        <a class="nav-link nav-btn noarrowx" href="https://rnscinemas.net/en/account">
+                            <image src="https://rnscinemas.net/public/ui/images/header/user_light.png" class="user-image no-mobile">
+                                <image src="https://rnscinemas.net/public/ui/images/header/user_dark.png" class="user-image no-disktop">
+                                    My Account
+
+                        </a>
+
+
+                    </li>
+
+                    <li class="nav-item animate__animated animate__fadeInTopLeft noarrowx">
+                        <a class="nav-link nav-btn" href="https://rnscinemas.net/en/logout" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Logout</a>
+                    </li>
+
+                    <li class="nav-item animate__animated animate__fadeInTopLeft noarrowx">
+                        <a class="nav-link nav-btn" href="https://rnscinemas.net/ar">  العربية <image style="width: 20px;margin-top: -5px;" src="https://rnscinemas.net/public/ui/images/eg.jpg" class=""> </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <form id="logout-form" action="https://rnscinemas.net/en/logout" method="POST" class="d-none">
+            <input type="hidden" name="_token" value="IRrcbapAtJoaHek8AwNkxXMCBYUCakeVAMDIKa0N"> </form>
+
+    </nav>
+</body>
+</html>
