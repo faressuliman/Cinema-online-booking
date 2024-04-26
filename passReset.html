@@ -5,105 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="passReset.css" />
     <title>Document</title>
-    <style>
-        body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-      }
-      .container {
-        display: flex;
-        height: 100vh;
-      }
 
-      .left-section,
-      .right-section {
-        flex: 1;
-        padding: 20px;
-      }
-
-      .left-section {
-        background-color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .right-section {
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-      }
-      #signin {
-        border-radius: 5px;
-        align-items: flex-start;
-        font-family: "Co Headline";
-        box-sizing: border-box;
-        width: 200px;
-        height: 42px;
-        font-weight: 400;
-        font-size: 16px;
-        cursor: pointer;
-        display: block;
-        background: #a02d8a;
-        margin: 0 auto;
-        padding: 9px 20px;
-        text-align: center;
-        color: #fff;
-        text-decoration: none;
-        border: 0px; 
-        margin: auto;
-        
-      }
-      #email{
-    background: #F3F3F3;
-    border-radius: 5px;
-    padding: 0px 20px;
-    border: 0px;
-    width: 130%;
-    margin-bottom: 10px;
-    color: #171717;
-    font-size: 14px;
-    margin-top: 10px;
-    height: 46px;
-    margin-right: 100px;
-    
-}
-        h3{
-            font-size: calc(1.3rem + .6vw);
-        }
-        p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-}
-    </style>
 </head>
 <body>
-    <header style="background-color: white;">
+    <header style="background-color: transparent;">
+
         <div class="logo">
-          <h2>CinemaName</h2>
+            <h2>CinemaName</h2>
         </div>
-        <nav class="navigation">
-          <a href="#">Now Showing</a>
-          <a href="#">Cinemas</a>
-          <a href="comingsoon.html">Coming Soon</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <div class="login">
-          <a href="loginpage.html"><i class="fas fa-user"></i> MY ACCOUNT</a>
-          <a href="loginpage.html"><i class="fas fa-user"></i> Login</a>
-          <a href="#"><i class="fas fa-user"></i> language</a>
-        </div>
-      </header>
+
+      <nav class="navigation">
+        <a href="#">Now Showing</a>
+        <a href="#">Cinemas</a>
+        <a href="comingsoon.html">Coming Soon</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="login">
+        <button id="loginButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
+        <button id="loginButton"><i class="fas fa-userr"></i> Login</button>
+        <button id="languageButton">
+          <i class="fas fa-userr"></i> language
+        </button>
+      </div>
+
+    </header>
     <div class="body">
         <div class="container">
             <div class="left-section">

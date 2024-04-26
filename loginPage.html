@@ -6,140 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="loginPage.css" />
     <title>Sign In</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-      }
-
-      .container {
-        display: flex;
-        height: 100vh;
-      }
-
-      .left-section,
-      .right-section {
-        flex: 1;
-        padding: 20px;
-      }
-
-      .left-section {
-        background-color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .right-section {
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-      }
-
-      #email,
-      #password {
-        background: #f3f3f3;
-        border-radius: 5px;
-        padding: 0px 20px;
-        border: 0px;
-        width: 100%;
-        margin-bottom: 10px;
-        color: #171717;
-        font-size: 14px;
-        margin-top: 10px;
-        height: 46px;
-      }
-
-      #signin {
-        border-radius: 5px;
-        align-items: flex-start;
-        font-family: "Co Headline";
-        box-sizing: border-box;
-        width: 250px;
-        height: 42px;
-        font-weight: 400;
-        font-size: 16px;
-        cursor: pointer;
-        display: block;
-        background: #a02d8a;
-        margin: 0 auto;
-        padding: 9px 20px;
-        text-align: center;
-        color: #fff;
-        text-decoration: none;
-        border: 0px;
-      }
-
-      .social-login {
-        text-align: center;
-      }
-
-      .social_login {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .social_login li {
-        display: inline-block;
-        margin-right: 10px;
-      }
-
-      .social-icon {
-        width: 25px;
-        height: auto;
-        margin: 5px;
-        display: block;
-      }
-
-      .dont-have-account {
-        color: black;
-        text-decoration: none;
-        font-size: 14px;
-      }
-
-      .create-account,
-      .forgot-password {
-        color: purple;
-        text-decoration: none;
-        font-size: 14px;
-      }
-
-      .create-account:hover,
-      .forgot-password:hover {
-        text-decoration: none;
-      }
-
-      .no-bullet {
-        list-style-type: none;
-      }
-    </style>
   </head>
   <body>
-    <header style="background-color: white;">
+    <header style="background-color: transparent;">
+
       <div class="logo">
-        <h2>CinemaName</h2>
+          <h2>CinemaName</h2>
       </div>
-      <nav class="navigation">
-        <a href="#">Now Showing</a>
-        <a href="#">Cinemas</a>
-        <a href="comingsoon.html">Coming Soon</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="login">
-        <a href="loginpage.html"><i class="fas fa-user"></i> MY ACCOUNT</a>
-        <a href="loginpage.html"><i class="fas fa-user"></i> Login</a>
-        <a href="#"><i class="fas fa-user"></i> language</a>
-      </div>
-    </header>
+
+    <nav class="navigation">
+      <a href="#">Now Showing</a>
+      <a href="#">Cinemas</a>
+      <a href="comingsoon.html">Coming Soon</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="login">
+      <button id="loginButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
+      <button id="loginButton"><i class="fas fa-userr"></i> Login</button>
+      <button id="languageButton">
+        <i class="fas fa-userr"></i> language
+      </button>
+    </div>
+
+  </header>
 
     <div class="the_body m-0 p-0">
       <div class="container">
@@ -150,9 +42,8 @@
               movies from around the world in a comfortable and elegant setting.
             </p>
             <div class="maintagcontact" style="width: 100%; text-align: center">
-              <!--chair photo -->
               <img
-                src="https://rnscinemas.net/public/ui/images/chair.jpg"
+                src="chair.jpg"
                 width="265"
               />
             </div>

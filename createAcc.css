@@ -1,3 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-section,
+.right-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-section {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#register {
+    border-radius: 5px;
+    align-items: flex-start;
+    font-family: "Co Headline";
+    box-sizing: border-box;
+    width: 250px;
+    height: 42px;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    background: #a02d8a;
+    margin: 0 auto;
+    padding: 9px 20px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border: 0px;
+}
+
+#email,
+#password,
+#name,
+#mobile,
+#password_confirmation {
+    background: #f3f3f3;
+    border-radius: 5px;
+    padding: 0px 20px;
+    border: 0px;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #171717;
+    font-size: 14px;
+    margin-top: 10px;
+    height: 46px;
+}
+
+.social-login {
+    text-align: center;
+}
+
+.social_login {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social_login li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icon {
+    width: 20px; 
+    height: auto;
+    margin: 5px;
+    display: block;
+}
+
+.no-bullet {
+    list-style-type: none;
+}
+
+.purple-link {
+    color: purple;
+    text-decoration: none;
+}
+.navigation a,
+.logo h2,
+.footer-bottom p {
+color: black;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
@@ -10,28 +116,26 @@
 header{
     background-color: white;
     width: 100%;
+    position:absolute;
     z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     height: 9vh;
+    
 }
 .logo{
-    color:#f0f0f0;
+    color:black;
     margin-left: 50px;
 }
 
 .navigation a{
     padding-right: 20px;
     text-decoration: none;
-    color: #f0f0f0;
-    transition: 0.2s ease;}
-    .navigation a,
-    .logo h2,
-    .footer-bottom p {
-            color: black;
-    
+    color: black;
+    transition: 0.2s ease;
+
 }
 .navigation a:hover{
     color: #952a80;
@@ -51,13 +155,67 @@ header{
     margin-left: 0px;
     background-color: transparent;
 }
+.navigation a,
+.logo h2,
+.footer-bottom p {
+        color: black;
+}
+
 .login button:hover{
     color: #f0f0f0;
     background-color: purple;
     cursor: pointer;
 }
 
-
+.nowshowing-image{
+    position: relative;
+    width: 100%;
+    min-height: 650px;                     
+    display: flex;                        
+    align-items: center;                     
+    background:url(/images/godzilla.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top:190px ;
+    margin-left: 150px;
+    
+}
+.info strong{
+    margin-top:20px ;
+    font-size: 50px;
+    color: #be73b0;
+    margin-left: -9px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.info .booknow {
+margin-top: 20px;
+margin-left: -9px;
+height: 39px;
+width: 200px;
+border-radius: 5px;
+border: solid transparent;
+background-color: #a82c8c;
+transition: 0.7s ease;
+font-size: 20px;
+}
+.info .booknow:hover{
+    color:white;
+    background-color: black;
+    cursor: pointer;
+    transform:translateY(5px)
+}
+.info div{
+    letter-spacing: 1px;
+    color: #a82c8c;
+    font-size: 19px;
+    margin-bottom: -5px;
+}
 .first-category{
     min-height: 100vh;
 }
@@ -185,5 +343,3 @@ footer {
     background-color: #f0f0f0;
     text-align:center;
 }
-
-
