@@ -1,170 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Cinema</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Cinema</title>
+  <style>
+    .nowshowing-image {
+      position: relative;
+      width: 100%;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
 
-  <body>
-    <header>
-      <div class="logo">
-        <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
-      </div>
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+    }
 
-      <nav class="navigation">
-        <a href="home.html">Now Showing</a>
-        <a href="comingsoon.html">Coming Soon</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="login">
-        <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
-        <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
-        <button id="languageButton">
-          <i class="fas fa-globe"></i> Language
-        </button>
-      </div>
-    </header>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("loginnButton")
-          .addEventListener("click", function () {
-            window.location.href = "loginPage.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("CinemaName")
-          .addEventListener("click", function () {
-            window.location.href = "home.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("myaccButton")
-          .addEventListener("click", function () {
-            window.location.href = "myAcc.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("Gladiator")
-          .addEventListener("click", function () {
-            window.location.href = "gladiator.html";
-          });
-      });
-    </script>
+    .mySlides {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
+    </div>
 
-    <section class="nowshowing-image">
-      <div class="info">
-        <div>Now Showing</div>
-        <strong>Godzila x Kong: The New Empire</strong>
-        <button id="booknow" class="booknow">Book Now</button>
-      </div>
-    </section>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("booknow")
-          .addEventListener("click", function () {
-            window.location.href = "https://instagram.com";
-          });
+    <nav class="navigation">
+      <a href="home.html">Now Showing</a>
+      <a href="comingsoon.html">Coming Soon</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="login">
+      <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
+      <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
+      <button id="languageButton">
+        <i class="fas fa-globe"></i> Language
+      </button>
+    </div>
+  </header>
+
+  <div class="slideshow-container">
+    <div class="mySlides">
+      <img src="godzilla.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="fasl.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="sheko.jpg" style="width:100%">
+    </div>
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    Slideshow();
+
+    function Slideshow() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(Slideshow, 3000); 
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("loginnButton").addEventListener("click", function () {
+        window.location.href = "loginPage.html";
       });
-    </script>
+    });
 
-    <section class="first-category">
-      <div class="first-logo">Now Showing</div>
-      <div class="content">
-        <div class="card">
-          <div class="image-one"><img src="/images/1.jpg" /></div>
-          <strong class="card-name"> The Nun </strong>
-          <div class="more-info">
-            Horror
-            <ul class="card-list">
-              <li>Rated +18</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="image-one"><img src="/images/2.jpg" /></div>
-          <strong class="card-name"> Dune 2 </strong>
-          <div class="more-info">
-            Action
-            <ul class="card-list">
-              <li>Rated +18</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="image-one"><img src="/images/3.jpg" /></div>
-          <strong class="card-name"> Oppenheimer </strong>
-          <div class="more-info">
-            Thriller
-            <ul class="card-list">
-              <li>Rated +18</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="image-one"><img src="/images/4.jpg" /></div>
-          <strong class="card-name"> Civil War </strong>
-          <div class="more-info">
-            Action
-            <ul class="card-list">
-              <li>Rated +18</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="image-one"><img src="/images/5.jpg" /></div>
-          <strong class="card-name"> Kung Fu Panda 4 </strong>
-          <div class="more-info">
-            Action
-            <ul class="card-list">
-              <li>Rated +12</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="image-one"><img src="/images/8.jpg" /></div>
-          <strong class="card-name"> Django Unchained </strong>
-          <div class="more-info">
-            Action
-            <ul class="card-list">
-              <li>Rated +18</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("CinemaName").addEventListener("click", function () {
+        window.location.href = "home.html";
+      });
+    });
 
-    <footer>
-      <hr style="opacity: 0.5" />
-      <div class="footer-container">
-        <div class="footer-icons">
-          <a href=""><i class="fab fa-facebook-f"></i></a>
-          <a href=""><i class="fab fa-instagram"></i></a>
-          <a href=""><i class="fab fa-tiktok"></i></a>
-        </div>
-        <div class="footer-nav">
-          <ul>
-            <li><a href="">About us</a></li>
-            <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Refunds & Exchanges</a></li>
-            <li><a href="">Terms of Service</a></li>
-          </ul>
-        </div>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("myaccButton").addEventListener("click", function () {
+        window.location.href = "myAcc.html";
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("Gladiator").addEventListener("click", function () {
+        window.location.href = "gladiator.html";
+      });
+    });
+  </script>
+
+  <section class="nowshowing-image">
+    <div class="info">
+      <div>Now Showing</div>
+      <strong>Godzilla x Kong: The New Empire</strong>
+      <button id="booknow1" class="booknow">Book Now</button>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("booknow1").addEventListener("click", function () {
+        window.location.href = "book.html";
+      });
+    });
+  </script>
+
+<section class="first-category">
+  <div class="first-logo">Now Showing</div>
+  <div class="content">
+    <div class="card">
+      <div class="image-one"><img src="/images/1.jpg" /></div>
+      <strong class="card-name"> The Nun </strong>
+      <div class="more-info">
+        Horror
+        <ul class="card-list">
+          <li>Rated +18</li>
+        </ul>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 All rights reserved by CinemaName</p>
+    </div>
+    <div class="card">
+      <div class="image-one"><img src="/images/2.jpg" /></div>
+      <strong class="card-name"> Dune 2 </strong>
+      <div class="more-info">
+        Action
+        <ul class="card-list">
+          <li>Rated +18</li>
+        </ul>
       </div>
-    </footer>
-  </body>
+    </div>
+    <div class="card">
+      <div class="image-one"><img src="/images/3.jpg" /></div>
+      <strong class="card-name"> Oppenheimer </strong>
+      <div class="more-info">
+        Thriller
+        <ul class="card-list">
+          <li>Rated +18</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image-one"><img src="/images/4.jpg" /></div>
+      <strong class="card-name"> Civil War </strong>
+      <div class="more-info">
+        Action
+        <ul class="card-list">
+          <li>Rated +18</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image-one"><img src="/images/5.jpg" /></div>
+      <strong class="card-name"> Kung Fu Panda 4 </strong>
+      <div class="more-info">
+        Action
+        <ul class="card-list">
+          <li>Rated +12</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image-one"><img src="/images/8.jpg" /></div>
+      <strong class="card-name"> Django Unchained </strong>
+      <div class="more-info">
+        Action
+        <ul class="card-list">
+          <li>Rated +18</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <hr style="opacity: 0.5" />
+    <div class="footer-container">
+      <div class="footer-icons">
+        <a href=""><i class="fab fa-facebook-f"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-tiktok"></i></a>
+      </div>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="">About us</a></li>
+          <li><a href="">Privacy Policy</a></li>
+          <li><a href="">Refunds & Exchanges</a></li>
+          <li><a href="">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 All rights reserved by CinemaName</p>
+    </div>
+  </footer>
+</body>
 </html>

@@ -60,17 +60,18 @@ header{
     cursor: pointer;
 }
 
-.nowshowing-image{
+/* .nowshowing-image{
     position: relative;
     width: 100%;
     min-height: 650px;                     
-    display: flex;                        
+    display: flex;   
+    background:url(godzilla.jpg) no-repeat;                     
     align-items: center;                     
-    background:url(/images/godzilla.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-}
+} */
+
 .info{
     display: flex;
     justify-content: space-between;
