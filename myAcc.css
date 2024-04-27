@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
 *{
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth; 
+}
+body {
+    margin-bottom: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 header{
     background-color: black;
@@ -22,14 +24,14 @@ header{
     
 }
 .logo{
-    color:#f0f0f0;
+    color:black;
     margin-left: 50px;
 }
 
 .navigation a{
     padding-right: 20px;
     text-decoration: none;
-    color: #f0f0f0;
+    color: black;
     transition: 0.2s ease;
 
 }
@@ -41,7 +43,6 @@ header{
     border: solid 1px transparent;
 
 }
-
 .login button{
     border: 1px solid black;
     border-radius: 5px;
@@ -56,7 +57,9 @@ header{
 .logo h2,
 .footer-bottom p {
         color: black;
-} button:hover{
+}
+
+.login button:hover{
     color: #f0f0f0;
     background-color: purple;
     cursor: pointer;
@@ -64,73 +67,12 @@ header{
 
 .container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-}
-
-.card {
-    background-color:#ececec;
-    border: 1px solid #fff;
-    min-height: 10em;
-    width: 400px;
-    overflow: hidden;
-    border-radius: 0px;
-    margin: 20px;
-    transition: 0.7s ease;
-    margin-left: 290px;
-    position: relative;
-}
-.card .image-container {
-    width: 60em;
-    padding-right:550px;
-    height: 600px;
-    overflow: hidden;
-    margin-bottom: -20px;
-}
-
-.image-container {
-    width: 60em;
-    padding-right: 550px;
-    height: 600px;
-    overflow: hidden;
-    margin-bottom: -20px;
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.info h2{
-    font-weight: 500;
-    margin-left: 5px;
-    margin-top: 30px;
-}
-
-.info h5 {
-    color: hsl(0, 0%, 26%);
-    margin-top: 5px;
-    font-weight: 450;
-    margin-left: 6px;
-}
-
-.info button {
-    margin-top: 10px;
-    margin-left: 5px;
-    padding: 10px;
-    padding-right: 25px;
-    padding-left: 25px;
-    border-radius: 5px;
-    border: 1px solid black;
-    background-color: white;
-    cursor: pointer;
-}
-
-footer {
+    height: 100vh;
+  }
+  footer {
     margin-top: 0px;
     background-color: #f0f0f0;
+    margin-bottom: 0;
 }
 
 .footer-container {
@@ -156,13 +98,13 @@ footer {
 
 .footer-icons i{
     font-size: 1.8em;
-    color:#ce2eae;
+    color: purple;
     opacity: 0.9;
     
 }
 
 .footer-icons a:hover {
-    background-color:#ce2eae;
+    background-color: purple;
     transform: scale(1.05);
 }
 
@@ -184,7 +126,7 @@ footer {
 }
 
 .footer-nav ul li a{
-    color:#ce2eae;
+    color: purple;
     margin: 20px;
     text-decoration: none;
     font-size: 1em;
@@ -198,7 +140,8 @@ footer {
 }
 
 .footer-bottom {
-    color:#ce2eae;
+    color: purple;
     background-color: #f0f0f0;
     text-align:center;
 }
+

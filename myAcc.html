@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="myAcc.css" />
+    <title>Sign In</title>
+  </head>
+  <body>
+    <header style="background-color: transparent">
+      <div class="logo">
+        <h2>CinemaName</h2>
+      </div>
+
+      <nav class="navigation">
+        <a href="home.html">Now Showing</a>
+        <a href="comingsoon.html">Coming Soon</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="login">
+        <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
+        <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
+        <button id="languageButton">
+          <i class="fas fa-globe"></i> Language
+        </button>
+      </div>
+    </header>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("loginnButton")
+          .addEventListener("click", function () {
+            window.location.href = "loginPage.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("myaccButton")
+          .addEventListener("click", function () {
+            window.location.href = "myAcc.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("Gladiator")
+          .addEventListener("click", function () {
+            window.location.href = "gladiator.html";
+          });
+      });
+    </script>
+
+    <!-- body -->
+    <div class ="a"  >
+      <div class ="b" >
+        <div class ="c" >
+          <div class ="d" >
+            <div class ="e" >
+              <div class ="f" >
+                <div class ="g" >
+                  <div class ="h" >
+                    <div class ="i" >
+                      <div class ="j" >
+                        <div class ="k" >
+                          <h5 style="color: #d70486">
+                            Welcome, User
+                          </h5>
+                          <span style="color: #000"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            
+
+            <h5 class="mt-3"><i class="flaticon-globe"></i> Reservations</h5>
+
+
+
+
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <hr style="opacity: 0.5" />
+      <div class="footer-container">
+        <div class="footer-icons">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="">About us</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Refunds & Exchanges</a></li>
+            <li><a href="">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="color: purple">
+          &copy; 2024 All rights reserved by CinemaName
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -25,8 +25,8 @@
         <a href="contact.html">Contact</a>
       </nav>
       <div class="login">
-        <button id="loginButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
-        <button id="loginButton"><i class="fas fa-user"></i> Login</button>
+        <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
+        <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
         <button id="languageButton">
             <i class="fas fa-globe"></i> Language
         </button>
@@ -35,10 +35,21 @@
     </header>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("loginButton").addEventListener("click", function() {
-                window.location.href = "https://youtube.com" ;
+            document.getElementById("loginnButton").addEventListener("click", function() {
+                window.location.href = "loginPage.html"; ;
             });
         });
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("myaccButton").addEventListener("click", function() {
+                window.location.href = "myAcc.html" ;
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("Gladiator").addEventListener("click", function() {
+                window.location.href = "gladiator.html" ;
+            });
+        });
+
     </script>
     
 
@@ -61,7 +72,7 @@
             </ul>
         </div>
     </div>
-    <div class="card">
+    <div class="card" id="Gladiator">
         <div class="image-one"><img src="/comingsoon-images/15.jpg" ></div>
         <strong class="card-name">
             Gladiator

@@ -23,13 +23,28 @@
         <a href="contact.html">Contact</a>
       </nav>
       <div class="login">
-        <button id="loginButton">MY ACCOUNT</button>
-        <button id="loginButton"><i class="fas fa-user"></i> Login</button>
+        <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
+        <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
         <button id="languageButton">
           <i class="fas fa-globe"></i> Language
         </button>
       </div>
     </header>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("loginnButton").addEventListener("click", function() {
+          window.location.href = "loginPage.html"; ;
+      });
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("myaccButton").addEventListener("click", function() {
+          window.location.href = "myAcc.html" ;
+      });
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("Gladiator").addEventListener("click", function() {
+          window.location.href = "gladiator.html" ;
+      });
+  });</script>
     <div class="the_body m-0 p-0">
       <div class="container">
         <div class="left-section">
