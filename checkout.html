@@ -1,68 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <link rel="stylesheet" href="checkout.css" />
-  <title>checkout</title>
-</head>
-<body>
-  <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="checkout.css" />
+    <title>checkout</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
+      </div>
 
-    <div class="logo">
-        <h2>CinemaName</h2>
-    </div>
-
-    <nav class="navigation">
-      <a href="home.html">Now Showing</a>
-      <a href="comingsoon.html">Coming Soon</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="login">
-      <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
+      <nav class="navigation">
+        <a href="home.html">Now Showing</a>
+        <a href="comingsoon.html">Coming Soon</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="login">
+        <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
         <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
-      <button id="languageButton">
-        <i class="fas fa-globe"></i> Language
-      </button>
-    </div>
-  </header>
-  <script>document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("loginnButton").addEventListener("click", function() {
-        window.location.href = "loginPage.html"; ;
-    });
-});
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("myaccButton").addEventListener("click", function() {
-        window.location.href = "myAcc.html" ;
-    });
-});
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("Gladiator").addEventListener("click", function() {
-        window.location.href = "gladiator.html" ;
-    });
-});</script>
+        <button id="languageButton">
+          <i class="fas fa-globe"></i> Language
+        </button>
+      </div>
+    </header>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("loginnButton")
+          .addEventListener("click", function () {
+            window.location.href = "loginPage.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("CinemaName")
+          .addEventListener("click", function () {
+            window.location.href = "home.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("myaccButton")
+          .addEventListener("click", function () {
+            window.location.href = "myAcc.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("Gladiator")
+          .addEventListener("click", function () {
+            window.location.href = "gladiator.html";
+          });
+      });
+    </script>
 
-  <div class="container">
-    <div class="col-12 col-xl-9 col-lg-8 col-md-12 website-col">
-      <div class="clearfix"></div>
-      <div id="real_checkout">
-        <div class="animate__animated animate__fadeIn">
-          <div class="checkout_login" class="">
-              <div style="margin-top: 20px; margin-bottom: 30px;" class="title pt-3">
+    <div class="container">
+      <div class="col-12 col-xl-9 col-lg-8 col-md-12 website-col">
+        <div class="clearfix"></div>
+        <div id="real_checkout">
+          <div class="animate__animated animate__fadeIn">
+            <div class="checkout_login" class="">
+              <div
+                style="margin-top: 20px; margin-bottom: 30px"
+                class="title pt-3"
+              >
                 <b style="font-size: 20px">Your Information</b>
               </div>
-              <div class="row mt-1">
-                <div class="col-md-12 col-sm-12">
-                  <input
-                    type="text"
-                    name="customer_name"
-                    id="customer_name"
-                    value=""
-                    class="rns-form-element"
-                    placeholder="Your Name"
-                  />
+              <form>
+                <div class="row mt-1">
+                  <div class="col-md-12 col-sm-12">
+                    <input
+                      type="text"
+                      name="customer_name"
+                      id="customer_name"
+                      value=""
+                      class="rns-form-element"
+                      placeholder="Your Name"
+                    />
                   </div>
                   <div class="col-md-12 col-sm-12">
                     <input
@@ -76,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     />
                     <label id="egyphone" for="egyphone"></label>
                   </div>
-                  <div class="col-md-12 col-sm-12" style="margin-bottom: 20px;">
+                  <div class="col-md-12 col-sm-12" style="margin-bottom: 20px">
                     <input
                       type="text"
                       name="customer_email"
@@ -89,7 +110,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     />
                   </div>
                   <div class="title mt-3 mb-4">
-                    <b style="font-size: 20px; margin-bottom: 20px;">Payment Method</b>
+                    <b style="font-size: 20px; margin-bottom: 20px"
+                      >Payment Method</b
+                    >
                   </div>
                   <div class="row checkout_notes p-3 pt-0 pb-2 mb-3">
                     <div class="col-12">
@@ -168,14 +191,15 @@ document.addEventListener("DOMContentLoaded", function() {
                       </label>
                     </div>
                   </div>
-                  <div
-                    id="payment_notes_pp"></div>
-                    <div class="col-md-12 col-sm-12 pt-3 pb-3 text-center">
-                      <div id="payloadbutton" style="margin-top: 30px;">
-                        <a class="btn_light booking-confirm-btn booking-confirm-btn-dark"
-                           style="color: white; text-decoration: none"
-                           href="payInfo.html"> 
-                        >Pay Now 145.00 EGP
+                  <div id="payment_notes_pp"></div>
+                  <div class="col-md-12 col-sm-12 pt-3 pb-3 text-center">
+                    <div id="payloadbutton" style="margin-top: 30px">
+                      <a
+                        class="btn_light booking-confirm-btn booking-confirm-btn-dark"
+                        style="color: white; text-decoration: none"
+                        href="payInfo.html"
+                      >
+                        Pay Now
                       </a>
                     </div>
                   </div>

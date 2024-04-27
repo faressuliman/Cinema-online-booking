@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="comingsoon.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="comingsoon.css" />
     <title>Cinema</title>
-   
-</head>
+  </head>
 
-
-
-<body>
-    <header style="background-color: transparent;">
-
-        <div class="logo">
-            <h2>CinemaName</h2>
-        </div>
+  <body>
+    <header style="background-color: transparent">
+      <div class="logo">
+        <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
+      </div>
 
       <nav class="navigation">
         <a href="home.html">Now Showing</a>
@@ -28,135 +27,129 @@
         <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
         <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
         <button id="languageButton">
-            <i class="fas fa-globe"></i> Language
+          <i class="fas fa-globe"></i> Language
         </button>
       </div>
-
     </header>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("loginnButton").addEventListener("click", function() {
-                window.location.href = "loginPage.html"; ;
-            });
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("myaccButton").addEventListener("click", function() {
-                window.location.href = "myAcc.html" ;
-            });
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("Gladiator").addEventListener("click", function() {
-                window.location.href = "gladiator.html" ;
-            });
-        });
-
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("loginnButton")
+          .addEventListener("click", function () {
+            window.location.href = "loginPage.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("CinemaName")
+          .addEventListener("click", function () {
+            window.location.href = "home.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("myaccButton")
+          .addEventListener("click", function () {
+            window.location.href = "myAcc.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("Gladiator")
+          .addEventListener("click", function () {
+            window.location.href = "gladiator.html";
+          });
+      });
     </script>
-    
 
-
-
-<section class="first-category">
-<div class="first-logo">
-    Coming Soon
-</div>
-<div class="content">
-    <div class="card">
-        <div class="image-one"><img src="/comingsoon-images/9.webp" ></div>
-        <strong class="card-name">
-            Ghostbusters: Frozen Empire
-        </strong>
-        <div class="more-info">
+    <section class="first-category">
+      <div class="first-logo">Coming Soon</div>
+      <div class="content">
+        <div class="card">
+          <div class="image-one"><img src="/comingsoon-images/9.webp" /></div>
+          <strong class="card-name"> Ghostbusters: Frozen Empire </strong>
+          <div class="more-info">
             Action
             <ul class="card-list">
-                <li>Rated +16</li>
+              <li>Rated +16</li>
             </ul>
+          </div>
         </div>
-    </div>
-    <div class="card" id="Gladiator">
-        <div class="image-one"><img src="/comingsoon-images/15.jpg" ></div>
-        <strong class="card-name">
-            Gladiator
-        </strong>
-        <div class="more-info">
+        <div class="card" id="Gladiator">
+          <div class="image-one"><img src="/comingsoon-images/15.jpg" /></div>
+          <strong class="card-name"> Gladiator </strong>
+          <div class="more-info">
             Action
             <ul class="card-list">
-                <li>Rated +18</li>
+              <li>Rated +18</li>
             </ul>
+          </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="image-one"><img src="/comingsoon-images/16.jpg" ></div>
-        <strong class="card-name">
-            Garfield
-        </strong>
-        <div class="more-info">
+        <div class="card">
+          <div class="image-one"><img src="/comingsoon-images/16.jpg" /></div>
+          <strong class="card-name"> Garfield </strong>
+          <div class="more-info">
             Humor
             <ul class="card-list">
-                <li>Rated +12</li>
+              <li>Rated +12</li>
             </ul>
+          </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="image-one"><img src="/comingsoon-images/12.webp" ></div>
-        <strong class="card-name">
-            Kingdom Of The Planet Of The Apes
-        </strong>
-        <div class="more-info">
+        <div class="card">
+          <div class="image-one"><img src="/comingsoon-images/12.webp" /></div>
+          <strong class="card-name"> Kingdom Of The Planet Of The Apes </strong>
+          <div class="more-info">
             Action
             <ul class="card-list">
-                <li>Rated +18</li>
+              <li>Rated +18</li>
             </ul>
+          </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="image-one"><img src="/comingsoon-images/13.jpeg" ></div>
-        <strong class="card-name">
-            Arthur The King
-        </strong>
-        <div class="more-info">
+        <div class="card">
+          <div class="image-one"><img src="/comingsoon-images/13.jpeg" /></div>
+          <strong class="card-name"> Arthur The King </strong>
+          <div class="more-info">
             Action
             <ul class="card-list">
-                <li>Rated +12</li>
+              <li>Rated +12</li>
             </ul>
+          </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="image-one"><img src="/comingsoon-images/14.jpg" ></div>
-        <strong class="card-name">
-            IF
-        </strong>
-        <div class="more-info">
+        <div class="card">
+          <div class="image-one"><img src="/comingsoon-images/14.jpg" /></div>
+          <strong class="card-name"> IF </strong>
+          <div class="more-info">
             Humor
             <ul class="card-list">
-                <li>Rated +12</li>
+              <li>Rated +12</li>
             </ul>
+          </div>
         </div>
-    </div>
-    
-</div>
-</section>
+      </div>
+    </section>
 
-<footer>
-    <hr style="opacity: 0.5;">
-    <div class="footer-container">
+    <footer>
+      <hr style="opacity: 0.5" />
+      <div class="footer-container">
         <div class="footer-icons">
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-tiktok"></i></a>
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-tiktok"></i></a>
         </div>
         <div class="footer-nav">
-            <ul>
-                <li><a href="">About us</a></li>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Refunds & Exchanges</a></li>
-                <li><a href="">Terms of Service</a></li>
-            </ul>
+          <ul>
+            <li><a href="">About us</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Refunds & Exchanges</a></li>
+            <li><a href="">Terms of Service</a></li>
+          </ul>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p style="color: purple;">&copy; 2024 All right reserved by CinemaName</p>
-    </div>
-</footer>
-    
-</body>
+      </div>
+      <div class="footer-bottom">
+        <p style="color: purple">
+          &copy; 2024 All right reserved by CinemaName
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <link rel="stylesheet" href="passReset.css" />
     <title>Password Reset</title>
-
-</head>
-<body>
-    <header style="background-color: transparent;">
-
-        <div class="logo">
-            <h2>CinemaName</h2>
-        </div>
+  </head>
+  <body>
+    <header style="background-color: transparent">
+      <div class="logo">
+        <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
+      </div>
 
       <nav class="navigation">
         <a href="home.html">Now Showing</a>
@@ -25,83 +26,123 @@
         <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
         <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
         <button id="languageButton">
-            <i class="fas fa-globe"></i> Language
+          <i class="fas fa-globe"></i> Language
         </button>
       </div>
-
     </header>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("loginnButton").addEventListener("click", function() {
-                window.location.href = "loginPage.html"; ;
-            });
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("myaccButton").addEventListener("click", function() {
-                window.location.href = "myAcc.html" ;
-            });
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("Gladiator").addEventListener("click", function() {
-                window.location.href = "gladiator.html" ;
-            });
-        });
-
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("loginnButton")
+          .addEventListener("click", function () {
+            window.location.href = "loginPage.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("CinemaName")
+          .addEventListener("click", function () {
+            window.location.href = "home.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("myaccButton")
+          .addEventListener("click", function () {
+            window.location.href = "myAcc.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("Gladiator")
+          .addEventListener("click", function () {
+            window.location.href = "gladiator.html";
+          });
+      });
     </script>
 
     <div class="body">
-        <div class="container">
-            <div class="left-section">
-                <div class="inner-content">
-                    <h1 style="text-align: center;">Contact Information</h1>
-                    <p id="p1"><i class="fas fa-map-marker-alt"></i> 23rd street, Somewhere, Alexandria, Egypt.</p>
-                    <p id="p2"><i class="far fa-envelope"></i> cinemabooking@gmail.com</p> 
-                </div>
-                
-            </div>
-            <div class="right-section ">
-                <div class="inside-content">
-                    <div class="pss-reset">
-                        <h3>Forgot password?</h3>
-                    </div>
-                    <p>We will send a password to your Email</p>
-                    <form method="POST" action="https://rnscinemas.net/en/password/email" class="register-form" id="login-form">
-                        <input type="hidden" name="_token" value="pWq4HX8tMeM8xB9QO4YlZLjRhZ6wedVNy0jEgqsq">
-                        <div class="form-group">
-                            <label for="email"><i class="zmdi zmdi-email"></i></label>
-                            <input type="email" name="email" id="email" class="rns-form-element" value="" placeholder="Your Email" />
-                        </div>
-                        <div class="form-group form-button" style="margin-top: 7px; margin-left: 100px;">
-                            <input type="submit" name="signin" id="signin" class="btn_primary" value="Reset Your Password" />
-                        </div>
-                    </form>
-
-                </div>
-                
-            </div>
+      <div class="container">
+        <div class="left-section">
+          <div class="inner-content">
+            <h1 style="text-align: center">Contact Information</h1>
+            <p id="p1">
+              <i class="fas fa-map-marker-alt"></i> 23rd street, Somewhere,
+              Alexandria, Egypt.
+            </p>
+            <p id="p2">
+              <i class="far fa-envelope"></i> cinemabooking@gmail.com
+            </p>
+          </div>
         </div>
+        <div class="right-section">
+          <div class="inside-content">
+            <div class="pss-reset">
+              <h3>Forgot password?</h3>
+            </div>
+            <p>We will send a password to your Email</p>
+            <form
+              method="POST"
+              action="https://rnscinemas.net/en/password/email"
+              class="register-form"
+              id="login-form"
+            >
+              <input
+                type="hidden"
+                name="_token"
+                value="pWq4HX8tMeM8xB9QO4YlZLjRhZ6wedVNy0jEgqsq"
+              />
+              <div class="form-group">
+                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="rns-form-element"
+                  value=""
+                  placeholder="Your Email"
+                />
+              </div>
+              <div
+                class="form-group form-button"
+                style="margin-top: 7px; margin-left: 100px"
+              >
+                <input
+                  type="submit"
+                  name="signin"
+                  id="signin"
+                  class="btn_primary"
+                  value="Reset Your Password"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <footer>
-        <hr style="opacity: 0.5" />
-        <div class="footer-container">
-            <div class="footer-icons">
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-instagram"></i></a>
-                <a href=""><i class="fab fa-tiktok"></i></a>
-            </div>
-            <div class="footer-nav">
-                <ul>
-                    <li><a href="">About us</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Refunds & Exchanges</a></li>
-                    <li><a href="">Terms of Service</a></li>
-                </ul>
-            </div>
+      <hr style="opacity: 0.5" />
+      <div class="footer-container">
+        <div class="footer-icons">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-tiktok"></i></a>
         </div>
-        <div class="footer-bottom">
-            <p style="color: purple;">&copy; 2024 All right reserved by CinemaName</p>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="">About us</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Refunds & Exchanges</a></li>
+            <li><a href="">Terms of Service</a></li>
+          </ul>
         </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="color: purple">
+          &copy; 2024 All right reserved by CinemaName
+        </p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

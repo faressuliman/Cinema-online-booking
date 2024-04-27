@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="contact.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="contact.css" />
     <title>Contact</title>
-</head>
-<body>
-    <header style="background-color: transparent;">
-
-        <div class="logo">
-            <h2>CinemaName</h2>
-        </div>
+  </head>
+  <body>
+    <header style="background-color: transparent">
+      <div class="logo">
+        <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
+      </div>
 
       <nav class="navigation">
         <a href="home.html">Now Showing</a>
@@ -23,84 +25,104 @@
         <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
         <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
         <button id="languageButton">
-            <i class="fas fa-globe"></i> Language
+          <i class="fas fa-globe"></i> Language
         </button>
       </div>
-
     </header>
-    <script>document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("loginnButton").addEventListener("click", function() {
-            window.location.href = "loginPage.html"; ;
-        });
-    });
-    document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("myaccButton").addEventListener("click", function() {
-            window.location.href = "myAcc.html" ;
-        });
-    });
-    document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("Gladiator").addEventListener("click", function() {
-            window.location.href = "gladiator.html" ;
-        });
-    });</script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("loginnButton")
+          .addEventListener("click", function () {
+            window.location.href = "loginPage.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("CinemaName")
+          .addEventListener("click", function () {
+            window.location.href = "home.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("myaccButton")
+          .addEventListener("click", function () {
+            window.location.href = "myAcc.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("Gladiator")
+          .addEventListener("click", function () {
+            window.location.href = "gladiator.html";
+          });
+      });
+    </script>
 
-<main>
-    <div class="contact-container">
+    <main>
+      <div class="contact-container">
         <div class="contact-information">
-            <div class="info-text">
-                <h1 class="h1">Contact Information</h1>
-                <p id="p1"><i class="fas fa-map-marker-alt"></i> 23rd street, Somewhere, Alexandria, Egypt.</p>
-                <p id="p2"><i class="far fa-envelope"></i> cinemabooking@gmail.com</p>  
-            </div>
+          <div class="info-text">
+            <h1 class="h1">Contact Information</h1>
+            <p id="p1">
+              <i class="fas fa-map-marker-alt"></i> 23rd street, Somewhere,
+              Alexandria, Egypt.
+            </p>
+            <p id="p2">
+              <i class="far fa-envelope"></i> cinemabooking@gmail.com
+            </p>
+          </div>
         </div>
         <div class="contact-us">
-            <div class="contact-header">
-                <h1>Contact Us</h1>
-                <h3>We are here to help! What do you need?</h3>    
-            </div>
-            <div class="contact-form">
-                <form action="index.html">
-                    <select>
-                        <option value="">Please choose a Topic</option>
-                        <option value="">General Inquiry</option>
-                        <option value="">Online Booking Issues</option>
-                        <option value="">Inquiries for Schools</option>
-                        <option value="">Inquiries for Companies</option>
-                    </select>
-                    <input type="text" placeholder="Your Name *" class="name">
-                    <div class="email-phone">
-                        <input type="text" placeholder="Your Email *" class="email">
-                        <input type="text" placeholder="Your Phone *" class="phone">
-                    </div>
-                    <textarea placeholder="Type your message..."></textarea>
-                    <button type="submit">Submit Contact</button>
-                </form> 
-            </div>
+          <div class="contact-header">
+            <h1>Contact Us</h1>
+            <h3>We are here to help! What do you need?</h3>
+          </div>
+          <div class="contact-form">
+            <form action="index.html">
+              <select>
+                <option value="">Please choose a Topic</option>
+                <option value="">General Inquiry</option>
+                <option value="">Online Booking Issues</option>
+                <option value="">Inquiries for Schools</option>
+                <option value="">Inquiries for Companies</option>
+              </select>
+              <input type="text" placeholder="Your Name *" class="name" />
+              <div class="email-phone">
+                <input type="text" placeholder="Your Email *" class="email" />
+                <input type="text" placeholder="Your Phone *" class="phone" />
+              </div>
+              <textarea placeholder="Type your message..."></textarea>
+              <button type="submit">Submit Contact</button>
+            </form>
+          </div>
         </div>
-    </div>
-</main>
+      </div>
+    </main>
 
-<footer >
-    <hr style="opacity: 0.5">
-    <div class="footer-container">
+    <footer>
+      <hr style="opacity: 0.5" />
+      <div class="footer-container">
         <div class="footer-icons">
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-tiktok"></i></a>
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-tiktok"></i></a>
         </div>
         <div class="footer-nav">
-            <ul>
-                <li><a href="">About us</a></li>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Refunds & Exchanges</a></li>
-                <li><a href="">Terms of Service</a></li>
-            </ul>
+          <ul>
+            <li><a href="">About us</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Refunds & Exchanges</a></li>
+            <li><a href="">Terms of Service</a></li>
+          </ul>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p style="color: purple;">&copy; 2024 All rights reserved by CinemaName</p>
-    </div>
-</footer>
-    
-</body>
+      </div>
+      <div class="footer-bottom">
+        <p style="color: purple">
+          &copy; 2024 All rights reserved by CinemaName
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

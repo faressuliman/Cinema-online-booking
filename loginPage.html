@@ -6,74 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <link rel="stylesheet" href="loginPage.css" />
     <title>Sign In</title>
   </head>
   <body>
-    <header style="background-color: transparent;">
-
+    <header style="background-color: transparent">
       <div class="logo">
-          <h2>CinemaName</h2>
+        <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
       </div>
 
-    <nav class="navigation">
-      <a href="home.html">Now Showing</a>
-      <a href="comingsoon.html">Coming Soon</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="login">
-      <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
+      <nav class="navigation">
+        <a href="home.html">Now Showing</a>
+        <a href="comingsoon.html">Coming Soon</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="login">
+        <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
         <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
-      <button id="languageButton">
-        <i class="fas fa-globe"></i> Language
-      </button>
-    </div>
-
-  </header>
-  <script>document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("loginnButton").addEventListener("click", function() {
-        window.location.href = "loginPage.html"; ;
-    });
-});
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("myaccButton").addEventListener("click", function() {
-        window.location.href = "myAcc.html" ;
-    });
-});
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("Gladiator").addEventListener("click", function() {
-        window.location.href = "gladiator.html" ;
-    });
-});</script>
+        <button id="languageButton">
+          <i class="fas fa-globe"></i> Language
+        </button>
+      </div>
+    </header>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("loginnButton")
+          .addEventListener("click", function () {
+            window.location.href = "loginPage.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("CinemaName")
+          .addEventListener("click", function () {
+            window.location.href = "home.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("myaccButton")
+          .addEventListener("click", function () {
+            window.location.href = "myAcc.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("Gladiator")
+          .addEventListener("click", function () {
+            window.location.href = "gladiator.html";
+          });
+      });
+    </script>
 
     <div class="the_body m-0 p-0">
       <div class="container">
         <div class="left-section">
           <div class="inner-content">
-            <p style="text-align: center; font-weight: 600; margin-left: 270px;">
+            <p style="text-align: center; font-weight: 600; margin-left: 270px">
               Welcome to Renaissance Cinemas, where you can enjoy the best
               movies
             </p>
-            <p style="text-align: center; font-weight: 600; margin-left: 270px;">
+            <p style="text-align: center; font-weight: 600; margin-left: 270px">
               from around the world in a comfortable and elegant setting.
             </p>
-            <div class="maintagcontact" style="width: 100%; text-align: center;">
-              <img
-                src="chair.jpg"
-                width="265"
-              />
+            <div class="maintagcontact" style="width: 100%; text-align: center">
+              <img src="chair.jpg" width="265" />
             </div>
           </div>
         </div>
         <div class="right-section">
           <div class="signin-form">
-            <h2 style="margin-bottom: 30px; font-family: Verdana, Geneva, Tahoma, sans-serif;">Sign in</h2>
-            <form
-              method="POST"
-              id="login-form"
-              action=""
+            <h2
+              style="
+                margin-bottom: 30px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+              "
             >
+              Sign in
+            </h2>
+            <form method="POST" id="login-form" action="">
               <input
                 type="hidden"
                 name="_token"
@@ -105,7 +119,12 @@ document.addEventListener("DOMContentLoaded", function() {
               </div>
               <div
                 class="form-group text-right"
-                style="text-align: right; font-size: 14px; margin-top: 5px; margin-bottom: 25px;"
+                style="
+                  text-align: right;
+                  font-size: 14px;
+                  margin-top: 5px;
+                  margin-bottom: 25px;
+                "
               >
                 <input
                   type="checkbox"
@@ -152,7 +171,13 @@ document.addEventListener("DOMContentLoaded", function() {
               <div class="col-md-12 col-sm-12 text-center sub_notes mt-2">
                 <div class="social-login">
                   <ul class="social_login no-bullet">
-                    <li class="pt-1 orc"><b><span style="color: purple; padding-left: 25px;">OR CONNECT WITH</span></b></li>
+                    <li class="pt-1 orc">
+                      <b
+                        ><span style="color: purple; padding-left: 25px"
+                          >OR CONNECT WITH</span
+                        ></b
+                      >
+                    </li>
                     <li>
                       <a href="https://google.com/"
                         ><img
@@ -194,7 +219,9 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
       </div>
       <div class="footer-bottom">
-        <p style="color: purple;">&copy; 2024 All rights reserved by CinemaName</p>
+        <p style="color: purple">
+          &copy; 2024 All rights reserved by CinemaName
+        </p>
       </div>
     </footer>
   </body>

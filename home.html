@@ -13,42 +13,53 @@
   </head>
 
   <body>
-    <header >
-
+    <header>
       <div class="logo">
-          <h2>CinemaName</h2>
+        <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
       </div>
 
-    <nav class="navigation">
-      <a href="home.html">Now Showing</a>
-      <a href="comingsoon.html">Coming Soon</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="login">
-      <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
+      <nav class="navigation">
+        <a href="home.html">Now Showing</a>
+        <a href="comingsoon.html">Coming Soon</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="login">
+        <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
         <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
-      <button id="languageButton">
-        <i class="fas fa-globe"></i> Language
-      </button>
-    </div>
-
-  </header>
+        <button id="languageButton">
+          <i class="fas fa-globe"></i> Language
+        </button>
+      </div>
+    </header>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("loginnButton").addEventListener("click", function() {
-                window.location.href = "loginPage.html"; ;
-            });
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("myaccButton").addEventListener("click", function() {
-                window.location.href = "myAcc.html" ;
-            });
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("Gladiator").addEventListener("click", function() {
-                window.location.href = "gladiator.html" ;
-            });
-        });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("loginnButton")
+          .addEventListener("click", function () {
+            window.location.href = "loginPage.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("CinemaName")
+          .addEventListener("click", function () {
+            window.location.href = "home.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("myaccButton")
+          .addEventListener("click", function () {
+            window.location.href = "myAcc.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("Gladiator")
+          .addEventListener("click", function () {
+            window.location.href = "gladiator.html";
+          });
+      });
     </script>
 
     <section class="nowshowing-image">
