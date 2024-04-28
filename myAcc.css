@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -5,13 +7,9 @@
     box-sizing: border-box;
     scroll-behavior: smooth; 
 }
-body {
-    margin-bottom: 0;
-    padding: 0;
-    min-height: 100vh;
-}
+
 header{
-    background-color: black;
+    background-color: white;
     width: 100%;
     position: static;
     z-index: 999;
@@ -20,18 +18,19 @@ header{
     align-items: center;
     flex-direction: row;
     height: 9vh;
-    border-bottom: 3px solid #f0f0f0;
+    border-bottom:3px #f0f0f0 solid;
     
 }
+
 .logo{
-    color:black;
+    color:#f0f0f0;
     margin-left: 50px;
 }
 
 .navigation a{
     padding-right: 20px;
     text-decoration: none;
-    color: black;
+    color: #f0f0f0;
     transition: 0.2s ease;
 
 }
@@ -43,6 +42,12 @@ header{
     border: solid 1px transparent;
 
 }
+.navigation a,
+.logo h2,
+.footer-bottom p {
+        color: black;
+}
+
 .login button{
     border: 1px solid black;
     border-radius: 5px;
@@ -53,26 +58,154 @@ header{
     margin-left: 0px;
     background-color: transparent;
 }
-.navigation a,
-.logo h2,
-.footer-bottom p {
-        color: black;
-}
-
 .login button:hover{
     color: #f0f0f0;
     background-color: purple;
     cursor: pointer;
 }
 
-.container {
+body{
+    margin-bottom: -1000px;
+}
+
+.contact-container {
     display: flex;
-    height: 100vh;
-  }
-  footer {
+    position: relative;
+}
+
+.contact-information {
+    border-top: 3px solid #f0f0f0;
+    border-right: 3px solid #f0f0f0;
+    min-width: 50%;
+    max-width: 50%; 
+    display: flex;
+    justify-content: center;
+}
+
+.h1 {
+    margin-top: 100px;
+    margin-left: 350px;
+    font-weight: 400;
+}
+
+#p1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 70px;
+    margin-left: 308px;
+    text-align: center;
+}
+
+#p2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 181px;
+    text-align: center;
+}
+
+.contact-information i {
+    text-align: center;
+    color: purple;
+    font-size: 1.4em;
+}
+
+.contact-us {
+    border-top: 3px solid #f0f0f0;
+    min-width: 50%;
+    max-width: 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-us h1, h3, form{
+    margin-left: 50px;
+}
+
+.contact-us h1 {
+    margin-top: 95.5px;
+    font-weight: 400;
+}
+
+.contact-form form{
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form select{
+    margin-top: 49px;
+    width: 65%;
+    padding: 10px 0px 10px 25px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.name {
+    margin-top: 20px;
+    width: 65%;
+    padding: 10px 0px 10px 25px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.email {
+    margin-top: 20px;
+    width: 32.5%;
+    padding: 10px 0px 10px 25px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.phone {
+    width: 32.5%;
+    padding: 10px 0px 10px 25px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+textarea {
+    margin-top: 20px;
+    width: 65%;
+    height: 150px;
+    padding: 10px 0px 10px 25px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.contact-form button {
+    margin-top: 50px;
+    padding: 10px;
+    width: 25%;
+    border: transparent;
+    background-color: purple;
+    color: white;
+    transition: 0.7s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-20px);
+    background-color: hsl(300, 100%, 34%);
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+footer {
     margin-top: 0px;
     background-color: #f0f0f0;
-    margin-bottom: 0;
 }
 
 .footer-container {
@@ -144,4 +277,3 @@ header{
     background-color: #f0f0f0;
     text-align:center;
 }
-

@@ -13,7 +13,7 @@ header{
     position:absolute;
     z-index: 999;
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
     flex-direction: row;
     height: 9vh;
@@ -24,20 +24,27 @@ header{
     margin-left: 50px;
 }
 
+.navigation {
+    margin-left: 350PX;
+    text-wrap: nowrap;
+}
 .navigation a{
     padding-right: 20px;
     text-decoration: none;
     color: white;
     transition: 0.2s ease;
+    
 
 }
 .navigation a:hover{
     color: #952a80;
 }
 .login{
+    text-wrap: nowrap;
     color: white;
-    margin-right: 150px;
+    MARGIN-LEFT: 400PX;
     border: solid 1px transparent;
+    
 
 }
 
@@ -51,6 +58,7 @@ header{
     margin-left: 0px;
     background-color: transparent;
     color: white;
+    
 }
 
 
@@ -59,19 +67,12 @@ header{
     background-color: purple;
     cursor: pointer;
 }
-
-/* .nowshowing-image{
-    position: relative;
-    width: 100%;
-    min-height: 650px;                     
-    display: flex;   
-    background:url(godzilla.jpg) no-repeat;                     
-    align-items: center;                     
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-} */
-
+#myaccButton{
+    margin-right: 100px;
+}
+#loginnButton{
+    margin-right: 200PX;
+}
 .info{
     display: flex;
     justify-content: space-between;
@@ -92,8 +93,6 @@ margin-top: 20px;
 margin-left: -9px;
 height: 39px;
 width: 200px;
-
-
 border-radius: 5px;
 border: solid transparent;
 background-color: #a82c8c;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">       <!--   i18n -->
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -42,28 +42,45 @@
       <a href="contact.html">Contact</a>
     </nav>
     <div class="login">
-      <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
+      <button id="myaccButton">MY ACCOUNT</button>
       <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
-      <button id="languageButton">
-        <i class="fas fa-globe"></i> Language
       </button>
     </div>
   </header>
 
   <div class="slideshow-container">
-    <div class="mySlides">
-      <img src="godzilla.jpg" style="width:100%">
+    <div class="mySlides" style="background-image: url(godzilla.jpg);">
+      <!-- <img src="godzilla.jpg" style="width:100%"> -->
+      <section class="nowshowing-image" style="margin-top: 0px;">
+        <div class="info" >
+          <div>Now Showing</div>
+          <strong>Godzilla x Kong: The New Empire</strong>
+          <button id="booknow1" class="booknow">Book Now</button>
+        </div>
+      </section>
     </div>
 
-    <div class="mySlides">
-      <img src="fasl.jpg" style="width:100%">
+      <!-- <img src="fasl.jpg" > -->
+      <div class="mySlides" style="background-image: url(fasl.jpg);">
+
+      <section class="nowshowing-image" style="margin-top: 0px;">
+        <div class="info" >
+          <div>Now Showing</div>
+          <strong>fASL</strong>
+          <button id="booknow2" class="booknow">Book Now</button>
+        </div>
+      </section>
     </div>
 
-    <div class="mySlides">
-      <img src="sheko.jpg" style="width:100%">
+    <div class="mySlides" style="background-image: url(sheko.jpg);">
+      <section class="nowshowing-image" style="margin-top: 0px;">
+        <div class="info" >
+          <div>Now Showing</div>
+          <strong>SHEKO</strong>
+          <button id="booknow3" class="booknow">Book Now</button>
+        </div>
+      </section>
     </div>
-  </div>
-
   <script>
     var slideIndex = 0;
     Slideshow();
@@ -105,18 +122,35 @@
     });
   </script>
 
-  <section class="nowshowing-image">
-    <div class="info">
-      <div>Now Showing</div>
-      <strong>Godzilla x Kong: The New Empire</strong>
-      <button id="booknow1" class="booknow">Book Now</button>
-    </div>
-  </section>
-
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("booknow1").addEventListener("click", function () {
         window.location.href = "book.html";
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("booknow2").addEventListener("click", function () {
+        window.location.href = "book.html";
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("booknow3").addEventListener("click", function () {
+        window.location.href = "book.html";
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("CARD1").addEventListener("click", function () {
+        window.location.href = "card1.html";
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("CARD2").addEventListener("click", function () {
+        window.location.href = "card2.html";
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("CARD3").addEventListener("click", function () {
+        window.location.href = "card3.html";
       });
     });
   </script>
@@ -124,8 +158,9 @@
 <section class="first-category">
   <div class="first-logo">Now Showing</div>
   <div class="content">
-    <div class="card">
-      <div class="image-one"><img src="/images/1.jpg" /></div>
+
+    <div class="card" id="CARD1" >
+      <div class="image-one"><img src="/images/TheNun.jpg" /></div>
       <strong class="card-name"> The Nun </strong>
       <div class="more-info">
         Horror
@@ -134,8 +169,8 @@
         </ul>
       </div>
     </div>
-    <div class="card">
-      <div class="image-one"><img src="/images/2.jpg" /></div>
+    <div class="card" id="CARD2">
+      <div class="image-one"><img src="/images/Dune2.jpg" /></div>
       <strong class="card-name"> Dune 2 </strong>
       <div class="more-info">
         Action
@@ -144,8 +179,8 @@
         </ul>
       </div>
     </div>
-    <div class="card">
-      <div class="image-one"><img src="/images/3.jpg" /></div>
+    <div class="card" id="CARD3">
+      <div class="image-one"><img src="/images/Oppenheimer.jpg" /></div>
       <strong class="card-name"> Oppenheimer </strong>
       <div class="more-info">
         Thriller
@@ -174,6 +209,47 @@
         </ul>
       </div>
     </div>
+    <div class="card">
+      <div class="image-one"><img src="a.jpg" /></div>
+      <strong class="card-name"> Barbie And Stacie To The Rescue </strong>
+      <div class="more-info">
+        Action
+        <ul class="card-list">
+          <li>Rated +12</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image-one"><img src="e.jpg" /></div>
+      <strong class="card-name"> SPY X FAMILY </strong>
+      <div class="more-info">
+        Action
+        <ul class="card-list">
+          <li>Rated +12</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image-one"><img src="g.jpg" /></div>
+      <strong class="card-name">عالماشي </strong>
+      <div class="more-info">
+        Action
+        <ul class="card-list">
+          <li>Rated +12</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image-one"><img src="d.jpg" /></div>
+      <strong class="card-name"> اسود ملون </strong>
+      <div class="more-info">
+        Action
+        <ul class="card-list">
+          <li>Rated +12</li>
+        </ul>
+      </div>
+    </div>
+    
     <div class="card">
       <div class="image-one"><img src="/images/8.jpg" /></div>
       <strong class="card-name"> Django Unchained </strong>
