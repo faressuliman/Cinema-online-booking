@@ -95,13 +95,14 @@ body {
 }
 
 .right-section {
-  border: 1px solid hsl(0, 0%, 85%);
+  border: 1px solid #f3f3f3;
   margin-top: 87px;
-  background-color: hsl(0, 0%, 87%);
+  /* background-color: hsl(0, 0%, 87%); */
+  background-color: #f3f3f3;
   width: 45%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
 }
 
 
@@ -185,4 +186,68 @@ footer {
   font-weight: 500;
   text-align: center;
 }
+#imgsz{
+  width: 75%;
+  margin-left: 12.5%;}
+ /* Your existing styles */
 
+    /* Movie seat booking styles */
+    .booking-section {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .booking-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .seats-container {
+      display: inline-block;
+      text-align: left;
+    }
+
+    .regular-seats, {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 20px;
+    }
+    .vip-seats, {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 20px;
+    }
+
+    .seat {
+      width: 30px;
+      height: 30px;
+      background-color: #ccc;
+      margin: 5px;
+      display: inline-block;
+    }
+    .seats-container {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .row {
+      display: flex;
+      margin-bottom: 2.5px; /* Adjust the space between rows */
+    }
+    
+    .seat {
+      width: 27px; /* Decrease the width of each seat */
+      height: 27px; /* Decrease the height of each seat */
+      background-color: #ccc;
+      border-radius: 2px;
+      margin-right: 2.5px; /* Adjust the space between seats */
+      cursor: pointer;
+    }
+    
+
+#toppp{
+  margin-top: 5px;
+}
+#vipseatsspace{
+  margin-top: 40px;
+  margin-left: 117px;
+}
