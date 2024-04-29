@@ -17,6 +17,7 @@ header{
     align-items: center;
     flex-direction: row;
     height: 9vh;
+    border-bottom: 3px solid #f0f0f0;
     
 }
 .logo{
@@ -69,198 +70,115 @@ body {
 
   .container {
     display: flex;
-    height: 100vh;
-  }
+    flex-direction: row;
+    align-content: center;
+    height: 800px;
+}
 
-  .left-section,
-  .right-section {
-    flex: 1;
-    padding: 20px;
-  }
-
-  .left-section {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-right: 5px grey; 
-    border-top: 3px solid #f0f0f0;
-    border-right: 3px solid #f0f0f0;
-    margin-top: 87px;
-  }
-
-  .maintagcontact {
-    margin-left: 150px;
-    margin-top: 50px;
-    margin-bottom: 250px;
-  }
-
-  .right-section {
-    background-color: white;
+.left-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-top: 87px;
-    border-top: 3px solid #f0f0f0;
-  }
+    flex-wrap: wrap;
+    background-color: hsl(0, 0%, 99%);
+    width: 450px;
+    margin-top: 5%;
+    margin-left: 15%;
+}
 
-  .signin-form {
-    margin-bottom: 120px;
-    margin-right: 400px;
-    margin-bottom: 280px;
-  }
+.left-section .image-container {
+    margin-left: 28%;
+}
 
+.left-section .first-line {
+  display: flex;
+  justify-content: center;
+}
 
-  #email,
-  #password {
-    background: #f3f3f3;
-    border-radius: 5px;
-    padding: 0px 20px;
-    border: 0px;
-    width: 100%;
-    margin-bottom: 10px;
-    color: #171717;
-    font-size: 14px;
-    margin-top: 10px;
-    height: 46px;
-  }
+.right-section {
+  border: 1px solid hsl(0, 0%, 85%);
+  margin-top: 87px;
+  background-color: hsl(0, 0%, 87%);
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 
-  #signin {
-    border-radius: 5px;
-    align-items: flex-start;
-    font-family: "Co Headline";
-    box-sizing: border-box;
-    width: 250px;
-    height: 42px;
-    font-weight: 400;
-    font-size: 16px;
-    cursor: pointer;
-    display: block;
-    background: #a02d8a;
-    margin: 0 auto;
-    padding: 9px 20px;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    border: 0px;
-  }
-
-  .social-login {
-    text-align: center;
-  }
-
-  .social_login {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .social_login li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-
-  .social-icon {
-    width: 25px;
-    height: auto;
-    margin: 5px;
-    display: block;
-  }
-
-  .dont-have-account {
-    color: black;
-    text-decoration: none;
-    font-size: 14px;
-  }
-
-  .create-account,
-  .forgot-password {
-    color: purple;
-    text-decoration: none;
-    font-size: 14px;
-  }
-
-  .create-account:hover,
-  .forgot-password:hover {
-    text-decoration: none;
-  }
-
-  .no-bullet {
-    list-style-type: none;
-  }
 
 footer {
-    margin-top: 0px;
-    background-color: #f0f0f0;
+  margin-top: 4%;
+  background-color: #f0f0f0;
 }
 
 .footer-container {
-    width: 100%;
-    padding: 15px;
+  width: 100%;
+  padding: 15px;
+
 }
 
 .footer-icons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: -10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -10px;
 }
 
 .footer-icons a{
-    text-decoration: none;
-    padding: 15px;
-    background-color: #f0f0f0;
-    margin: 10px;
-    border-radius: 10px;
-    transition: 0.5s;
+  text-decoration: none;
+  padding: 15px;
+  background-color: #f0f0f0;
+  margin: 10px;
+  border-radius: 10px;
+  transition: 0.5s;
 }
 
 .footer-icons i{
-    font-size: 1.8em;
-    color: purple;
-    opacity: 0.9;
-    
+  font-size: 1.8em;
+  color:#ce2eae;
+  opacity: 0.9;
+  
 }
 
 .footer-icons a:hover {
-    background-color: purple;
-    transform: scale(1.05);
+  background-color:#ce2eae;
+  transform: scale(1.05);
 }
 
 .footer-icons a:hover i{
-    color: white;
-    transition: 0.5s;
+  color: white;
+  transition: 0.5s;
 }
 
 .footer-nav {
-    margin: 30px;
-    margin-bottom: -1px;
-    margin-top: 5px;
+  margin: 30px;
+  margin-bottom: -1px;
+  margin-top: 5px;
 }
 
 .footer-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+  display: flex;
+  justify-content: center;
+  list-style: none;
 }
 
 .footer-nav ul li a{
-    color: purple;
-    margin: 20px;
-    text-decoration: none;
-    font-size: 1em;
-    opacity: 0.9;
-    transition: 0.5s;
+  color:#ce2eae;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1em;
+  opacity: 0.9;
+  transition: 0.5s;
 }
 
 .footer-nav ul li a:hover {
-    color: black;
-    opacity: 1;
+  color: black;
+  opacity: 1;
 }
 
 .footer-bottom {
-    color: purple;
-    background-color: #f0f0f0;
-    text-align:center;
+  color:#ce2eae;
+  background-color: #f0f0f0;
+  text-align:center;
 }
+
+
+
