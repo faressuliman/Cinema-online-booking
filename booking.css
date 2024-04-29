@@ -92,8 +92,22 @@ body {
 .left-section .first-line {
   display: flex;
   justify-content: center;
+
+
 }
 
+.sy{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin-top:10px;
+}
+hr{
+  width: 90%;
+  height:1px;
+  margin: 10px auto;
+}
 .right-section {
   border: 1px solid #f3f3f3;
   margin-top: 87px;
@@ -104,7 +118,22 @@ body {
   flex-wrap: wrap; 
 }
 
-
+.watch-butt{
+    border-radius: 5px;
+    padding: 10px 40px 10px 40px;
+    margin-top: 1px;
+    border: 1px solid;
+    background-color: white;
+    transition: .7s ease;
+    margin-left: 27%;
+    
+}
+.watch-butt:hover{
+    cursor: pointer;
+    background-color:#ce2eae;
+    color: white;
+    transform: scale(1.1);
+}
 footer {
   margin-top: 4%;
   background-color: #f0f0f0;
