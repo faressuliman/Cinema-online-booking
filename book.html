@@ -1,220 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link rel="stylesheet" href="book.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="book.css">
     <title>Cinema</title>
-  </head>
-
-  <body>
+</head>
+<body>
     <header>
-      <div class="logo">
-        <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
-      </div>
+        <div class="logo">
+            <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
+        </div>
 
-      <nav class="navigation">
-        <a href="home.html">Now Showing</a>
-        <a href="comingsoon.html">Coming Soon</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="login">
-        <button id="myaccButton">MY ACCOUNT</button>
-        <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
-      </div>
+        <nav class="navigation">
+            <a href="home.html">Now Showing</a>
+            <a href="comingsoon.html">Coming Soon</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="login">
+            <button id="myaccButton"><i class="fas fa-user"></i> MY ACCOUNT</button>
+            <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
+        </div>
     </header>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("loginnButton")
-          .addEventListener("click", function () {
-            window.location.href = "loginPage.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("myaccButton")
-          .addEventListener("click", function () {
-            window.location.href = "myAcc.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("Gladiator")
-          .addEventListener("click", function () {
-            window.location.href = "gladiator.html";
-          });
-      });
-    </script>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/qqrpMRDuPfc?si=N1eRBbXOhZXlh8vi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
 
     <section>
-      <div class="book-content">
-        <div class="card">
-          <div class="book-image"><img src="/images/200.webp" alt="" /></div>
-        </div>
-        <div class="right-side">
-          <h2 style="color: #ce2eae; font-size: 40px; font-weight: 550">
-            Godzilla x Kong
-          </h2>
-          <div class="second-line">
-            <div>Action</div>
-            <ul class="list-one">
-              <li>Rated +18</li>
-            </ul>
-            <ul class="list-two">
-              <li>155 Mins</li>
-            </ul>
-          </div>
-          <div class="third-line">
-            <button id="watch-butt" class="watch-butt">Watch Trailer</button>
-            <script>
-              document.addEventListener("DOMContentLoaded", function () {
-                document
-                  .getElementById("watch-butt")
-                  .addEventListener("click", function () {
-                    window.location.href =
-                      "https://www.youtube.com/watch?v=qqrpMRDuPfc&pp=ygUmZ29kemlsbGEgeCBrb25nIHRoZSBuZXcgZW1waXJlIHRyYWlsZXI%3D";
-                  });
-              });
-              document.addEventListener("DOMContentLoaded", function () {
-                document
-                  .getElementById("booking")
-                  .addEventListener("click", function () {
-                    window.location.href ="booking.html"                  });
-              });
-            </script>
-          </div>
-          <div class="fourth-line">
-            <div>Showtimes</div>
-            <hr />
-          </div>
+        <div class="book-content">
+            <div class="card">
+                <div class="book-image"><img src="/images/200.webp" alt="" /></div>
+            </div>
+            <div class="right-side">
+                <h2 style="color: #ce2eae; font-size: 40px; font-weight: 550">Godzilla x Kong</h2>
+                <div class="second-line">
+                    <div>Action</div>
+                    <ul class="list-one">
+                        <li>Rated +18</li>
+                    </ul>
+                    <ul class="list-two">
+                        <li>155 Mins</li>
+                    </ul>
+                </div>
+                <div class="third-line">
+                    <button id="watch-butt" class="watch-butt">Watch Trailer</button>
+                </div>
+                <div class="fourth-line">
+                    <div>Showtimes</div>
+                    <hr />
+                </div>
 
-          <div class="fifth-line">
-            <div class="line-content" id="booking">
-              <div class="line-card">
-                <button class="line-butt">
-                  <div>
-                    <div class="thu">Thu</div>
-                    <div class="day">25</div>
-                    <div class="apr">Apr</div>
+                <div class="fifth-line">
+                  <div class="line-content" id="booking">
+                    <div class="line-card">
+                      <button class="line-butt">
+                        <div>
+                          <div class="thu">Thu</div>
+                          <div class="day">25</div>
+                          <div class="apr">Apr</div>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="line-card">
+                      <button class="line-butt">
+                        <div>
+                          <div class="thu">Fri</div>
+                          <div class="day">26</div>
+                          <div class="apr">Tue</div>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="line-card">
+                      <button class="line-butt">
+                        <div>
+                          <div class="thu">Sat</div>
+                          <div class="day">27</div>
+                          <div class="apr">Apr</div>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="line-card">
+                      <button class="line-butt">
+                        <div>
+                          <div class="thu">Sun</div>
+                          <div class="day">28</div>
+                          <div class="apr">Apr</div>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="line-card">
+                      <button class="line-butt">
+                        <div>
+                          <div class="thu">Mon</div>
+                          <div class="day">29</div>
+                          <div class="apr">Apr</div>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="line-card">
+                      <button class="line-butt">
+                        <div>
+                          <div class="thu">Tue</div>
+                          <div class="day">30</div>
+                          <div class="apr">Apr</div>
+                        </div>
+                      </button>
+                    </div>
                   </div>
-                </button>
-              </div>
-              <div class="line-card">
-                <button class="line-butt">
-                  <div>
-                    <div class="thu">Fri</div>
-                    <div class="day">26</div>
-                    <div class="apr">Tue</div>
-                  </div>
-                </button>
-              </div>
-              <div class="line-card">
-                <button class="line-butt">
-                  <div>
-                    <div class="thu">Sat</div>
-                    <div class="day">27</div>
-                    <div class="apr">Apr</div>
-                  </div>
-                </button>
-              </div>
-              <div class="line-card">
-                <button class="line-butt">
-                  <div>
-                    <div class="thu">Sun</div>
-                    <div class="day">28</div>
-                    <div class="apr">Apr</div>
-                  </div>
-                </button>
-              </div>
-              <div class="line-card">
-                <button class="line-butt">
-                  <div>
-                    <div class="thu">Mon</div>
-                    <div class="day">29</div>
-                    <div class="apr">Apr</div>
-                  </div>
-                </button>
-              </div>
-              <div class="line-card">
-                <button class="line-butt">
-                  <div>
-                    <div class="thu">Tue</div>
-                    <div class="day">30</div>
-                    <div class="apr">Apr</div>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="sixth-line">
-            <div class="sixth-content">
-              <strong>SanStephano</strong>
-              <div class="regular">
-                <div>Regular</div>
-                <ul class="sixth-list">
-                  <li>Premium</li>
-                </ul>
-              </div>
-              <div class="sixth-button">
-                <button>9.30 PM (2D)</button>
-                <button class="butt-two">12 AM (2D)</button>
-              </div>
-            </div>
-            <br />
-            <hr />
-            <div class="sixth-content">
-              <strong>Madinty</strong>
-              <div class="regular">
-                <div>Regular</div>
-                <ul class="sixth-list">
-                  <li>Premium</li>
-                </ul>
-              </div>
-              <div>
-                <div class="sixth-button">
-                  <button>8.30 PM (2D)</button>
-                  <button class="butt-two">11 AM (2D)</button>
                 </div>
-                <div>
+                <div class="sixth-line">
+                  <div class="sixth-content">
+                    <strong>SanStephano</strong>
+                    <div class="regular">
+                      <div>Regular</div>
+                      <ul class="sixth-list">
+                        <li>Premium</li>
+                      </ul>
+                    </div>
+                    <div class="sixth-button">
+                      <button>9.30 PM (2D)</button>
+                      <button class="butt-two">12 AM (2D)</button>
+                    </div>
+                  </div>
                   <br />
-                  <div>VIP</div>
-                  <div class="sixth-button">
-                    <button>10.30 PM (2D)</button>
-                    <button class="butt-two">1 AM (2D)</button>
+                  <hr />
+                  <div class="sixth-content">
+                    <strong>Madinty</strong>
+                    <div class="regular">
+                      <div>Regular</div>
+                      <ul class="sixth-list">
+                        <li>Premium</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div class="sixth-button">
+                        <button>8.30 PM (2D)</button>
+                        <button class="butt-two">11 AM (2D)</button>
+                      </div>
+                      <div>
+                        <br />
+                        <div>VIP</div>
+                        <div class="sixth-button">
+                          <button>10.30 PM (2D)</button>
+                          <button class="butt-two">1 AM (2D)</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
     <footer>
-      <hr style="opacity: 0.5" />
-      <div class="footer-container">
-        <div class="footer-icons">
-          <a href=""><i class="fab fa-facebook-f"></i></a>
-          <a href=""><i class="fab fa-instagram"></i></a>
-          <a href=""><i class="fab fa-tiktok"></i></a>
+        <hr style="opacity: 0.5" />
+        <div class="footer-container">
+            <div class="footer-icons">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Refunds & Exchanges</a></li>
+                    <li><a href="">Terms of Service</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-nav">
-          <ul>
-            <li><a href="">About us</a></li>
-            <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Refunds & Exchanges</a></li>
-            <li><a href="">Terms of Service</a></li>
-          </ul>
+        <div class="footer-bottom">
+            <p>&copy; 2024 All right reserved by CinemaName</p>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 All right reserved by CinemaName</p>
-      </div>
     </footer>
-  </body>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          // Get the modal
+          var modal = document.getElementById("myModal");
+  
+          // Get the button that opens the modal
+          var btn = document.getElementById("watch-butt");
+  
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+  
+          // Get the video iframe
+          var videoFrame = document.getElementById("videoPlayer");
+  
+          // Original video source URL
+          var originalSrc = videoFrame.src;
+  
+          // When the user clicks the button, open the modal 
+          btn.onclick = function() {
+              modal.style.display = "block";
+              // Set the video source back to the original URL
+              videoFrame.src = originalSrc;
+          }
+  
+          // When the user clicks on <span> (x) or outside of the modal, close the modal and stop the video
+          span.onclick = function() {
+              modal.style.display = "none";
+              stopVideo();
+          }
+  
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+                  stopVideo();
+              }
+          }
+  
+          // Function to stop the video
+          function stopVideo() {
+              // Set the video source to an empty string
+              videoFrame.src = "";
+          }
+      });
+  </script>
+  
+</body>
 </html>
