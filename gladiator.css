@@ -79,6 +79,7 @@ main {
     transition: .7s ease;
     
 }
+
 .watch-butt:hover{
     cursor: pointer;
     background-color:#ce2eae;
