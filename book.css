@@ -21,6 +21,7 @@ header{
     border-bottom:3px #f0f0f0 solid;
     
   }
+ 
   
   .logo{
     color:#f0f0f0;
@@ -224,6 +225,9 @@ transition: 0.7s ease;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
+    cursor: pointer;
+    
 }
 .sixth-content strong {
     font-size: 30px;
@@ -258,6 +262,34 @@ padding-right: 340px;
 .sixth-button button:hover{
     cursor: pointer;
     background-color: #ce2eae;
+
+}
+#BookNow{
+    position: absolute;
+    left: 50% ;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    white-space: nowrap;
+    padding: 10px 15px;
+    border-radius: 7px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+#BookNow::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%
+    transform: translateX(-50%);
+    border: 15px solid;
+    border-color:#000 #0000 #0000 #0000;
+}
+.sixth-line:hover #BookNow{
+    top: -130%;
+    visibility: visible;
+    opacity: 1;
 
 }
 

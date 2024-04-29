@@ -85,7 +85,8 @@
                 document
                   .getElementById("booking")
                   .addEventListener("click", function () {
-                    window.location.href ="booking.html"                  });
+                    window.location.href = "booking.html";
+                  });
               });
             </script>
           </div>
@@ -95,7 +96,7 @@
           </div>
 
           <div class="fifth-line">
-            <div class="line-content" id="booking">
+            <div class="line-content">
               <div class="line-card">
                 <button class="line-butt">
                   <div>
@@ -152,7 +153,8 @@
               </div>
             </div>
           </div>
-          <div class="sixth-line">
+          <div class="sixth-line" id="booking">
+            <span id="BookNow"> BookNow</span>
             <div class="sixth-content">
               <strong>SanStephano</strong>
               <div class="regular">
@@ -192,8 +194,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </section>
     <footer>
       <hr style="opacity: 0.5" />
