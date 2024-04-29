@@ -18,7 +18,7 @@ header{
     align-items: center;
     flex-direction: row;
     height: 9vh;
-    border-bottom:3px #f0f0f0 solid;
+    border-bottom:1px #f0f0f0 solid;
     
   }
   
@@ -204,6 +204,7 @@ textarea {
     background-color: purple;
     color: white;
     transition: 0.7s ease;
+    border-radius: 5px;
 }
 
 .contact-form button:hover {
