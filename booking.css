@@ -118,7 +118,7 @@ hr{
   flex-wrap: wrap; 
 }
 
-.watch-butt{
+.butt{
     border-radius: 5px;
     padding: 10px 40px 10px 40px;
     margin-top: 1px;
@@ -128,7 +128,7 @@ hr{
     margin-left: 27%;
     
 }
-.watch-butt:hover{
+.butt:hover{
     cursor: pointer;
     background-color:#ce2eae;
     color: white;
