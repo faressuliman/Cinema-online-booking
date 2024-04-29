@@ -131,6 +131,13 @@ main {
     transition: .7s ease;
 }
 
+.watch-butt:hover{
+    cursor: pointer;
+    background-color:#ce2eae;
+    color: white;
+    transform: scale(1.1);
+}
+
 .fourth-line {
     width: 60%;
     margin-top: 40px;
