@@ -8,57 +8,75 @@
     scroll-behavior: smooth; 
 }
 header{
-    background-color: white;
-    width: 100%;
-    position:absolute;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    height: 9vh;
-    
-}
-.logo{
-    color:black;
-    margin-left: 50px;
+  background-color: white;
+  width: 100%;
+  position: static;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 9vh;
+  border-bottom:3px #f0f0f0 solid;
+  
 }
 
+.logo{
+  color:#f0f0f0;
+  margin-left: 50px;
+}
+
+.navigation {
+  margin-left: 50px;
+}
 .navigation a{
-    padding-right: 20px;
-    text-decoration: none;
-    color: black;
-    transition: 0.2s ease;
+  padding-left: 50px;
+  text-decoration: none;
+  color: white;
+  transition: 0.6s ease;
 
 }
 .navigation a:hover{
-    color: #952a80;
+  color: #a82c8c;
 }
 .login{
-    margin-right: 150px;
-    border: solid 1px transparent;
+  margin-right: 10px;
+  border: solid 1px transparent;
 
-}
-.login button{
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 13px;
-    width: 140px;
-    text-align: center;
-    margin-left: 0px;
-    background-color: transparent;
 }
 .navigation a,
 .logo h2,
 .footer-bottom p {
-        color: black;
+      color: black;
 }
 
+.login button{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 13px;
+  width: 140px;
+  text-align: center;
+  margin-left: -90px;
+  background-color:#f0f0f0;
+  color: black;
+  transition: 0.6s ease;
+  
+  
+  
+}
+
+
 .login button:hover{
-    color: #f0f0f0;
-    background-color: purple;
-    cursor: pointer;
+  color: #f0f0f0;
+  background-color: purple;
+  cursor: pointer;
+}
+#myaccButton{
+  margin-right: 100px;
+}
+#loginnButton{
+  margin-right: 200PX;
 }
 
 body {
@@ -70,6 +88,7 @@ body {
   .container {
     display: flex;
     height: 100vh;
+    margin-top: -90px;
   }
 
   .left-section,

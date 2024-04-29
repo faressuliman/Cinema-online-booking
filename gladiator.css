@@ -8,59 +8,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth; 
 }
-header{
-    background-color: black;
-    width: 100%;
-    position: static;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    height: 9vh;
-    border-bottom: 3px solid #f0f0f0;
-    
-}
-.logo{
-    color:#f0f0f0;
-    margin-left: 50px;
-}
 
-.navigation a{
-    padding-right: 20px;
-    text-decoration: none;
-    color: #f0f0f0;
-    transition: 0.2s ease;
-
-}
-.navigation a:hover{
-    color: #952a80;
-}
-.login{
-    margin-right: 150px;
-    border: solid 1px transparent;
-
-}
-
-.login button{
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 13px;
-    width: 140px;
-    text-align: center;
-    margin-left: 0px;
-    background-color: transparent;
-}
-.navigation a,
-.logo h2,
-.footer-bottom p {
-        color: black;
-} button:hover{
-    color: #f0f0f0;
-    background-color: purple;
-    cursor: pointer;
-}
 
 .container {
     display: flex;
