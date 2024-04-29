@@ -97,7 +97,6 @@ body {
 .right-section {
   border: 1px solid #f3f3f3;
   margin-top: 87px;
-  /* background-color: hsl(0, 0%, 87%); */
   background-color: #f3f3f3;
   width: 45%;
   display: flex;
@@ -189,9 +188,7 @@ footer {
 #imgsz{
   width: 75%;
   margin-left: 12.5%;}
- /* Your existing styles */
 
-    /* Movie seat booking styles */
     .booking-section {
       text-align: center;
       margin-top: 50px;
@@ -231,15 +228,15 @@ footer {
     
     .row {
       display: flex;
-      margin-bottom: 2.5px; /* Adjust the space between rows */
+      margin-bottom: 2.5px; 
     }
     
     .seat {
-      width: 27px; /* Decrease the width of each seat */
-      height: 27px; /* Decrease the height of each seat */
+      width: 27px; 
+      height: 27px; 
       background-color: #ccc;
       border-radius: 2px;
-      margin-right: 2.5px; /* Adjust the space between seats */
+      margin-right: 2.5px; 
       cursor: pointer;
     }
     
