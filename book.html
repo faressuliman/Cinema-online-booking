@@ -81,14 +81,21 @@
                       "https://www.youtube.com/watch?v=qqrpMRDuPfc&pp=ygUmZ29kemlsbGEgeCBrb25nIHRoZSBuZXcgZW1waXJlIHRyYWlsZXI%3D";
                   });
               });
+              document.addEventListener("DOMContentLoaded", function () {
+                document
+                  .getElementById("booking")
+                  .addEventListener("click", function () {
+                    window.location.href ="booking.html"                  });
+              });
             </script>
           </div>
           <div class="fourth-line">
             <div>Showtimes</div>
             <hr />
           </div>
+
           <div class="fifth-line">
-            <div class="line-content">
+            <div class="line-content" id="booking">
               <div class="line-card">
                 <button class="line-butt">
                   <div>
