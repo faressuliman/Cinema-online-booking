@@ -133,6 +133,25 @@ header{
     margin-top: 15px;
     font-weight: 500;
 }
+#james img{
+    height: 477px;
+}
+#Garfield img{
+height: 470px;
+}
+#Kingdom img{
+    height: 470px;
+}
+#srb ul{
+display: inline-block;
+text-wrap: nowrap;
+margin-left: 30px;
+}
+#winnie ul{
+    display: inline-block;
+text-wrap: nowrap;
+margin-left: 30px;
+}
 
 footer {
     margin-top: 0px;
