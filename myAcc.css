@@ -27,18 +27,21 @@ header{
     margin-left: 50px;
 }
 
+.navigation {
+    margin-left: 50px;
+}
 .navigation a{
-    padding-right: 20px;
+    padding-left: 50px;
     text-decoration: none;
-    color: #f0f0f0;
-    transition: 0.2s ease;
+    color: white;
+    transition: 0.6s ease;
 
 }
 .navigation a:hover{
-    color: #952a80;
+    color: #a82c8c;
 }
 .login{
-    margin-right: 150px;
+    margin-right: 10px;
     border: solid 1px transparent;
 
 }
@@ -55,15 +58,27 @@ header{
     font-size: 13px;
     width: 140px;
     text-align: center;
-    margin-left: 0px;
-    background-color: transparent;
+    margin-left: -90px;
+    background-color:#f0f0f0;
+    color: black;
+    transition: 0.6s ease;
+    
+    
+    
 }
+
+
 .login button:hover{
     color: #f0f0f0;
     background-color: purple;
     cursor: pointer;
 }
-
+#myaccButton{
+    margin-right: 100px;
+}
+#loginnButton{
+    margin-right: 200PX;
+}
 body{
     margin-bottom: -1000px;
 }
@@ -276,4 +291,28 @@ footer {
     color: purple;
     background-color: #f0f0f0;
     text-align:center;
+}
+section{
+display: flex;
+flex-direction: column;
+
+
+align-items: center;
+margin-left: -85%;
+min-height: calc(100vh - 200px);
+}
+section strong{
+    margin-top: 1%;
+    font-size: 1.25rem;
+    color: #d70486;
+    font-weight: 600;
+    font-style: italic;
+    
+}
+section div{
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 590;
+    margin-left: -0.8%;
 }
