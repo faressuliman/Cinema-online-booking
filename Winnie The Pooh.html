@@ -29,6 +29,23 @@
         <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
       </div>
     </header>
+    
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe
+          id="videoPlayer"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/PRlBKYQsjXo?si=Z0KB3hNgMI8pnCVP"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         document
@@ -39,17 +56,60 @@
       });
       document.addEventListener("DOMContentLoaded", function () {
         document
+          .getElementById("myaccButton")
+          .addEventListener("click", function () {
+            window.location.href = "myAcc.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
           .getElementById("CinemaName")
           .addEventListener("click", function () {
             window.location.href = "home.html";
           });
       });
+      
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("myaccButton")
-          .addEventListener("click", function () {
-            window.location.href = "myAcc.html";
-          });
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("watch-butt");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Get the video iframe
+        var videoFrame = document.getElementById("videoPlayer");
+
+        // Original video source URL
+        var originalSrc = videoFrame.src;
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+          modal.style.display = "block";
+          // Set the video source back to the original URL
+          videoFrame.src = originalSrc;
+        };
+
+        // When the user clicks on <span> (x) or outside of the modal, close the modal and stop the video
+        span.onclick = function () {
+          modal.style.display = "none";
+          stopVideo();
+        };
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+            stopVideo();
+          }
+        };
+
+        // Function to stop the video
+        function stopVideo() {
+          // Set the video source to an empty string
+          videoFrame.src = "";
+        }
       });
     </script>
 
@@ -70,15 +130,6 @@
             </div>
             <div class="third-line">
               <button id="watch-butt" class="watch-butt">Watch Trailer</button>
-              <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  document
-                    .getElementById("watch-butt")
-                    .addEventListener("click", function () {
-                      window.location.href = "https://youtu.be/PRlBKYQsjXo";
-                    });
-                });
-              </script>
             </div>
             <div class="fourth-line">
               <h3>Details</h3>
@@ -87,19 +138,15 @@
               <h4 style="color: hsla(300, 100%, 25%, 0.678)">Synopsis</h4>
               <p>
                 <b
-                  >2024 British independent film directed by Rhys
-                  Frick-Waterfield and written by Matt Leslie. It is the second
-                  installment of the world of Twisted Childhood and the sequel
-                  to Winnie the Pooh: Blood and Honey, which is a horror
-                  reimagining of the books by A. A. Milne and E. H
+                  >In the Hundred Acre Wood, the once peaceful domain of Winnie the Pooh and his friends, a mysterious force threatens to consume everything in darkness. As Pooh and his companions grapple with this new threat, they uncover dark secrets buried within the forest's depths. To save their home, they must embark on a perilous journey through treacherous terrain, encountering strange creatures and facing their deepest fears. But as they delve deeper, they realize that the true source of the darkness lies within themselves.
                 </b>
               </p>
               <br />
               <h4 style="color: hsla(300, 100%, 25%, 0.678)">Starring</h4>
-              <p><b>Eddy MacKenzie - Lewis Santer </b></p>
+              <p><b>Scott Chambers - Ryan Oliva </b></p>
               <br />
               <h4 style="color: hsla(300, 100%, 25%, 0.678)">Directed by</h4>
-              <p><b>res frek woterfild</b></p>
+              <p><b>Rhys Frake-Waterfield</b></p>
             </div>
           </div>
         </div>

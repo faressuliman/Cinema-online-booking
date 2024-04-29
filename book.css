@@ -390,3 +390,7 @@ footer {
     background-color: #f0f0f0;
     text-align:center;
 }
+
+.footer-bottom p {
+    color: purple;
+}
