@@ -129,7 +129,7 @@ iframe {
 
 .watch-butt:hover{
     cursor: pointer;
-    background-color:#ce2eae;
+    background-color:#A02D8A;
     color: white;
     transform: scale(1.1);
 }
@@ -167,13 +167,13 @@ footer {
 
 .footer-icons i{
     font-size: 1.8em;
-    color:#ce2eae;
+    color:#A02D8A;
     opacity: 0.9;
     
 }
 
 .footer-icons a:hover {
-    background-color:#ce2eae;
+    background-color:#A02D8A;
     transform: scale(1.05);
 }
 
@@ -195,7 +195,7 @@ footer {
 }
 
 .footer-nav ul li a{
-    color:#ce2eae;
+    color:#A02D8A;
     margin: 20px;
     text-decoration: none;
     font-size: 1em;
@@ -209,7 +209,7 @@ footer {
 }
 
 .footer-bottom {
-    color:#ce2eae;
+    color#A02D8A;
     background-color: #f0f0f0;
     text-align:center;
 }

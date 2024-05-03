@@ -26,13 +26,13 @@ footer {
 
 .footer-icons i{
     font-size: 1.8em;
-    color: purple;
+    color: #A02D8A;
     opacity: 0.9;
     
 }
 
 .footer-icons a:hover {
-    background-color: purple;
+    background-color: #A02D8A;
     transform: scale(1.05);
 }
 
@@ -54,7 +54,7 @@ footer {
 }
 
 .footer-nav ul li a{
-    color: purple;
+    color: #A02D8A;
     margin: 20px;
     text-decoration: none;
     font-size: 1em;
@@ -68,11 +68,11 @@ footer {
 }
 
 .footer-bottom {
-    color: purple;
+    color: #A02D8A;
     background-color: #f0f0f0;
     text-align:center;
 }
 
 .footer-bottom p {
-    color:purple;
+    color:#A02D8A;
 }

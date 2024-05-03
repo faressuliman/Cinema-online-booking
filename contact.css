@@ -38,7 +38,7 @@ header{
   
   }
   .navigation a:hover{
-    color: #a82c8c;
+    color: #A02D8A;
   }
   .login{
     margin-right: 10px;
@@ -70,7 +70,7 @@ header{
   
   .login button:hover{
     color: #f0f0f0;
-    background-color: purple;
+    background-color: #A02D8A;
     cursor: pointer;
   }
   #myaccButton{
@@ -123,7 +123,7 @@ body{
 
 .contact-information i {
     text-align: center;
-    color: purple;
+    color: #A02D8A;
     font-size: 1.4em;
 }
 
@@ -201,7 +201,7 @@ textarea {
     padding: 10px;
     width: 25%;
     border: transparent;
-    background-color: purple;
+    background-color: #A02D8A;
     color: white;
     transition: 0.7s ease;
     border-radius: 5px;

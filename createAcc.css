@@ -37,7 +37,7 @@ header{
   
   }
   .navigation a:hover{
-    color: #a82c8c;
+    color: #A02D8A;
   }
   .login{
     margin-right: 10px;
@@ -61,15 +61,12 @@ header{
     background-color:white;
     color: black;
     transition: 0.6s ease;
-    
-    
-    
   }
   
   
   .login button:hover{
     color: #f0f0f0;
-    background-color: purple;
+    background-color: #A02D8A;
     cursor: pointer;
   }
   #myaccButton{
@@ -149,7 +146,7 @@ body {
     font-size: 16px;
     cursor: pointer;
     display: block;
-    background: #a02d8a;
+    background: #A02D8A;
     margin: 0 auto;
     padding: 9px 20px;
     text-align: center;
@@ -202,7 +199,7 @@ body {
 }
 
 .purple-link {
-    color: purple;
+    color: #A02D8A;
     text-decoration: none;
 }
 
