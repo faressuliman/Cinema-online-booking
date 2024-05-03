@@ -77,14 +77,14 @@ body {
     margin-top: 20px;
     color: #7f98c5;
     display: flex;
-    flex-direction: column; /* Added */
-    align-items: center; /* Added */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   #paymobimg {
-    width: 150px; /* Increased size */
+    width: 150px; 
     height: auto;
-    margin-top: 10px; /* Added */
+    margin-top: 10px; 
   }
 
   .checkbox-container {
