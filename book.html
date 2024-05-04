@@ -109,6 +109,15 @@
           videoFrame.src = "";
         }
       });
+
+
+
+
+      document.querySelectorAll(".sixth-button button").forEach(function(button) {
+        button.addEventListener("click", function() {
+          window.location.href = "booking.html";
+        });
+      });
     </script>
 
     <section>
@@ -146,15 +155,7 @@
                     <div class="day">25</div>
                     <div class="apr">Apr</div>
                   </div>
-                </button>
-                <script>
-                  document.getElementById("booking1").addEventListener("click", function() {
-                    
-                    window.location.href = "book.html";
-                  });
-                </script>
-                
-                
+                </button>              
               </div>
               <div class="line-card">
                 <button class="line-butt" id="fri">
@@ -164,14 +165,7 @@
                     <div class="apr">Tue</div>
                   </div>
                 </button>
-              </div>
-              <script>
-                document.getElementById("booking1").addEventListener("click", function() {
-                  
-                  window.location.href = "26.html";
-                });
-              </script>
-              
+              </div>           
               <div class="line-card">
                 <button class="line-butt">
                   <div>
@@ -181,14 +175,6 @@
                   </div>
                 </button>
               </div>
-              <script>
-                document.getElementById("booking1").addEventListener("click", function() {
-                 
-                  window.location.href = "27.html";
-                });
-              </script>
-             
-             
             </div>
           </div>
           <div class="sixth-line">
@@ -198,11 +184,11 @@
                 <div>Regular</div>
                 <ul class="sixth-list">
                   <li>Premium</li>
-                </ul>
+               </ul>
               </div>
               <div class="sixth-button">
-                <button>9.30 PM (2D)</button>
-                <button class="butt-two">12 AM (2D)</button>
+                <button class="abcd">9.30 PM (2D)</button>
+                <button  class="abcd">12 AM (2D)</button>
               </div>
             </div>
             <br />
@@ -217,8 +203,8 @@
               </div>
               <div>
                 <div class="sixth-button">
-                  <button>8.30 PM (2D)</button>
-                  <button class="butt-two">11 AM (2D)</button>
+                  <button class="abcd" >8.30 PM (2D)</button>
+                  <button class="abcd" >11 AM (2D)</button>
                 </div>
                 
               </div>
@@ -248,7 +234,13 @@
         <p>&copy; 2024 All right reserved by CinemaName</p>
       </div>
     </footer>
-    
+    <script>
+      document.querySelectorAll(".abcd").forEach(function(button) {
+        button.addEventListener("click", function() {
+          window.location.href = "booking.html";
+        });
+      });
+    </script>
     
   </body>
 </html>

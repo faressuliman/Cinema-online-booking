@@ -208,8 +208,8 @@
                 </ul>
               </div>
               <div class="sixth-button">
-                <button>9.30 PM (2D)</button>
-                <button class="butt-two">12 AM (2D)</button>
+                <button class="abcd">9.30 PM (2D)</button>
+                <button class="abcd">12 AM (2D)</button>
               </div>
             </div>
             <br />
@@ -224,8 +224,8 @@
               </div>
               <div>
                 <div class="sixth-button">
-                  <button>8.30 PM (2D)</button>
-                  <button class="butt-two">11 AM (2D)</button>
+                  <button class="abcd">8.30 PM (2D)</button>
+                  <button class="abcd">11 AM (2D)</button>
                 </div>
                 
               </div>
@@ -255,5 +255,12 @@
         <p style="color: #A02D8A;">&copy; 2024 All right reserved by CinemaName</p>
       </div>
     </footer>
+    <script>
+      document.querySelectorAll(".abcd").forEach(function(button) {
+        button.addEventListener("click", function() {
+          window.location.href = "booking9.html";
+        });
+      });
+    </script>
   </body>
 </html>
