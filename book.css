@@ -228,9 +228,13 @@ flex-direction: row;
 justify-content: space-between;
 flex-wrap: wrap;
 margin-top: 5px;
+padding-right: 350px;
 
 
 }
+
+
+
 .line-card button{
     width: 5rem;
     height: 6rem;

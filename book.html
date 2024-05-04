@@ -137,19 +137,27 @@
             <hr />
           </div>
 
-          <div class="fifth-line">
-            <div class="line-content" id="booking">
-              <div class="line-card">
-                <button class="line-butt">
+          <div class="fifth-line" >
+            <div class="line-content" id="booking1">
+              <div class="line-card" id="thu">
+                <button class="line-butt" id="mySquareButton">
                   <div>
                     <div class="thu">Thu</div>
                     <div class="day">25</div>
                     <div class="apr">Apr</div>
                   </div>
                 </button>
+                <script>
+                  document.getElementById("booking1").addEventListener("click", function() {
+                    
+                    window.location.href = "book.html";
+                  });
+                </script>
+                
+                
               </div>
               <div class="line-card">
-                <button class="line-butt">
+                <button class="line-butt" id="fri">
                   <div>
                     <div class="thu">Fri</div>
                     <div class="day">26</div>
@@ -157,6 +165,13 @@
                   </div>
                 </button>
               </div>
+              <script>
+                document.getElementById("booking1").addEventListener("click", function() {
+                  
+                  window.location.href = "26.html";
+                });
+              </script>
+              
               <div class="line-card">
                 <button class="line-butt">
                   <div>
@@ -166,33 +181,14 @@
                   </div>
                 </button>
               </div>
-              <div class="line-card">
-                <button class="line-butt">
-                  <div>
-                    <div class="thu">Sun</div>
-                    <div class="day">28</div>
-                    <div class="apr">Apr</div>
-                  </div>
-                </button>
-              </div>
-              <div class="line-card">
-                <button class="line-butt">
-                  <div>
-                    <div class="thu">Mon</div>
-                    <div class="day">29</div>
-                    <div class="apr">Apr</div>
-                  </div>
-                </button>
-              </div>
-              <div class="line-card">
-                <button class="line-butt">
-                  <div>
-                    <div class="thu">Tue</div>
-                    <div class="day">30</div>
-                    <div class="apr">Apr</div>
-                  </div>
-                </button>
-              </div>
+              <script>
+                document.getElementById("booking1").addEventListener("click", function() {
+                 
+                  window.location.href = "27.html";
+                });
+              </script>
+             
+             
             </div>
           </div>
           <div class="sixth-line">
@@ -252,6 +248,7 @@
         <p>&copy; 2024 All right reserved by CinemaName</p>
       </div>
     </footer>
-
+    
+    
   </body>
 </html>
