@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+body{
+    background-color: #f9f9f9;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    
+}
+.first-para{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 7%;
+    position: relative;
+    
+}
+.first-para p{
+    width: 30%;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(149, 148, 148);
+}
+.first-para h1{
+    position: relative;
+    top: -120px;
+    display: flex;
+    flex-direction: column;
+    color:#A02D8A ;
+    font-size: 40px;
+}
+.first-para h1 span{
+    position: relative;
+    top: -10px;
+    left: 10px;
+}
+.second-para{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -50px;
+   
+}
+.second-para h1{
+    color:#A02D8A ;
+    font-size: 50px;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    position: relative;
+    top: 50px;
+    
+    
+
+}
+.first-class{
+    width: 400px;
+    min-height: 50px;
+    box-shadow: 0 5px 25px rgba(1,1,1 ,50% );
+    padding: 20px 60px 20px 60px ;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+.first-class span{
+    display: inline-block;
+    margin-top: 5px;
+    
+}
+.first-class:hover{
+    transform: scale(1.1);
+}
+
