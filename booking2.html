@@ -28,7 +28,58 @@
         <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
       </div>
     </header>
-    <script>
+    <script>      document.addEventListener("DOMContentLoaded", function () {
+      const seats = document.querySelectorAll(".seat");
+      const selectedSeats = [];
+      const maxSeats = 5; 
+      const seatPrice = 150; 
+    
+      seats.forEach(function(seat) {
+        seat.addEventListener("click", function () {
+          if (selectedSeats.length >= maxSeats && !this.classList.contains("selected")) {
+            alert("You can only book up to 5 seats.");
+            return;
+          }
+    
+          this.classList.toggle("selected");
+          const seatNumber = this.dataset.seat;
+          if (this.classList.contains("selected")) {
+            selectedSeats.push(seatNumber);
+          } else {
+            const index = selectedSeats.indexOf(seatNumber);
+            if (index !== -1) {
+              selectedSeats.splice(index, 1);
+            }
+          }
+          updateSelectedSeats();
+        });
+      });
+    
+      function updateSelectedSeats() {
+        const selectedSeatsList = document.getElementById("selectedSeatsList");
+        const totalCostElement = document.getElementById("totalCost");
+        selectedSeatsList.innerHTML = ""; 
+    
+        let totalCost = selectedSeats.length * seatPrice;
+        totalCostElement.textContent = totalCost;
+    
+        selectedSeats.forEach(function(seat) {
+          const li = document.createElement("li");
+          li.textContent = "Seat " + seat;
+          selectedSeatsList.appendChild(li);
+        });
+      }
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
       document.addEventListener("DOMContentLoaded", function () {
         document
           .getElementById("CinemaName")
@@ -74,21 +125,48 @@
           <div class="sy">
             <div>Madinaty</div>
             <ul>
-              <li > 28-04-2024 </li>
+              <li>28-04-2024</li>
             </ul>
             <ul>
-              <li > 10:00pm </li>
+              <li>10:00pm</li>
             </ul>
           </div>
-          <div style="margin-top:10px";>
-            <hr>
+          <div style="margin-top: 10px" ;>
+            <hr />
             <button class="butt">Choose your offer</button>
-            <hr>
-          </div>
-          <div>
-            <p style="padding-left: 60px; font-weight: 550;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; padding-bottom: 50px;"> Click on any desired seat to add them to your card</p>
-            <button class="butt" id="switch" style="margin-left: 60px; background-color: #A02D8A; border-color: #A02D8A; color: white;">Checkout</button>
-            <button class="butt" style="margin-left: 40px; background-color: #887c7c; border-color: #887c7c;">Cancel</button>
+            <hr />
+            <div class="left-section">
+              <div  class="selected-seats">
+                <h4>Selected Seats:</h4>
+                <ul id="selectedSeatsList"></ul>
+                <h4>Total Cost: <span id="totalCost">0</span> LE</h4>
+              </div>
+              <div>
+                
+                <button
+                  class="butt"
+                  id="switch"
+                  style="
+                    margin-left: 0px;
+                    background-color: #a02d8a;
+                    border-color: #a02d8a;
+                    color: white;
+                  "
+                >
+                  Checkout
+                </button>
+                <button
+                  class="butt"
+                  style="
+                    margin-left: 10px;
+                    background-color: #887c7c;
+                    border-color: #887c7c;
+                  "
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="right-section">
@@ -369,6 +447,7 @@
         </div>
       </div>
     </main>
+
     <footer>
       <hr style="opacity: 0.5" />
       <div class="footer-container">
@@ -379,10 +458,10 @@
         </div>
         <div class="footer-nav">
           <ul>
-            <li><a href="aboutus.html">About us</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="refunds.html">Refunds & Exchanges</a></li>
-          <li><a href="termsofservice.html">Terms of Service</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Refunds & Exchanges</a></li>
+            <li><a href="">Terms of Service</a></li>
           </ul>
         </div>
       </div>

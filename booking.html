@@ -32,15 +32,18 @@
       document.addEventListener("DOMContentLoaded", function () {
   const seats = document.querySelectorAll(".seat");
   const selectedSeats = [];
-  const seatPrice = 150; // Price per seat
+  const maxSeats = 5; 
+  const seatPrice = 150; 
 
   seats.forEach(function(seat) {
     seat.addEventListener("click", function () {
-      // Toggle the 'selected' class on click
+      if (selectedSeats.length >= maxSeats && !this.classList.contains("selected")) {
+        alert("You can only book up to 5 seats.");
+        return;
+      }
+
       this.classList.toggle("selected");
-      // Get seat number
       const seatNumber = this.dataset.seat;
-      // If seat is selected, add to selectedSeats array, else remove it
       if (this.classList.contains("selected")) {
         selectedSeats.push(seatNumber);
       } else {
@@ -49,11 +52,9 @@
           selectedSeats.splice(index, 1);
         }
       }
-      // Update selected seats list and total cost
       updateSelectedSeats();
     });
   });
-  
 
   function updateSelectedSeats() {
     const selectedSeatsList = document.getElementById("selectedSeatsList");
@@ -70,23 +71,17 @@
     });
   }
 });
-document.addEventListener("DOMContentLoaded", function () {
-      const seats = document.querySelectorAll(".seat");
-      seats.forEach(function(seat) {
-      seat.addEventListener("click", function () {
-      this.classList.toggle("selected");
-    });
-  });
-});
 
-      document.addEventListener("DOMContentLoaded", function () {
-        const seats = document.querySelectorAll(".seat");
-        seats.forEach(function (seat) {
-          seat.addEventListener("click", function () {
-            this.classList.toggle("selected");
-          });
-        });
-      });
+
+
+
+
+
+
+
+
+
+
       document.addEventListener("DOMContentLoaded", function () {
         document
           .getElementById("CinemaName")
@@ -115,6 +110,14 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "checkout.html";
           });
       });
+
+
+
+
+
+
+
+      
     </script>
 
     <main>
@@ -141,10 +144,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <button class="butt">Choose your offer</button>
             <hr />
             <div class="left-section">
-              <div class="selected-seats">
-                <h3>Selected Seats:</h3>
+              <div  class="selected-seats">
+                <h4>Selected Seats:</h4>
                 <ul id="selectedSeatsList"></ul>
-                <h3>Total Cost: <span id="totalCost">0</span> LE</h3>
+                <h4>Total Cost: <span id="totalCost">0</span> LE</h4>
               </div>
               <div>
                 
@@ -152,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   class="butt"
                   id="switch"
                   style="
-                    margin-left: 60px;
+                    margin-left: 0px;
                     background-color: #a02d8a;
                     border-color: #a02d8a;
                     color: white;
@@ -163,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <button
                   class="butt"
                   style="
-                    margin-left: 40px;
+                    margin-left: 10px;
                     background-color: #887c7c;
                     border-color: #887c7c;
                   "
