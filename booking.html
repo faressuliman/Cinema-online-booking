@@ -9,7 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="booking.css" />
-    <link rel="stylesheet" href="hhhhhhhh.css">
+    <link rel="stylesheet" href="hhhhhhhh.css" />
     <title>Booking</title>
   </head>
   <body>
@@ -29,6 +29,64 @@
       </div>
     </header>
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  const seats = document.querySelectorAll(".seat");
+  const selectedSeats = [];
+  const seatPrice = 150; // Price per seat
+
+  seats.forEach(function(seat) {
+    seat.addEventListener("click", function () {
+      // Toggle the 'selected' class on click
+      this.classList.toggle("selected");
+      // Get seat number
+      const seatNumber = this.dataset.seat;
+      // If seat is selected, add to selectedSeats array, else remove it
+      if (this.classList.contains("selected")) {
+        selectedSeats.push(seatNumber);
+      } else {
+        const index = selectedSeats.indexOf(seatNumber);
+        if (index !== -1) {
+          selectedSeats.splice(index, 1);
+        }
+      }
+      // Update selected seats list and total cost
+      updateSelectedSeats();
+    });
+  });
+  
+
+  function updateSelectedSeats() {
+    const selectedSeatsList = document.getElementById("selectedSeatsList");
+    const totalCostElement = document.getElementById("totalCost");
+    selectedSeatsList.innerHTML = ""; 
+
+    let totalCost = selectedSeats.length * seatPrice;
+    totalCostElement.textContent = totalCost;
+
+    selectedSeats.forEach(function(seat) {
+      const li = document.createElement("li");
+      li.textContent = "Seat " + seat;
+      selectedSeatsList.appendChild(li);
+    });
+  }
+});
+document.addEventListener("DOMContentLoaded", function () {
+      const seats = document.querySelectorAll(".seat");
+      seats.forEach(function(seat) {
+      seat.addEventListener("click", function () {
+      this.classList.toggle("selected");
+    });
+  });
+});
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const seats = document.querySelectorAll(".seat");
+        seats.forEach(function (seat) {
+          seat.addEventListener("click", function () {
+            this.classList.toggle("selected");
+          });
+        });
+      });
       document.addEventListener("DOMContentLoaded", function () {
         document
           .getElementById("CinemaName")
@@ -57,7 +115,6 @@
             window.location.href = "checkout.html";
           });
       });
-
     </script>
 
     <main>
@@ -65,32 +122,57 @@
         <div class="left-section">
           <div class="image-container">
             <img src="ffffffff.jpeg" alt="" />
-
           </div>
 
           <div class="first-line">
-            <h1 style="color: #A02D8A;">Godzilla x Kong</h1>
+            <h1 style="color: #a02d8a">Godzilla x Kong</h1>
           </div>
           <div class="sy">
             <div>Madinaty</div>
             <ul>
-              <li > 28-04-2024 </li>
+              <li>28-04-2024</li>
             </ul>
             <ul>
-              <li > 10:00pm </li>
+              <li>10:00pm</li>
             </ul>
           </div>
-          <div style="margin-top:10px";>
-            <hr>
+          <div style="margin-top: 10px" ;>
+            <hr />
             <button class="butt">Choose your offer</button>
-            <hr>
+            <hr />
+            <div class="left-section">
+              <div class="selected-seats">
+                <h3>Selected Seats:</h3>
+                <ul id="selectedSeatsList"></ul>
+                <h3>Total Cost: <span id="totalCost">0</span> LE</h3>
+              </div>
+              <div>
+                
+                <button
+                  class="butt"
+                  id="switch"
+                  style="
+                    margin-left: 60px;
+                    background-color: #a02d8a;
+                    border-color: #a02d8a;
+                    color: white;
+                  "
+                >
+                  Checkout
+                </button>
+                <button
+                  class="butt"
+                  style="
+                    margin-left: 40px;
+                    background-color: #887c7c;
+                    border-color: #887c7c;
+                  "
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
           </div>
-          <div>
-            <p style="padding-left: 60px; font-weight: 550;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; padding-bottom: 50px;"> Click on any desired seat to add them to your card</p>
-            <button class="butt" id="switch" style="margin-left: 60px; background-color: #A02D8A; border-color: #A02D8A; color: white;">Checkout</button>
-            <button class="butt" style="margin-left: 40px; background-color: #887c7c; border-color: #887c7c;">Cancel</button>
-          </div>
-
         </div>
 
         <div class="right-section">
@@ -382,10 +464,10 @@
         </div>
         <div class="footer-nav">
           <ul>
-            <li><a href="aboutus.html">About us</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="refunds.html">Refunds & Exchanges</a></li>
-          <li><a href="termsofservice.html">Terms of Service</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Refunds & Exchanges</a></li>
+            <li><a href="">Terms of Service</a></li>
           </ul>
         </div>
       </div>
