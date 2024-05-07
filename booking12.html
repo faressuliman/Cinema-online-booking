@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +21,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="booking.css" />
-    <link rel="stylesheet" href="hhhhhhhh.css">
+    <link rel="stylesheet" href="hhhhhhhh.css" />
     <title>Booking</title>
   </head>
   <body>
@@ -30,48 +42,47 @@
     </header>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-  const seats = document.querySelectorAll(".seat");
-  const selectedSeats = [];
-  const maxSeats = 5; 
-  const seatPrice = 150; 
-
-  seats.forEach(function(seat) {
-    seat.addEventListener("click", function () {
-      if (selectedSeats.length >= maxSeats && !this.classList.contains("selected")) {
-        alert("You can only book up to 5 seats.");
-        return;
-      }
-
-      this.classList.toggle("selected");
-      const seatNumber = this.dataset.seat;
-      if (this.classList.contains("selected")) {
-        selectedSeats.push(seatNumber);
-      } else {
-        const index = selectedSeats.indexOf(seatNumber);
-        if (index !== -1) {
-          selectedSeats.splice(index, 1);
+        const seats = document.querySelectorAll(".seat");
+        const selectedSeats = [];
+        const maxSeats = 5;
+        const seatPrice = 150;
+  
+        seats.forEach(function(seat) {
+          seat.addEventListener("click", function () {
+            if (selectedSeats.length >= maxSeats && !this.classList.contains("selected")) {
+              alert("You can only book up to 5 seats.");
+              return;
+            }
+  
+            this.classList.toggle("selected");
+            const seatNumber = this.dataset.seat;
+            if (this.classList.contains("selected")) {
+              selectedSeats.push(seatNumber);
+            } else {
+              const index = selectedSeats.indexOf(seatNumber);
+              if (index !== -1) {
+                selectedSeats.splice(index, 1);
+              }
+            }
+            updateSelectedSeats();
+          });
+        });
+  
+        function updateSelectedSeats() {
+          const selectedSeatsList = document.getElementById("selectedSeatsList");
+          const totalCostElement = document.getElementById("totalCost");
+          selectedSeatsList.innerHTML = "";
+  
+          let totalCost = selectedSeats.length * seatPrice;
+          totalCostElement.textContent = totalCost;
+  
+          // Store total cost in URL parameters
+          const url = new URL(window.location.href);
+          url.searchParams.set('totalCost', totalCost);
+          history.replaceState(null, '', url);
         }
-      }
-      updateSelectedSeats();
-    });
-  });
-
-  function updateSelectedSeats() {
-    const selectedSeatsList = document.getElementById("selectedSeatsList");
-    const totalCostElement = document.getElementById("totalCost");
-    selectedSeatsList.innerHTML = ""; 
-
-    let totalCost = selectedSeats.length * seatPrice;
-    totalCostElement.textContent = totalCost;
-
-    selectedSeats.forEach(function(seat) {
-      const li = document.createElement("li");
-      li.textContent = "Seat " + seat;
-      selectedSeatsList.appendChild(li);
-    });
-  }
-});
-
+      });
+  
       document.addEventListener("DOMContentLoaded", function () {
         document
           .getElementById("CinemaName")
@@ -100,26 +111,18 @@
             window.location.href = "checkout.html";
           });
       });
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("switchh")
-          .addEventListener("click", function () {
-            window.location.href = "home.html";
-          });
-      });
-
     </script>
 
     <main>
       <div class="container">
         <div class="left-section">
           <div class="image-container">
-            <img style="width: 50%;" src="SPY X FAMILY.jpg" alt="" />
+            <img style="width: 50%;" src="Barbie And Stacie To The Rescue.jpg" alt="" />
 
           </div>
 
           <div class="first-line">
-            <h1 style="color: #A02D8A;">SPY X FAMILY
+            <h1 style="color: #A02D8A;">Barbie And Stacie 
             </h1>
           </div>
           <div class="sy">
@@ -170,6 +173,7 @@
             </div>
           </div>
         </div>
+
         <div class="right-section">
           <div class="screen text-center">
             <div class="screen_text">Screen</div>
@@ -448,6 +452,7 @@
         </div>
       </div>
     </main>
+
     <footer>
       <hr style="opacity: 0.5" />
       <div class="footer-container">
