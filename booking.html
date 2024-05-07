@@ -30,58 +30,47 @@
     </header>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-  const seats = document.querySelectorAll(".seat");
-  const selectedSeats = [];
-  const maxSeats = 5; 
-  const seatPrice = 150; 
-
-  seats.forEach(function(seat) {
-    seat.addEventListener("click", function () {
-      if (selectedSeats.length >= maxSeats && !this.classList.contains("selected")) {
-        alert("You can only book up to 5 seats.");
-        return;
-      }
-
-      this.classList.toggle("selected");
-      const seatNumber = this.dataset.seat;
-      if (this.classList.contains("selected")) {
-        selectedSeats.push(seatNumber);
-      } else {
-        const index = selectedSeats.indexOf(seatNumber);
-        if (index !== -1) {
-          selectedSeats.splice(index, 1);
+        const seats = document.querySelectorAll(".seat");
+        const selectedSeats = [];
+        const maxSeats = 5;
+        const seatPrice = 150;
+  
+        seats.forEach(function(seat) {
+          seat.addEventListener("click", function () {
+            if (selectedSeats.length >= maxSeats && !this.classList.contains("selected")) {
+              alert("You can only book up to 5 seats.");
+              return;
+            }
+  
+            this.classList.toggle("selected");
+            const seatNumber = this.dataset.seat;
+            if (this.classList.contains("selected")) {
+              selectedSeats.push(seatNumber);
+            } else {
+              const index = selectedSeats.indexOf(seatNumber);
+              if (index !== -1) {
+                selectedSeats.splice(index, 1);
+              }
+            }
+            updateSelectedSeats();
+          });
+        });
+  
+        function updateSelectedSeats() {
+          const selectedSeatsList = document.getElementById("selectedSeatsList");
+          const totalCostElement = document.getElementById("totalCost");
+          selectedSeatsList.innerHTML = "";
+  
+          let totalCost = selectedSeats.length * seatPrice;
+          totalCostElement.textContent = totalCost;
+  
+          // Store total cost in URL parameters
+          const url = new URL(window.location.href);
+          url.searchParams.set('totalCost', totalCost);
+          history.replaceState(null, '', url);
         }
-      }
-      updateSelectedSeats();
-    });
-  });
-
-  function updateSelectedSeats() {
-    const selectedSeatsList = document.getElementById("selectedSeatsList");
-    const totalCostElement = document.getElementById("totalCost");
-    selectedSeatsList.innerHTML = ""; 
-
-    let totalCost = selectedSeats.length * seatPrice;
-    totalCostElement.textContent = totalCost;
-
-    selectedSeats.forEach(function(seat) {
-      const li = document.createElement("li");
-      li.textContent = "Seat " + seat;
-      selectedSeatsList.appendChild(li);
-    });
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
+      });
+  
       document.addEventListener("DOMContentLoaded", function () {
         document
           .getElementById("CinemaName")
@@ -110,14 +99,6 @@
             window.location.href = "checkout.html";
           });
       });
-
-
-
-
-
-
-
-      
     </script>
 
     <main>
@@ -165,6 +146,7 @@
                 </button>
                 <button
                   class="butt"
+                  id="switchh"
                   style="
                     margin-left: 10px;
                     background-color: #887c7c;
@@ -467,10 +449,10 @@
         </div>
         <div class="footer-nav">
           <ul>
-            <li><a href="">About us</a></li>
-            <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Refunds & Exchanges</a></li>
-            <li><a href="">Terms of Service</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="refunds.html">Refunds & Exchanges</a></li>
+            <li><a href="termsofservice.html">Terms of Service</a></li>
           </ul>
         </div>
       </div>
