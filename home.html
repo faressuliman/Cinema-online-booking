@@ -17,7 +17,6 @@
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
-      
     }
 
     .slideshow-container {
@@ -29,13 +28,40 @@
     .mySlides {
       display: none;
     }
+
+
+
+    .manual-navigation {
+  position: absolute;
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
+.manual-navigation .dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px; 
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+.manual-navigation .dot.active {
+  background-color: #717171;
+}
+
   </style>
 </head>
 <body>
+  
   <header>
     <div class="logo">
       <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
     </div>
+
     <nav class="navigation">
       <a href="home.html">Now Showing</a>
       <a href="comingsoon.html">Coming Soon</a>
@@ -47,39 +73,40 @@
       </button>
     </div>
   </header>
-<div class="slideshow-container">
+  <div class="slideshow-container">
     <div class="mySlides" style="background-image: url(wb.jpg);">
-      <section class="nowshowing-image" style="margin-top: 0px;">
-        <div class="info" >
+      <section class="nowshowing-image">
+        <div class="info">
           <div>Coming Soon</div>
           <strong>Winnie The Pooh: Blood And Honey 2</strong>
           <button id="booknow4" class="booknow">Pre-Order</button>
         </div>
       </section>
     </div>
-<div class="slideshow-container">
+
     <div class="mySlides" style="background-image: url(alserb.jpg);">
-      <section class="nowshowing-image" style="margin-top: 0px;">
-        <div class="info" >
+      <section class="nowshowing-image">
+        <div class="info">
           <div>Coming Soon</div>
           <strong>السرب</strong>
           <button id="booknow5" class="booknow">Pre-Order</button>
         </div>
       </section>
     </div>
-  <div class="slideshow-container">
+
     <div class="mySlides" style="background-image: url(godzilla.jpg);">
-      <section class="nowshowing-image" style="margin-top: 0px;">
-        <div class="info" >
+      <section class="nowshowing-image">
+        <div class="info">
           <div>Now Showing</div>
           <strong>Godzilla x Kong: The New Empire</strong>
           <button id="booknow1" class="booknow">Book Now</button>
         </div>
       </section>
     </div>
-      <div class="mySlides" style="background-image: url(fasl.jpg);">
-      <section class="nowshowing-image" style="margin-top: 0px;">
-        <div class="info" >
+
+    <div class="mySlides" style="background-image: url(fasl.jpg);">
+      <section class="nowshowing-image">
+        <div class="info">
           <div>Now Showing</div>
           <strong>فاصل من اللحظات الذيذة</strong>
           <button id="booknow2" class="booknow">Book Now</button>
@@ -88,44 +115,82 @@
     </div>
 
     <div class="mySlides" style="background-image: url(sheko.jpg);">
-      <section class="nowshowing-image" style="margin-top: 0px;">
-        <div class="info" >
+      <section class="nowshowing-image">
+        <div class="info">
           <div>Now Showing</div>
           <strong>شقو</strong>
           <button id="booknow3" class="booknow">Book Now</button>
         </div>
       </section>
     </div>
+
+    <div class="manual-navigation">
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+      <span class="dot" data-slide="4"></span>
+      <span class="dot" data-slide="5"></span>
+    </div>
+  </div>
   <script>
     var slideIndex = 0;
-    Slideshow();
+    var slideTimeout;
 
-    function Slideshow() {
-      var i;
+    function showSlide(n) {
       var slides = document.getElementsByClassName("mySlides");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+      var dots = document.getElementsByClassName("dot");
+
+      if (n > slides.length) {
+        slideIndex = 1;
+      } else if (n < 1) {
+        slideIndex = slides.length;
       }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}
-      slides[slideIndex-1].style.display = "block";
-      setTimeout(Slideshow, 3000); 
+
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dots[i].className = "dot";
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("loginnButton").addEventListener("click", function () {
+    function autoSlide() {
+      slideIndex++;
+      showSlide(slideIndex);
+      slideTimeout = setTimeout(autoSlide, 3000); 
+    }
+
+    function resetAutoSlide() {
+      clearTimeout(slideTimeout);
+      slideTimeout = setTimeout(autoSlide, 3000);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      showSlide(slideIndex);
+      autoSlide();
+
+      var dots = document.getElementsByClassName("dot");
+
+      for (var i = 0; i < dots.length; i++) {
+        (function(index) {
+          dots[index].addEventListener("click", function() {
+            slideIndex = index + 1;
+            showSlide(slideIndex);
+            resetAutoSlide(); 
+          });
+        })(i);
+      }
+
+      document.getElementById("loginnButton").addEventListener("click", function() {
         window.location.href = "loginPage.html";
       });
-    });
 
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("CinemaName").addEventListener("click", function () {
+      document.getElementById("CinemaName").addEventListener("click", function() {
         window.location.href = "home.html";
       });
-    });
 
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("myaccButton").addEventListener("click", function () {
+      document.getElementById("myaccButton").addEventListener("click", function() {
         window.location.href = "myAcc.html";
       });
     });
@@ -207,11 +272,6 @@
         window.location.href = "card10.html";
       });
     });
-
-
-
-
-
 
 
   </script>
