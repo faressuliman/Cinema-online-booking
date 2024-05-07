@@ -8,7 +8,7 @@
     scroll-behavior: smooth; 
 }
 .seat.selected {
-  background-color: purple;
+  background-color: #A02D8A;
 }
 header{
     background-color: white;
@@ -36,7 +36,7 @@ header{
 
 }
 .navigation a:hover{
-    color: #952a80;
+    color: #A02D8A;
 }
 .login{
     margin-right: 150px;
@@ -61,7 +61,7 @@ header{
 
 .login button:hover{
     color: #f0f0f0;
-    background-color: purple;
+    background-color: A02D8A;
     cursor: pointer;
 }
 

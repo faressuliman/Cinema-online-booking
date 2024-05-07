@@ -110,7 +110,15 @@
           // Set the video source to an empty string
           videoFrame.src = "";
         }
-      });
+      });function selectButton(button) {
+  // Remove 'selected' class from all buttons with class 'line-butt'
+  document.querySelectorAll('.line-butt').forEach(function(btn) {
+    btn.classList.remove('selected');
+  });
+
+  // Add 'selected' class to the clicked button
+  button.classList.add('selected');
+}
     </script>
 
     <section>
@@ -143,7 +151,7 @@
           <div class="fifth-line">
             <div class="line-content">
               <div class="line-card">
-                <button class="line-butt">
+                <button class="line-butt"onclick="selectButton(this)">
                   <div>
                     <div class="thu">Thu</div>
                     <div class="day">25</div>
@@ -152,7 +160,7 @@
                 </button>
               </div>
               <div class="line-card">
-                <button class="line-butt">
+                <button class="line-butt"onclick="selectButton(this)">
                   <div>
                     <div class="thu">Fri</div>
                     <div class="day">26</div>
@@ -161,7 +169,7 @@
                 </button>
               </div>
               <div class="line-card">
-                <button class="line-butt">
+                <button class="line-butt"onclick="selectButton(this)">
                   <div>
                     <div class="thu">Sat</div>
                     <div class="day">27</div>
@@ -170,7 +178,7 @@
                 </button>
               </div>
               <div class="line-card">
-                <button class="line-butt">
+                <button class="line-butt"onclick="selectButton(this)">
                   <div>
                     <div class="thu">Sun</div>
                     <div class="day">28</div>
@@ -179,7 +187,7 @@
                 </button>
               </div>
               <div class="line-card">
-                <button class="line-butt">
+                <button class="line-butt"onclick="selectButton(this)">
                   <div>
                     <div class="thu">Mon</div>
                     <div class="day">29</div>
@@ -188,7 +196,7 @@
                 </button>
               </div>
               <div class="line-card">
-                <button class="line-butt">
+                <button class="line-butt"onclick="selectButton(this)">
                   <div>
                     <div class="thu">Tue</div>
                     <div class="day">30</div>
