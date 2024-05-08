@@ -260,13 +260,13 @@ transition: 0.7s ease;
     font-weight: 600;
     transition: 0.7s ease;
 }
+
+.line-butt .thu {
+    color: black;
+}
 .line-butt:hover{
     background-color:#A02D8A;
     cursor: pointer;
-    
-}
-.line-butt:hover .thu {
-    color: black;
 }
 
 .sixth-line {
