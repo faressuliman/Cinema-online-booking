@@ -338,7 +338,8 @@ footer {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 30%;
+  border-radius: 15px;
+  width: 25%;
 }
 
 .modal-header {
@@ -396,4 +397,9 @@ footer {
   font-size: 0.9rem;
   border-radius: 0.25rem;
   border-radius: 5px;
+}
+
+.skip_button:hover {
+  background-color: purple;
+  cursor: pointer;
 }
