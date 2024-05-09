@@ -15,7 +15,7 @@
   <body>
     <header style="background-color: transparent">
       <div class="logo">
-        <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
+        <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
       </div>
 
       <nav class="navigation">
@@ -29,21 +29,21 @@
       </div>
     </header>
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const seats = document.querySelectorAll(".seat");
-      const selectedSeats = [];
-      const maxSeats = 2;
-      const seatPrice = 150;
+      document.addEventListener("DOMContentLoaded", function () {
+        const seats = document.querySelectorAll(".seat");
+        const selectedSeats = [];
+        const maxSeats = 2;
+        const seatPrice = 150;
 
-      seats.forEach(function (seat) {
-        seat.addEventListener("click", function () {
-          if (
-            selectedSeats.length >= maxSeats &&
-            !this.classList.contains("selected")
-          ) {
-            alert("You can only book up to 2 seats.");
-            return;
-          }
+        seats.forEach(function (seat) {
+          seat.addEventListener("click", function () {
+            if (
+              selectedSeats.length >= maxSeats &&
+              !this.classList.contains("selected")
+            ) {
+              alert("You can only book up to 2 seats.");
+              return;
+            }
 
             this.classList.toggle("selected");
             const seatNumber = this.dataset.seat;
@@ -73,50 +73,60 @@
             listItem.textContent = "Seat " + seatNumber;
             selectedSeatsList.appendChild(listItem);
           });
-
+          // Store total cost in URL parameters
           const url = new URL(window.location.href);
           url.searchParams.set("totalCost", totalCost);
           history.replaceState(null, "", url);
         }
-      });
 
-      document.addEventListener("DOMContentLoaded", function () {
         document
           .getElementById("CinemaName")
           .addEventListener("click", function () {
             window.location.href = "home.html";
           });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
+
         document
           .getElementById("loginnButton")
           .addEventListener("click", function () {
             window.location.href = "loginPage.html";
           });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
+
         document
           .getElementById("myaccButton")
           .addEventListener("click", function () {
             window.location.href = "myAcc.html";
           });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
+
         document
           .getElementById("switch")
           .addEventListener("click", function () {
             window.location.href = "checkout.html";
           });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
         document
-          .getElementById("cancel")
+          .getElementById("switchh")
           .addEventListener("click", function () {
             window.location.href = "book.html";
           });
+
+        const showModalButton = document.getElementById("showModalButton");
+        const modalContainer = document.getElementById("modalContainer");
+        const modalContent = document.querySelector(".modal-content");
+
+        // Event listener to show modal when button clicked
+        showModalButton.addEventListener("click", function () {
+          modalContainer.style.display = "flex"; // show the modal container
+          modalContent.classList.add("show"); // add the 'show' class to display the modal content
+        });
+
+        // Close modal when close button or outside modal clicked
+        const skipButton = document.querySelector(".skip_button");
+
+        skipButton.addEventListener("click", function () {
+          modalContainer.style.display = "none";
+          modalContent.classList.remove("show");
+        });
       });
     </script>
-
     <main>
       <div class="container">
         <div class="left-section">
@@ -132,7 +142,7 @@
           </div>
           <div style="margin-top: 10px" ;>
             <hr />
-            <button class="butt">Choose your offer</button>
+            <button class="butt" id="showModalButton">Choose your offer</button>
             <hr />
             <div class="left-section">
               <div class="selected-seats">
@@ -155,7 +165,7 @@
                 </button>
                 <button
                   class="butt"
-                  id="cancel"
+                  id="switchh"
                   style="
                     margin-left: 10px;
                     background-color: #887c7c;
@@ -446,14 +456,37 @@
           </div>
         </div>
       </div>
+      <div id="modalContainer" class="modal-container">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" style="color: #a02d8a">
+              Choose your favorite offer
+            </h5>
+            <button type="button" class="btn-close" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center">
+              There is no available offers for this movie.
+            </div>
+          </div>
+          <div class="modal-footer text-center mb-3">
+            <button
+              type="button"
+              class="btn btn_primary btn_full text-center skip_button"
+            >
+              Skip
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       <hr style="opacity: 0.5" />
       <div class="footer-container">
         <div class="footer-icons">
-          <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
-          <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-tiktok"></i></a>
         </div>
         <div class="footer-nav">
           <ul>
@@ -465,10 +498,11 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p style="color: #a02d8a">
-          &copy; 2024 All right reserved by OCinema
+        <p style="color: purple">
+          &copy; 2024 All right reserved by CinemaName
         </p>
       </div>
     </footer>
+     
   </body>
 </html>
