@@ -213,9 +213,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <hr style="opacity: 0.5" />
       <div class="footer-container">
         <div class="footer-icons">
-          <a href=""><i class="fab fa-facebook-f"></i></a>
-          <a href=""><i class="fab fa-instagram"></i></a>
-          <a href=""><i class="fab fa-tiktok"></i></a>
+          <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
         </div>
         <div class="footer-nav">
           <ul>
@@ -228,9 +228,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       </div>
       <div class="footer-bottom">
         <p style="color: #a02d8a">
-          &copy; 2024 All rights reserved by OCinema
+          &copy; 2024 All right reserved by OCinema
         </p>
       </div>
     </footer>
-  </body>
+  </body>
 </html>
