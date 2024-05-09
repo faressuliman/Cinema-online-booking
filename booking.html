@@ -32,7 +32,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       const seats = document.querySelectorAll(".seat");
       const selectedSeats = [];
-      const maxSeats = 5;
+      const maxSeats = 2;
       const seatPrice = 150;
 
       seats.forEach(function (seat) {
@@ -41,7 +41,7 @@
             selectedSeats.length >= maxSeats &&
             !this.classList.contains("selected")
           ) {
-            alert("You can only book up to 5 seats.");
+            alert("You can only book up to 2 seats.");
             return;
           }
 

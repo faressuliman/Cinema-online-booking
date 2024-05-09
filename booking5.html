@@ -32,7 +32,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         const seats = document.querySelectorAll(".seat");
         const selectedSeats = [];
-        const maxSeats = 5;
+        const maxSeats = 2;
         const seatPrice = 150;
 
         seats.forEach(function (seat) {
@@ -41,7 +41,7 @@
               selectedSeats.length >= maxSeats &&
               !this.classList.contains("selected")
             ) {
-              alert("You can only book up to 5 seats.");
+              alert("You can only book up to 2 seats.");
               return;
             }
 
@@ -60,20 +60,24 @@
         });
 
         function updateSelectedSeats() {
-          const selectedSeatsList =
-            document.getElementById("selectedSeatsList");
-          const totalCostElement = document.getElementById("totalCost");
-          selectedSeatsList.innerHTML = "";
+        const selectedSeatsList = document.getElementById("selectedSeatsList");
+        const totalCostElement = document.getElementById("totalCost");
+        selectedSeatsList.innerHTML = "";
 
-          let totalCost = selectedSeats.length * seatPrice;
-          totalCostElement.textContent = totalCost;
+        let totalCost = selectedSeats.length * seatPrice;
+        totalCostElement.textContent = totalCost;
 
-          // Store total cost in URL parameters
-          const url = new URL(window.location.href);
-          url.searchParams.set("totalCost", totalCost);
-          history.replaceState(null, "", url);
-        }
-      });
+        selectedSeats.forEach(function(seatNumber) {
+          const listItem = document.createElement("li");
+          listItem.textContent = "Seat " + seatNumber;
+          selectedSeatsList.appendChild(listItem);
+        });
+
+        const url = new URL(window.location.href);
+        url.searchParams.set("totalCost", totalCost);
+        history.replaceState(null, "", url);
+      }
+    });
 
       document.addEventListener("DOMContentLoaded", function () {
         document
