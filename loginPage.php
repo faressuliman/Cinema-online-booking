@@ -87,7 +87,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="left-section">
           <div class="inner-content">
             <p style="text-align: center; font-weight: 600; margin-left: 270px">
-              Welcome to Renaissance Cinemas, where you can enjoy the best
+              Welcome to OCinema, where you can enjoy the best
               movies
             </p>
             <p style="text-align: center; font-weight: 600; margin-left: 270px">
