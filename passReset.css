@@ -240,7 +240,8 @@ footer {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 30%;
+    width: 25%;
+    border-radius: 15px;
   }
   
   .modal-header {
@@ -283,18 +284,27 @@ footer {
     padding: 1rem;
   }
   
+  .modal-footer button {
+    border-radius: 10px;
+    border-color: #7066e0;
+  }
   .btn_primary {
     color: #fff;
-    background-color: #a02d8a;
-    border-color: #a02d8a;
+    background-color: #7066e0;
+    border-radius: 15px;
   }
   
   .btn_full {
-    width: 100%;
+    width: 30%;
   }
   
   .skip_button {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
     border-radius: 0.25rem;
+  }
+
+  .skip_button:hover {
+    background-color: hsl(245, 100%, 72%);
+    cursor: pointer;
   }
