@@ -23,13 +23,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 exit(); 
             }
         } else {
-            echo "<script>alert('Invalid Email/Password');</script>";
-            header("Location:loginPage.php"); 
-            exit(); 
-        }
-    }
+          echo "<script>alert('Please Enter A Valid Email or Password');</script>";
+      }
+  }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
