@@ -64,20 +64,15 @@
         });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        // Add event listener to the reset password button
         document
           .getElementById("loginform")
           .addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent form submission for now
-
-            // Here you can add your logic for resetting the password,
-            // for this example, let's just display the modal
-
+            event.preventDefault();
             const modalContainer = document.getElementById("modalContainer");
             const modalContent = document.querySelector(".modal-content");
 
-            modalContainer.style.display = "flex"; // Show the modal container
-            modalContent.classList.add("sinin"); // Add the 'show' class to display the modal content
+            modalContainer.style.display = "flex";
+            modalContent.classList.add("sinin");
           });
       });
     </script>
@@ -90,7 +85,9 @@
               <i class="fas fa-map-marker-alt"></i> 23rd street,
               Somewhere,Alexandria, Egypt.
             </p>
-            <p id="p2"><i class="far fa-envelope"></i> cinemabooking@gmail.com</p>
+            <p id="p2" style="margin-right: 50px">
+              <i class="far fa-envelope"></i> OCinema@gmail.com
+            </p>
           </div>
         </div>
         <div class="right-section">
@@ -130,7 +127,7 @@
     </div>
     <div id="modalContainer" class="modal-container">
       <div class="modal-content">
-        <div class="modal-header" style="justify-content: center;">
+        <div class="modal-header" style="justify-content: center">
           <h4 class="modal-title" style="color: #a02d8a; text-align: center">
             DONE!
           </h4>
