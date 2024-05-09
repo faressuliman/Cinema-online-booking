@@ -9,7 +9,6 @@ header{
     flex-direction: row;
     height: 9vh;
     border-bottom:3px #f0f0f0 solid;
-    
   }
   
   .logo{
@@ -51,13 +50,8 @@ header{
     margin-left: -90px;
     background-color:white;
     color: black;
-    transition: 0.6s ease;
-    
-    
-    
+    transition: 0.6s ease; 
   }
-  
-  
   .login button:hover{
     color: #f0f0f0;
     background-color: #A02D8A;
@@ -69,4 +63,3 @@ header{
   #loginnButton{
     margin-right: 200PX;
   }
- 

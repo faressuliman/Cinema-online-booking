@@ -9,532 +9,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="booking.css" />
-    <link rel="stylesheet" href="hhhhhhhh.css">
-    <title>Booking</title>
-  </head>
-  <body>
-    <header style="background-color: transparent">
-      <div class="logo">
-        <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
-      </div>
-
-      <nav class="navigation">
-        <a href="home.html">Now Showing</a>
-        <a href="comingsoon.html">Coming Soon</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="login">
-        <button id="myaccButton">MY ACCOUNT</button>
-        <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
-      </div>
-    </header>
-    <script>document.addEventListener("DOMContentLoaded", function () {
-      const seats = document.querySelectorAll(".seat");
-      const selectedSeats = [];
-      const maxSeats = 5; 
-      const seatPrice = 150; 
-    
-      seats.forEach(function(seat) {
-        seat.addEventListener("click", function () {
-          if (selectedSeats.length >= maxSeats && !this.classList.contains("selected")) {
-            alert("You can only book up to 5 seats.");
-            return;
-          }
-    
-          this.classList.toggle("selected");
-          const seatNumber = this.dataset.seat;
-          if (this.classList.contains("selected")) {
-            selectedSeats.push(seatNumber);
-          } else {
-            const index = selectedSeats.indexOf(seatNumber);
-            if (index !== -1) {
-              selectedSeats.splice(index, 1);
-            }
-          }
-          updateSelectedSeats();
-        });
-      });
-    
-      function updateSelectedSeats() {
-        const selectedSeatsList = document.getElementById("selectedSeatsList");
-        const totalCostElement = document.getElementById("totalCost");
-        selectedSeatsList.innerHTML = ""; 
-    
-        let totalCost = selectedSeats.length * seatPrice;
-        totalCostElement.textContent = totalCost;
-    
-        selectedSeats.forEach(function(seat) {
-          const li = document.createElement("li");
-          li.textContent = "Seat " + seat;
-          selectedSeatsList.appendChild(li);
-        });
-      }
-    });
-    
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("CinemaName")
-          .addEventListener("click", function () {
-            window.location.href = "home.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("loginnButton")
-          .addEventListener("click", function () {
-            window.location.href = "loginPage.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("myaccButton")
-          .addEventListener("click", function () {
-            window.location.href = "myAcc.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("switch")
-          .addEventListener("click", function () {
-            window.location.href = "checkout.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("switchh")
-          .addEventListener("click", function () {
-            window.location.href = "home.html";
-          });
-      });
-
-    </script>
-
-    <main>
-      <div class="container">
-        <div class="left-section">
-          <div class="image-container">
-            <img style="width: 50%;" src="Barbie And Stacie To The Rescue.jpg" alt="" />
-
-          </div>
-
-          <div class="first-line">
-            <h1 style="color: #A02D8A;">Barbie And Stacie 
-            </h1>
-          </div>
-          <div class="sy">
-            <div>Madinaty</div>
-            <ul>
-              <li>28-04-2024</li>
-            </ul>
-            <ul>
-              <li>10:00pm</li>
-            </ul>
-          </div>
-          <div style="margin-top: 10px" ;>
-            <hr />
-            <button class="butt">Choose your offer</button>
-            <hr />
-            <div class="left-section">
-              <div  class="selected-seats">
-                <h4>Selected Seats:</h4>
-                <ul id="selectedSeatsList"></ul>
-                <h4>Total Cost: <span id="totalCost">0</span> LE</h4>
-              </div>
-              <div>
-                
-                <button
-                  class="butt"
-                  id="switch"
-                  style="
-                    margin-left: 0px;
-                    background-color: #a02d8a;
-                    border-color: #a02d8a;
-                    color: white;
-                  "
-                >
-                  Checkout
-                </button>
-                <button
-                  class="butt"
-                  id="switchh"
-                  style="
-                    margin-left: 10px;
-                    background-color: #887c7c;
-                    border-color: #887c7c;
-                  "
-                >
-                  Cancel
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="right-section">
-          <div class="screen text-center">
-            <div class="screen_text">Screen</div>
-            <div class="screen_place">
-              <img src="screen.png" class="text-center" id="imgsz" />
-              <div class="booking-section" id="toppp">
-                <div class="seats-container">
-                  <div class="regular-seats">
-                    <div class="row">
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                    </div>
-                    <div class="row">
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                    </div>
-                    <div class="row">
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                    </div>
-                    <div class="row">
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                    </div>
-                    <div class="row">
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                    </div>
-                    <div class="row">
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                    </div>
-                    <div class="row">
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                    </div>
-                    <div class="row">
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                    </div>
-                    <div class="row">
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                    </div>
-                    <div class="row">
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="vip-seats" id="vipseatsspace">
-                  <div class="row">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                  </div>
-                  <div class="row">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                  </div>
-                  <div class="row">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                  </div>
-                  <div class="row">
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <hr style="opacity: 0.5" />
-      <div class="footer-container">
-        <div class="footer-icons">
-          <a href=""><i class="fab fa-facebook-f"></i></a>
-          <a href=""><i class="fab fa-instagram"></i></a>
-          <a href=""><i class="fab fa-tiktok"></i></a>
-        </div>
-        <div class="footer-nav">
-          <ul>
-            <li><a href="aboutus.html">About us</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="refunds.html">Refunds & Exchanges</a></li>
-            <li><a href="termsofservice.html">Terms of Service</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p style="color: purple">
-          &copy; 2024 All right reserved by CinemaName
-        </p>
-      </div>
-    </footer>
-  </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link rel="stylesheet" href="booking.css" />
     <link rel="stylesheet" href="hhhhhhhh.css" />
     <title>Booking</title>
   </head>
   <body>
     <header style="background-color: transparent">
       <div class="logo">
-        <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
+        <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
       </div>
 
       <nav class="navigation">
@@ -553,14 +34,17 @@
         const selectedSeats = [];
         const maxSeats = 5;
         const seatPrice = 150;
-  
-        seats.forEach(function(seat) {
+
+        seats.forEach(function (seat) {
           seat.addEventListener("click", function () {
-            if (selectedSeats.length >= maxSeats && !this.classList.contains("selected")) {
+            if (
+              selectedSeats.length >= maxSeats &&
+              !this.classList.contains("selected")
+            ) {
               alert("You can only book up to 5 seats.");
               return;
             }
-  
+
             this.classList.toggle("selected");
             const seatNumber = this.dataset.seat;
             if (this.classList.contains("selected")) {
@@ -574,22 +58,23 @@
             updateSelectedSeats();
           });
         });
-  
+
         function updateSelectedSeats() {
-          const selectedSeatsList = document.getElementById("selectedSeatsList");
+          const selectedSeatsList =
+            document.getElementById("selectedSeatsList");
           const totalCostElement = document.getElementById("totalCost");
           selectedSeatsList.innerHTML = "";
-  
+
           let totalCost = selectedSeats.length * seatPrice;
           totalCostElement.textContent = totalCost;
-  
+
           // Store total cost in URL parameters
           const url = new URL(window.location.href);
-          url.searchParams.set('totalCost', totalCost);
-          history.replaceState(null, '', url);
+          url.searchParams.set("totalCost", totalCost);
+          history.replaceState(null, "", url);
         }
       });
-  
+
       document.addEventListener("DOMContentLoaded", function () {
         document
           .getElementById("CinemaName")
@@ -624,13 +109,15 @@
       <div class="container">
         <div class="left-section">
           <div class="image-container">
-            <img style="width: 50%;" src="Barbie And Stacie To The Rescue.jpg" alt="" />
-
+            <img
+              style="width: 50%"
+              src="Barbie And Stacie To The Rescue.jpg"
+              alt=""
+            />
           </div>
 
           <div class="first-line">
-            <h1 style="color: #A02D8A;">Barbie And Stacie 
-            </h1>
+            <h1 style="color: #a02d8a">Barbie And Stacie</h1>
           </div>
           <div class="sy">
             <div>Madinaty</div>
@@ -646,13 +133,12 @@
             <button class="butt">Choose your offer</button>
             <hr />
             <div class="left-section">
-              <div  class="selected-seats">
+              <div class="selected-seats">
                 <h4>Selected Seats:</h4>
                 <ul id="selectedSeatsList"></ul>
                 <h4>Total Cost: <span id="totalCost">0</span> LE</h4>
               </div>
               <div>
-                
                 <button
                   class="butt"
                   id="switch"
@@ -978,7 +464,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p style="color: purple">
+        <p style="color: #a02d8a">
           &copy; 2024 All right reserved by CinemaName
         </p>
       </div>

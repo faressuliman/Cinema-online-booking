@@ -14,7 +14,7 @@
   <body>
     <header>
       <div class="logo">
-        <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
+        <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
       </div>
 
       <nav class="navigation">
@@ -66,7 +66,7 @@
             window.location.href = "home.html";
           });
       });
-      
+
       document.addEventListener("DOMContentLoaded", function () {
         // Get the modal
         var modal = document.getElementById("myModal");
@@ -110,14 +110,13 @@
         }
       });
 
-
-
-
-      document.querySelectorAll(".sixth-button button").forEach(function(button) {
-        button.addEventListener("click", function() {
-          window.location.href = "booking.html";
+      document
+        .querySelectorAll(".sixth-button button")
+        .forEach(function (button) {
+          button.addEventListener("click", function () {
+            window.location.href = "booking.html";
+          });
         });
-      });
     </script>
 
     <section>
@@ -126,7 +125,7 @@
           <div class="book-image"><img src="/images/200.webp" alt="" /></div>
         </div>
         <div class="right-side">
-          <h2 style="color: #A02D8A; font-size: 40px; font-weight: 550">
+          <h2 style="color: #a02d8a; font-size: 40px; font-weight: 550">
             Godzilla x Kong
           </h2>
           <div class="second-line">
@@ -146,26 +145,30 @@
             <hr />
           </div>
 
-          <div class="fifth-line" >
+          <div class="fifth-line">
             <div class="line-content" id="booking1">
               <div class="line-card" id="thu">
-                <button class="line-butt" id="mySquareButton"onclick="selectButton(this)">
+                <button
+                  class="line-butt"
+                  id="mySquareButton"
+                  onclick="selectButton(this)"
+                >
                   <div>
                     <div class="thu">Thu</div>
                     <div class="day">25</div>
                     <div class="apr">Apr</div>
                   </div>
-                </button>              
+                </button>
               </div>
               <div class="line-card">
-                <button class="line-butt" id="fri"onclick="selectButton(this)">
+                <button class="line-butt" id="fri" onclick="selectButton(this)">
                   <div>
                     <div class="thu">Fri</div>
                     <div class="day">26</div>
                     <div class="apr">Tue</div>
                   </div>
                 </button>
-              </div>           
+              </div>
               <div class="line-card">
                 <button class="line-butt" onclick="selectButton(this)">
                   <div>
@@ -184,11 +187,11 @@
                 <div>Regular</div>
                 <ul class="sixth-list">
                   <li>Premium</li>
-               </ul>
+                </ul>
               </div>
               <div class="sixth-button">
                 <button class="abcd">9.30 PM (2D)</button>
-                <button  class="abcd">12 AM (2D)</button>
+                <button class="abcd">12 AM (2D)</button>
               </div>
             </div>
             <br />
@@ -203,10 +206,9 @@
               </div>
               <div>
                 <div class="sixth-button">
-                  <button class="abcd" >8.30 PM (2D)</button>
-                  <button class="abcd" >11 AM (2D)</button>
+                  <button class="abcd">8.30 PM (2D)</button>
+                  <button class="abcd">11 AM (2D)</button>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -229,6 +231,7 @@
               <li><a href="refunds.html">Refunds & Exchanges</a></li>
               <li><a href="termsofservice.html">Terms of Service</a></li>
             </ul>
+          </ul>
         </div>
       </div>
       <div class="footer-bottom">
@@ -236,20 +239,20 @@
       </div>
     </footer>
     <script>
-      document.querySelectorAll(".abcd").forEach(function(button) {
-        button.addEventListener("click", function() {
+      document.querySelectorAll(".abcd").forEach(function (button) {
+        button.addEventListener("click", function () {
           window.location.href = "booking.html";
         });
-      });function selectButton(button) {
-  // Remove 'selected' class from all buttons with class 'line-butt'
-  document.querySelectorAll('.line-butt').forEach(function(btn) {
-    btn.classList.remove('selected');
-  });
+      });
+      function selectButton(button) {
+        // Remove 'selected' class from all buttons with class 'line-butt'
+        document.querySelectorAll(".line-butt").forEach(function (btn) {
+          btn.classList.remove("selected");
+        });
 
-  // Add 'selected' class to the clicked button
-  button.classList.add('selected');
-}
+        // Add 'selected' class to the clicked button
+        button.classList.add("selected");
+      }
     </script>
-    
   </body>
 </html>

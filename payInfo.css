@@ -9,7 +9,7 @@ body {
     background: #f2f2f2;
   }
   
-  .container-wrapper {
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;

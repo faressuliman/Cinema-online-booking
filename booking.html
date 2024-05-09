@@ -15,7 +15,7 @@
   <body>
     <header style="background-color: transparent">
       <div class="logo">
-        <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
+        <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
       </div>
 
       <nav class="navigation">
@@ -34,14 +34,17 @@
         const selectedSeats = [];
         const maxSeats = 5;
         const seatPrice = 150;
-  
-        seats.forEach(function(seat) {
+
+        seats.forEach(function (seat) {
           seat.addEventListener("click", function () {
-            if (selectedSeats.length >= maxSeats && !this.classList.contains("selected")) {
+            if (
+              selectedSeats.length >= maxSeats &&
+              !this.classList.contains("selected")
+            ) {
               alert("You can only book up to 5 seats.");
               return;
             }
-  
+
             this.classList.toggle("selected");
             const seatNumber = this.dataset.seat;
             if (this.classList.contains("selected")) {
@@ -55,22 +58,23 @@
             updateSelectedSeats();
           });
         });
-  
+
         function updateSelectedSeats() {
-          const selectedSeatsList = document.getElementById("selectedSeatsList");
+          const selectedSeatsList =
+            document.getElementById("selectedSeatsList");
           const totalCostElement = document.getElementById("totalCost");
           selectedSeatsList.innerHTML = "";
-  
+
           let totalCost = selectedSeats.length * seatPrice;
           totalCostElement.textContent = totalCost;
-  
+
           // Store total cost in URL parameters
           const url = new URL(window.location.href);
-          url.searchParams.set('totalCost', totalCost);
-          history.replaceState(null, '', url);
+          url.searchParams.set("totalCost", totalCost);
+          history.replaceState(null, "", url);
         }
       });
-  
+
       document.addEventListener("DOMContentLoaded", function () {
         document
           .getElementById("CinemaName")
@@ -125,13 +129,12 @@
             <button class="butt">Choose your offer</button>
             <hr />
             <div class="left-section">
-              <div  class="selected-seats">
+              <div class="selected-seats">
                 <h4>Selected Seats:</h4>
                 <ul id="selectedSeatsList"></ul>
                 <h4>Total Cost: <span id="totalCost">0</span> LE</h4>
               </div>
               <div>
-                
                 <button
                   class="butt"
                   id="switch"
@@ -457,7 +460,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p style="color: #A02D8A">
+        <p style="color: #a02d8a">
           &copy; 2024 All right reserved by CinemaName
         </p>
       </div>

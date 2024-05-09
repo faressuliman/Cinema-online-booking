@@ -1,407 +1,423 @@
 <!DOCTYPE html>
-<html lang="en">       <!--   i18n -->
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Cinema</title>
-  <style>
-    .nowshowing-image {
-      position: relative;
-      width: 100%;
-      min-height: 650px;
-      display: flex;
-      align-items: center;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .slideshow-container {
-      max-width: 100%;
-      position: relative;
-      margin: auto;
-    }
-
-    .mySlides {
-      display: none;
-    }
-
-
-
-    .manual-navigation {
-  position: absolute;
-  bottom: 20px; 
-  left: 50%; 
-  transform: translateX(-50%);
-}
-
-.manual-navigation .dot {
-  height: 10px;
-  width: 10px;
-  margin: 0 5px; 
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.6s ease;
-}
-
-.manual-navigation .dot.active {
-  background-color: #717171;
-}
-
-  </style>
-</head>
-<body>
-  
-  <header>
-    <div class="logo">
-      <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
-    </div>
-
-    <nav class="navigation">
-      <a href="home.html">Now Showing</a>
-      <a href="comingsoon.html">Coming Soon</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="login">
-      <button id="myaccButton">MY ACCOUNT</button>
-      <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
-      </button>
-    </div>
-  </header>
-  <div class="slideshow-container">
-    <div class="mySlides" style="background-image: url(wb.jpg);">
-      <section class="nowshowing-image">
-        <div class="info">
-          <div>Coming Soon</div>
-          <strong>Winnie The Pooh: Blood And Honey 2</strong>
-          <button id="booknow4" class="booknow">Pre-Order</button>
-        </div>
-      </section>
-    </div>
-
-    <div class="mySlides" style="background-image: url(alserb.jpg);">
-      <section class="nowshowing-image">
-        <div class="info">
-          <div>Coming Soon</div>
-          <strong>السرب</strong>
-          <button id="booknow5" class="booknow">Pre-Order</button>
-        </div>
-      </section>
-    </div>
-
-    <div class="mySlides" style="background-image: url(godzilla.jpg);">
-      <section class="nowshowing-image">
-        <div class="info">
-          <div>Now Showing</div>
-          <strong>Godzilla x Kong: The New Empire</strong>
-          <button id="booknow1" class="booknow">Book Now</button>
-        </div>
-      </section>
-    </div>
-
-    <div class="mySlides" style="background-image: url(fasl.jpg);">
-      <section class="nowshowing-image">
-        <div class="info">
-          <div>Now Showing</div>
-          <strong>فاصل من اللحظات الذيذة</strong>
-          <button id="booknow2" class="booknow">Book Now</button>
-        </div>
-      </section>
-    </div>
-
-    <div class="mySlides" style="background-image: url(sheko.jpg);">
-      <section class="nowshowing-image">
-        <div class="info">
-          <div>Now Showing</div>
-          <strong>شقو</strong>
-          <button id="booknow3" class="booknow">Book Now</button>
-        </div>
-      </section>
-    </div>
-
-    <div class="manual-navigation">
-      <span class="dot" data-slide="1"></span>
-      <span class="dot" data-slide="2"></span>
-      <span class="dot" data-slide="3"></span>
-      <span class="dot" data-slide="4"></span>
-      <span class="dot" data-slide="5"></span>
-    </div>
-  </div>
-  <script>
-    var slideIndex = 0;
-    var slideTimeout;
-
-    function showSlide(n) {
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-
-      if (n > slides.length) {
-        slideIndex = 1;
-      } else if (n < 1) {
-        slideIndex = slides.length;
+<html lang="en">
+  <!--   i18n -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cinema</title>
+    <style>
+      .nowshowing-image {
+        position: relative;
+        width: 100%;
+        min-height: 650px;
+        display: flex;
+        align-items: center;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
       }
 
-      for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        dots[i].className = "dot";
+      .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin: auto;
       }
 
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-    }
+      .mySlides {
+        display: none;
+      }
 
-    function autoSlide() {
-      slideIndex++;
-      showSlide(slideIndex);
-      slideTimeout = setTimeout(autoSlide, 3000); 
-    }
+      .manual-navigation {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
-    function resetAutoSlide() {
-      clearTimeout(slideTimeout);
-      slideTimeout = setTimeout(autoSlide, 3000);
-    }
+      .manual-navigation .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.6s ease;
+      }
 
-    document.addEventListener("DOMContentLoaded", function() {
-      showSlide(slideIndex);
-      autoSlide();
+      .manual-navigation .dot.active {
+        background-color: #717171;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
+      </div>
 
-      var dots = document.getElementsByClassName("dot");
+      <nav class="navigation">
+        <a href="home.html">Now Showing</a>
+        <a href="comingsoon.html">Coming Soon</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="login">
+        <button id="myaccButton">MY ACCOUNT</button>
+        <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
+      </div>
+    </header>
+    <div class="slideshow-container">
+      <div class="mySlides" style="background-image: url(wb.jpg)">
+        <section class="nowshowing-image">
+          <div class="info">
+            <div>Coming Soon</div>
+            <strong>Winnie The Pooh: Blood And Honey 2</strong>
+            <button id="booknow4" class="booknow">Pre-Order</button>
+          </div>
+        </section>
+      </div>
 
-      for (var i = 0; i < dots.length; i++) {
-        (function(index) {
-          dots[index].addEventListener("click", function() {
-            slideIndex = index + 1;
-            showSlide(slideIndex);
-            resetAutoSlide(); 
+      <div class="mySlides" style="background-image: url(alserb.jpg)">
+        <section class="nowshowing-image">
+          <div class="info">
+            <div>Coming Soon</div>
+            <strong>السرب</strong>
+            <button id="booknow5" class="booknow">Pre-Order</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="mySlides" style="background-image: url(godzilla.jpg)">
+        <section class="nowshowing-image">
+          <div class="info">
+            <div>Now Showing</div>
+            <strong>Godzilla x Kong: The New Empire</strong>
+            <button id="booknow1" class="booknow">Book Now</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="mySlides" style="background-image: url(fasl.jpg)">
+        <section class="nowshowing-image">
+          <div class="info">
+            <div>Now Showing</div>
+            <strong>فاصل من اللحظات الذيذة</strong>
+            <button id="booknow2" class="booknow">Book Now</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="mySlides" style="background-image: url(sheko.jpg)">
+        <section class="nowshowing-image">
+          <div class="info">
+            <div>Now Showing</div>
+            <strong>شقو</strong>
+            <button id="booknow3" class="booknow">Book Now</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="manual-navigation">
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
+        <span class="dot" data-slide="4"></span>
+        <span class="dot" data-slide="5"></span>
+      </div>
+    </div>
+    <script>
+      var slideIndex = 0;
+      var slideTimeout;
+
+      function showSlide(n) {
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        } else if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+          dots[i].className = "dot";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+      function autoSlide() {
+        slideIndex++;
+        showSlide(slideIndex);
+        slideTimeout = setTimeout(autoSlide, 3000);
+      }
+
+      function resetAutoSlide() {
+        clearTimeout(slideTimeout);
+        slideTimeout = setTimeout(autoSlide, 3000);
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        showSlide(slideIndex);
+        autoSlide();
+
+        var dots = document.getElementsByClassName("dot");
+
+        for (var i = 0; i < dots.length; i++) {
+          (function (index) {
+            dots[index].addEventListener("click", function () {
+              slideIndex = index + 1;
+              showSlide(slideIndex);
+              resetAutoSlide();
+            });
+          })(i);
+        }
+
+        document
+          .getElementById("loginnButton")
+          .addEventListener("click", function () {
+            window.location.href = "loginPage.html";
           });
-        })(i);
-      }
 
-      document.getElementById("loginnButton").addEventListener("click", function() {
-        window.location.href = "loginPage.html";
-      });
+        document
+          .getElementById("CinemaName")
+          .addEventListener("click", function () {
+            window.location.href = "home.html";
+          });
 
-      document.getElementById("CinemaName").addEventListener("click", function() {
-        window.location.href = "home.html";
+        document
+          .getElementById("myaccButton")
+          .addEventListener("click", function () {
+            window.location.href = "myAcc.html";
+          });
       });
+    </script>
 
-      document.getElementById("myaccButton").addEventListener("click", function() {
-        window.location.href = "myAcc.html";
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("booknow1")
+          .addEventListener("click", function () {
+            window.location.href = "book.html";
+          });
       });
-    });
-  </script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("booknow2")
+          .addEventListener("click", function () {
+            window.location.href = "book2.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("booknow3")
+          .addEventListener("click", function () {
+            window.location.href = "book3.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("booknow4")
+          .addEventListener("click", function () {
+            window.location.href = "book4.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("booknow5")
+          .addEventListener("click", function () {
+            window.location.href = "book5.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CARD1").addEventListener("click", function () {
+          window.location.href = "card1.html";
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CARD2").addEventListener("click", function () {
+          window.location.href = "card2.html";
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CARD3").addEventListener("click", function () {
+          window.location.href = "card3.html";
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CARD4").addEventListener("click", function () {
+          window.location.href = "card4.html";
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CARD5").addEventListener("click", function () {
+          window.location.href = "card5.html";
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CARD6").addEventListener("click", function () {
+          window.location.href = "card6.html";
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CARD7").addEventListener("click", function () {
+          window.location.href = "card7.html";
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CARD8").addEventListener("click", function () {
+          window.location.href = "card8.html";
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CARD9").addEventListener("click", function () {
+          window.location.href = "card9.html";
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("CARD10")
+          .addEventListener("click", function () {
+            window.location.href = "card10.html";
+          });
+      });
+    </script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("booknow1").addEventListener("click", function () {
-        window.location.href = "book.html";
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("booknow2").addEventListener("click", function () {
-        window.location.href = "book2.html";
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("booknow3").addEventListener("click", function () {
-        window.location.href = "book3.html";
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("booknow4").addEventListener("click", function () {
-        window.location.href = "book4.html";
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("booknow5").addEventListener("click", function () {
-        window.location.href = "book5.html";
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("CARD1").addEventListener("click", function () {
-        window.location.href = "card1.html";
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("CARD2").addEventListener("click", function () {
-        window.location.href = "card2.html";
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("CARD3").addEventListener("click", function () {
-        window.location.href = "card3.html";
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("CARD4").addEventListener("click", function () {
-        window.location.href = "card4.html";
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("CARD5").addEventListener("click", function () {
-        window.location.href = "card5.html";
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("CARD6").addEventListener("click", function () {
-        window.location.href = "card6.html";
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("CARD7").addEventListener("click", function () {
-        window.location.href = "card7.html";
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("CARD8").addEventListener("click", function () {
-        window.location.href = "card8.html";
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("CARD9").addEventListener("click", function () {
-        window.location.href = "card9.html";
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("CARD10").addEventListener("click", function () {
-        window.location.href = "card10.html";
-      });
-    });
-
-
-  </script>
-
-<section class="first-category">
-  <div class="first-logo">Now Showing</div>
-  <div class="content">
-
-    <div class="card" id="CARD1" >
-      <div class="image-one"><img src="/images/TheNun.jpg" /></div>
-      <strong class="card-name"> The Nun </strong>
-      <div class="more-info">
-        Action
-        <ul class="card-list">
-          <li>Rated +18</li>
-        </ul>
+    <section class="first-category">
+      <div class="first-logo">Now Showing</div>
+      <div class="content">
+        <div class="card" id="CARD1">
+          <div class="image-one"><img src="/images/TheNun.jpg" /></div>
+          <strong class="card-name"> The Nun </strong>
+          <div class="more-info">
+            Action
+            <ul class="card-list">
+              <li>Rated +18</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" id="CARD2">
+          <div class="image-one"><img src="/images/Dune2.jpg" /></div>
+          <strong class="card-name"> Dune 2 </strong>
+          <div class="more-info">
+            Action
+            <ul class="card-list">
+              <li>Rated +18</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" id="CARD3">
+          <div class="image-one"><img src="/images/Oppenheimer.jpg" /></div>
+          <strong class="card-name"> Oppenheimer </strong>
+          <div class="more-info">
+            Action
+            <ul class="card-list">
+              <li>Rated +18</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" id="CARD4">
+          <div class="image-one"><img src="/images/CivilWar.jpg" /></div>
+          <strong class="card-name"> Civil War </strong>
+          <div class="more-info">
+            Action
+            <ul class="card-list">
+              <li>Rated +18</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" id="CARD5">
+          <div class="image-one"><img src="/images/kung fu panda 4.jpg" /></div>
+          <strong class="card-name"> Kung Fu Panda 4 </strong>
+          <div class="more-info">
+            Animated
+            <ul style="margin-right: 120px" class="card-list">
+              <li>Rated +12</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" id="CARD6">
+          <div class="image-one">
+            <img src="Barbie And Stacie To The Rescue.jpg" />
+          </div>
+          <strong class="card-name"> Barbie And Stacie To The Rescue </strong>
+          <div class="more-info">
+            Animated
+            <ul style="margin-right: 120px" class="card-list">
+              <li>Rated +12</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" id="CARD7">
+          <div class="image-one"><img src="SPY X FAMILY.jpg" /></div>
+          <strong class="card-name"> SPY X FAMILY </strong>
+          <div class="more-info">
+            Animated
+            <ul style="margin-right: 120px" class="card-list">
+              <li>Rated +12</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" id="CARD8">
+          <div class="image-one"><img src="عالماشي.jpg" /></div>
+          <strong class="card-name">عالماشي </strong>
+          <div class="more-info">
+            Comedy
+            <ul style="margin-right: 135px" class="card-list">
+              <li>Rated +12</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" id="CARD9">
+          <div class="image-one"><img src="اسود ملون.jpg" /></div>
+          <strong class="card-name"> اسود ملون </strong>
+          <div class="more-info">
+            Comedy
+            <ul style="margin-right: 135px" class="card-list">
+              <li>Rated +12</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" id="CARD10">
+          <div class="image-one"><img src="/images/djNGO.jpg" /></div>
+          <strong class="card-name"> Django Unchained </strong>
+          <div class="more-info">
+            Action
+            <ul class="card-list">
+              <li>Rated +18</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card" id="CARD2">
-      <div class="image-one"><img src="/images/Dune2.jpg" /></div>
-      <strong class="card-name"> Dune 2 </strong>
-      <div class="more-info">
-        Action
-        <ul class="card-list">
-          <li>Rated +18</li>
-        </ul>
+    </section>
+    <footer>
+      <hr style="opacity: 0.5" />
+      <div class="footer-container">
+        <div class="footer-icons">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="refunds.html">Refunds & Exchanges</a></li>
+            <li><a href="termsofservice.html">Terms of Service</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="card" id="CARD3">
-      <div class="image-one"><img src="/images/Oppenheimer.jpg" /></div>
-      <strong class="card-name"> Oppenheimer </strong>
-      <div class="more-info">
-        Action
-        <ul class="card-list">
-          <li>Rated +18</li>
-        </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2024 All rights reserved by CinemaName</p>
       </div>
-    </div>
-    <div class="card" id="CARD4">
-      <div class="image-one"><img src="/images/CivilWar.jpg" /></div>
-      <strong class="card-name"> Civil War </strong>
-      <div class="more-info">
-        Action
-        <ul class="card-list">
-          <li>Rated +18</li>
-        </ul>
-      </div>
-    </div>
-    <div class="card" id="CARD5">
-      <div class="image-one"><img src="/images/kung fu panda 4.jpg" /></div>
-      <strong class="card-name"> Kung Fu Panda 4 </strong>
-      <div class="more-info" >
-        Animated
-        <ul style="margin-right: 120px;" class="card-list">
-          <li>Rated +12</li>
-        </ul>
-      </div>
-    </div>
-    <div class="card" id="CARD6">
-      <div class="image-one"><img src="Barbie And Stacie To The Rescue.jpg" /></div>
-      <strong class="card-name"> Barbie And Stacie To The Rescue </strong>
-      <div class="more-info">
-        Animated
-        <ul style="margin-right: 120px;" class="card-list">
-          <li>Rated +12</li>
-        </ul>
-      </div>
-    </div>
-    <div class="card" id="CARD7">
-      <div class="image-one"><img src="SPY X FAMILY.jpg" /></div>
-      <strong class="card-name"> SPY X FAMILY </strong>
-      <div class="more-info">
-        Animated
-        <ul style="margin-right: 120px;" class="card-list">
-          <li>Rated +12</li>
-        </ul>
-      </div>
-    </div>
-    <div class="card"id="CARD8">
-      <div class="image-one"><img src="عالماشي.jpg" /></div>
-      <strong class="card-name">عالماشي </strong>
-      <div class="more-info">
-        Comedy
-        <ul style="margin-right: 135px;" class="card-list">
-          <li>Rated +12</li>
-        </ul>
-      </div>
-    </div>
-    <div class="card"id="CARD9">
-      <div class="image-one"><img src="اسود ملون.jpg" /></div>
-      <strong class="card-name"> اسود ملون </strong>
-      <div class="more-info">
-        Comedy
-        <ul style="margin-right: 135px;" class="card-list">
-          <li>Rated +12</li>
-        </ul>
-      </div>
-    </div>
-    <div class="card"id="CARD10">
-      <div class="image-one"><img src="/images/djNGO.jpg" /></div>
-      <strong class="card-name"> Django Unchained </strong>
-      <div class="more-info">
-        Action
-        <ul class="card-list">
-          <li>Rated +18</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-  <footer>
-    <hr style="opacity: 0.5" />
-    <div class="footer-container">
-      <div class="footer-icons">
-        <a href=""><i class="fab fa-facebook-f"></i></a>
-        <a href=""><i class="fab fa-instagram"></i></a>
-        <a href=""><i class="fab fa-tiktok"></i></a>
-      </div>
-      <div class="footer-nav">
-        <ul>
-          <li><a href="aboutus.html">About us</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="refunds.html">Refunds & Exchanges</a></li>
-          <li><a href="termsofservice.html">Terms of Service</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 All rights reserved by CinemaName</p>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

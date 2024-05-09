@@ -18,76 +18,51 @@
           alert("Please enter a valid card number");
           return false;
         }
-
         return true;
       }
     </script>
   </head>
-  <body><form action="">
-    <div class="container-wrapper">
-      <div class="header">
-        <h2><b>Payment Information</b></h2>
-      </div>
-      <div class="containers">
-        <img src="4.png" class="visa-image" alt="Visa Card Image" />
-        <div class="form-container">
-          <form id="paymob_checkout" onsubmit="return validateForm()">
-            <div class="card-num-input">
-              <input
-                placeholder="Card Number"
-                type="tel"
-                name="number"
-                id="number"
-                class="card-num"
-                required
-              />
+  <body>
+    <form action="">
+      <div class="container">
+        <div class="header">
+          <h2><b>Payment Information</b></h2>
+        </div>
+        <div class="containers">
+          <img src="4.png" class="visa-image" alt="Visa Card Image" />
+          <div class="form-container">
+            <form id="paymob_checkout" onsubmit="return validateForm()">
+              <div class="card-num-input">
+                <input placeholder="Card Number"type="tel"name="number"
+                  id="number"class="card-num"required/>
+              </div>
+              <div class="card-num-input">
+                <input placeholder="Card Holder Name"type="text"
+                  name="name"paymob_field="card_holdername"required/>
+              </div>
+              <div class="input-containers">
+                <input placeholder="MM/YY"type="tel"name="expiry"
+                  id="mmyy"requiredmaxlength="5 "style="margin-right: 20px"/>
+                <input placeholder="CVV"type="tel"name="cvc"
+                  paymob_field="card_cvn"id="cvv"maxlength="3"required/>
+              </div>
+              <div class="checkbox-container">
+                <label for="save card" style="color: #7f98c5; font-size: small"><span>Save Card</span></label>
+                <input type="checkbox" value="tokenize" name="save card" />
+              </div>
+              <button id="submitButton" type="submit" class="submit">
+                PAY
+              </button>
+            </form>
+            <div class="footer">
+              <span>
+                <i class="fa fa-lock" aria-hidden="true"></i> Secured byPaymob
+              </span>
+              <img src="paymob_new.svg" id="paymobimg" alt="Paymob Logo" />
             </div>
-            <div class="card-num-input">
-              <input
-                placeholder="Card Holder Name"
-                type="text"
-                name="name"
-                paymob_field="card_holdername"
-                required
-              />
-            </div>
-            <div class="input-containers">
-              <input
-                placeholder="MM/YY"
-                type="tel"
-                name="expiry"
-                id="mmyy"
-                required
-                maxlength="5 "
-                style="margin-right: 20px"
-              />
-              <input
-                placeholder="CVV"
-                type="tel"
-                name="cvc"
-                paymob_field="card_cvn"
-                id="cvv"
-                maxlength="3"
-                required
-              />
-            </div>
-            <div class="checkbox-container">
-              <label for="save card" style="color: #7f98c5; font-size: small"
-                ><span>Save Card</span></label
-              >
-              <input type="checkbox" value="tokenize" name="save card" />
-            </div>
-            <button id="submitButton" type="submit" class="submit">PAY</button>
-          </form>
-          <div class="footer">
-            <span
-              ><i class="fa fa-lock" aria-hidden="true"></i> Secured by
-              Paymob</span
-            >
-            <img src="paymob_new.svg" id="paymobimg" alt="Paymob Logo" />
           </div>
         </div>
       </div>
-    </div></form>
+    </form>
   </body>
 </html>

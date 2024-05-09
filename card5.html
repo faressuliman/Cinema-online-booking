@@ -16,7 +16,7 @@
   <body>
     <header>
       <div class="logo">
-        <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
+        <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
       </div>
 
       <nav class="navigation">
@@ -25,11 +25,11 @@
         <a href="contact.html">Contact</a>
       </nav>
       <div class="login">
-        <button id="myaccButton"> MY ACCOUNT</button>
+        <button id="myaccButton">MY ACCOUNT</button>
         <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
       </div>
     </header>
-    
+
     <!-- Modal -->
     <div id="myModal" class="modal">
       <div class="modal-content">
@@ -68,7 +68,7 @@
             window.location.href = "home.html";
           });
       });
-      
+
       document.addEventListener("DOMContentLoaded", function () {
         // Get the modal
         var modal = document.getElementById("myModal");
@@ -110,15 +110,16 @@
           // Set the video source to an empty string
           videoFrame.src = "";
         }
-      });function selectButton(button) {
-  // Remove 'selected' class from all buttons with class 'line-butt'
-  document.querySelectorAll('.line-butt').forEach(function(btn) {
-    btn.classList.remove('selected');
-  });
+      });
+      function selectButton(button) {
+        // Remove 'selected' class from all buttons with class 'line-butt'
+        document.querySelectorAll(".line-butt").forEach(function (btn) {
+          btn.classList.remove("selected");
+        });
 
-  // Add 'selected' class to the clicked button
-  button.classList.add('selected');
-}
+        // Add 'selected' class to the clicked button
+        button.classList.add("selected");
+      }
     </script>
 
     <section>
@@ -129,7 +130,7 @@
           </div>
         </div>
         <div class="right-side">
-          <h2 style="color: #A02D8A; font-size: 40px; font-weight: 550">
+          <h2 style="color: #a02d8a; font-size: 40px; font-weight: 550">
             Kung Fu Panda 4
           </h2>
           <div class="second-line">
@@ -151,7 +152,7 @@
           <div class="fifth-line">
             <div class="line-content">
               <div class="line-card">
-                <button class="line-butt"onclick="selectButton(this)">
+                <button class="line-butt" onclick="selectButton(this)">
                   <div>
                     <div class="thu">Thu</div>
                     <div class="day">25</div>
@@ -160,7 +161,7 @@
                 </button>
               </div>
               <div class="line-card">
-                <button class="line-butt"onclick="selectButton(this)">
+                <button class="line-butt" onclick="selectButton(this)">
                   <div>
                     <div class="thu">Fri</div>
                     <div class="day">26</div>
@@ -169,7 +170,7 @@
                 </button>
               </div>
               <div class="line-card">
-                <button class="line-butt"onclick="selectButton(this)">
+                <button class="line-butt" onclick="selectButton(this)">
                   <div>
                     <div class="thu">Sat</div>
                     <div class="day">27</div>
@@ -178,7 +179,7 @@
                 </button>
               </div>
               <div class="line-card">
-                <button class="line-butt"onclick="selectButton(this)">
+                <button class="line-butt" onclick="selectButton(this)">
                   <div>
                     <div class="thu">Sun</div>
                     <div class="day">28</div>
@@ -187,7 +188,7 @@
                 </button>
               </div>
               <div class="line-card">
-                <button class="line-butt"onclick="selectButton(this)">
+                <button class="line-butt" onclick="selectButton(this)">
                   <div>
                     <div class="thu">Mon</div>
                     <div class="day">29</div>
@@ -196,7 +197,7 @@
                 </button>
               </div>
               <div class="line-card">
-                <button class="line-butt"onclick="selectButton(this)">
+                <button class="line-butt" onclick="selectButton(this)">
                   <div>
                     <div class="thu">Tue</div>
                     <div class="day">30</div>
@@ -235,7 +236,6 @@
                   <button class="abcd">8.30 PM (2D)</button>
                   <button class="abcd">11 AM (2D)</button>
                 </div>
-               
               </div>
             </div>
           </div>
@@ -253,19 +253,21 @@
         <div class="footer-nav">
           <ul>
             <li><a href="aboutus.html">About us</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="refunds.html">Refunds & Exchanges</a></li>
-          <li><a href="termsofservice.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="refunds.html">Refunds & Exchanges</a></li>
+            <li><a href="termsofservice.html">Terms of Service</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p style="color: #A02D8A;">&copy; 2024 All right reserved by CinemaName</p>
+        <p style="color: #a02d8a">
+          &copy; 2024 All right reserved by CinemaName
+        </p>
       </div>
     </footer>
     <script>
-      document.querySelectorAll(".abcd").forEach(function(button) {
-        button.addEventListener("click", function() {
+      document.querySelectorAll(".abcd").forEach(function (button) {
+        button.addEventListener("click", function () {
           window.location.href = "booking10.html";
         });
       });

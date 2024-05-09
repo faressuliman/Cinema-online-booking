@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="gladiator.css" />
     <link rel="stylesheet" href="hhhhhhhh.css" />
     <title>Document</title>
@@ -14,11 +13,9 @@
   <body>
     <header style="background-color: transparent">
       <div class="logo">
-        <a href="home.html" style="text-decoration: none"
-          ><h2 id="CinemaName" style="cursor: pointer">CinemaName</h2></a
-        >
+        <a href="home.html" style="text-decoration: none">
+        <h2 id="CinemaName" style="cursor: pointer">OCinema</h2></a>
       </div>
-
       <nav class="navigation">
         <a href="home.html">Now Showing</a>
         <a href="comingsoon.html">Coming Soon</a>
@@ -51,8 +48,14 @@
             window.location.href = "myAcc.html";
           });
       });
+      document.addEventListener("DOMContentLoaded", function () {
+                  document
+                    .getElementById("watch-butt")
+                    .addEventListener("click", function () {
+                      window.location.href = "https://youtu.be/-GRRA558ojg";
+                    });
+                });
     </script>
-
     <main>
       <div class="container">
         <div class="left-section">
@@ -62,7 +65,7 @@
         </div>
         <div class="right-section">
           <div class="info">
-            <h2 style="color: #A02D8A; font-size: 40px; font-weight: 550">
+            <h2 style="color: #a02d8a; font-size: 40px; font-weight: 550">
               السرب
             </h2>
             <div class="second-line">
@@ -72,15 +75,6 @@
             </div>
             <div class="third-line">
               <button id="watch-butt" class="watch-butt">Watch Trailer</button>
-              <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  document
-                    .getElementById("watch-butt")
-                    .addEventListener("click", function () {
-                      window.location.href = "https://youtu.be/-GRRA558ojg";
-                    });
-                });
-              </script>
             </div>
             <div class="fourth-line">
               <h3>Details</h3>
@@ -88,23 +82,22 @@
               <br />
               <h4 style="color: hsla(300, 100%, 25%, 0.678)">Synopsis</h4>
               <p>
-                <b
-                  >Based on actual events and the efforts of the Egyptian
-                  National Security Authorities against terrorist organizations
-                  through the incident of the massacre of 21 Egyptians in Libya
-                  and the army’s expanding operations in order to confront these
-                  terrorist groups.
+                <b>Based on actual events and the efforts of the Egyptian
+                    National Security Authorities against terrorist organizations
+                    through the incident of the massacre of 21 Egyptians in Libya
+                    and the army’s expanding operations in order to confront these
+                    terrorist groups.
                 </b>
               </p>
-              <br />
+              <br/>
               <h4 style="color: hsla(300, 100%, 25%, 0.678)">Starring</h4>
               <p>
-                <b
-                  >Ahmed El Sakka - Amr Abdul Gelil - Kosai Khauli - Mostafa
+                <b>
+                  Ahmed El Sakka - Amr Abdul Gelil - Kosai Khauli - Mostafa
                   Fahmi - Hend Sabry
                 </b>
               </p>
-              <br />
+              <br/>
               <h4 style="color: hsla(300, 100%, 25%, 0.678)">Directed by</h4>
               <p><b>Ahmed Nader Galal</b></p>
             </div>
@@ -112,7 +105,6 @@
         </div>
       </div>
     </main>
-
     <footer>
       <hr style="opacity: 0.5" />
       <div class="footer-container">
@@ -131,7 +123,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p style="color: #A02D8A">
+        <p style="color: #a02d8a">
           &copy; 2024 All right reserved by CinemaName
         </p>
       </div>

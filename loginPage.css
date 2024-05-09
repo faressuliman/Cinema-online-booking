@@ -37,7 +37,7 @@ header{
 
 }
 .navigation a:hover{
-  color: #a82c8c;
+  color: #A02D8A;
 }
 .login{
   margin-right: 10px;
@@ -69,7 +69,7 @@ header{
 
 .login button:hover{
   color: #f0f0f0;
-  background-color: purple;
+  background-color: #A02D8A;
   cursor: pointer;
 }
 #myaccButton{
