@@ -1,4 +1,6 @@
 <?php
+require "dbcon.php";
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $name = $_POST["name"];
     $mobile = $_POST["mobile"];
@@ -32,9 +34,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
         }
     }
-}
-header("location:loginPage.php");
+    header("location:loginPage.php");
 exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,7 +116,7 @@ exit();
           window.location.href = "loginPage.html";
         });
     </script>
-    <div class="">
+    <div class="the_body m-0 p-0">
       <div class="container">
         <div class="left-section">
           <div>
@@ -132,10 +135,10 @@ exit();
               <h3 style="padding-bottom: 15px">Create An Account</h3>
             </div>
             <form
-                method="post"
-              action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
+              method="POST"
+              action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
               class="register-form"
-              id="login-form" 
+              id="login-form"
             >
               <div class="row">
                 <div class="your-name">
@@ -273,5 +276,5 @@ exit();
         </p>
       </div>
     </footer>
-  </body>
+  </body>
 </html>

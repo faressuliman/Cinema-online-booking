@@ -11,9 +11,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             return $data;
         }
         
-       $email = validate($_POST['email']);
+        $email = validate($_POST['email']);
         $pass = validate($_POST['password']);
-        $query = "SELECT * FROM customer WHERE Email='{$_SESSION['email']}' AND Password='$pass'";
+        $query = "SELECT * FROM customer WHERE Email='$email' && Password='$pass'";
         $result = mysqli_query($db, $query);
         
         if(mysqli_num_rows($result) === 1){
@@ -26,8 +26,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo "<script>alert('Invalid Email/Password');</script>";
             header("Location:loginPage.php"); 
             exit(); 
-        }
-    }
+        }
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -109,7 +109,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             >
               Sign in
             </h2>
-            <form method="post" id="login-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <form method="POST" id="login-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
               <input
                 type="hidden"
                 name="_token"
@@ -233,5 +233,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </p>
       </div>
     </footer>
-  </body>
+  </body>
 </html>

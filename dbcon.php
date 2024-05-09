@@ -1,3 +1,3 @@
 <?php 
-$db=new mysqli("localhost","root","","finalprojectt");
+$db=new mysqli("localhost","root","","testimport");
 ?>
