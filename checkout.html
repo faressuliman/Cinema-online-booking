@@ -1,162 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link rel="stylesheet" href="checkout.css" />
-    <title>checkout</title>
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+  <link rel="stylesheet" href="checkout.css" />
+  <title>checkout</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
+    </div>
 
-      <nav class="navigation">
-        <a href="home.html">Now Showing</a>
-        <a href="comingsoon.html">Coming Soon</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="login">
-        <button id="myaccButton">MY ACCOUNT</button>
-        <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
-      </div>
-    </header>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("loginnButton")
-          .addEventListener("click", function () {
-            window.location.href = "loginPage.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("CinemaName")
-          .addEventListener("click", function () {
-            window.location.href = "home.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("myaccButton")
-          .addEventListener("click", function () {
-            window.location.href = "myAcc.html";
-          });
-      });
-    </script>
-    <div class="container">
-      <div style="margin-bottom: 120px" class="">
-        <div id="real_checkout">
-          <div class="">
-            <div class="checkout_login" class="">
-              <div style="margin-top: 10px; margin-bottom: 30px" class="">
-                <b style="font-size: 20px">Your Information</b>
-              </div>
-              <form>
+    <nav class="navigation">
+      <a href="home.html">Now Showing</a>
+      <a href="comingsoon.html">Coming Soon</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="login">
+      <button id="myaccButton">MY ACCOUNT</button>
+      <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
+    </div>
+  </header>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document
+        .getElementById("loginnButton")
+        .addEventListener("click", function () {
+          window.location.href = "loginPage.html";
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      document
+        .getElementById("CinemaName")
+        .addEventListener("click", function () {
+          window.location.href = "home.html";
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      document
+        .getElementById("myaccButton")
+        .addEventListener("click", function () {
+          window.location.href = "myAcc.html";
+        });
+    });
+  </script>
+  <div class="container">
+    <div style="margin-bottom: 120px" class="">
+      <div id="real_checkout">
+        <div class="">
+          <div class="checkout_login" class="">
+            <div style="margin-top: 10px; margin-bottom: 30px" class="">
+              <b style="font-size: 20px">Your Information</b>
+            </div>
+            <form>
+              <div class="">
                 <div class="">
-                  <div class="">
-                    <input
-                      type="text"
-                      name="customer_name"
-                      id="customer_name"
-                      value=""
-                      class=""
-                      placeholder="Your Name"
-                    />
-                  </div>
+                  <input
+                    type="text"
+                    name="customer_name"
+                    id="customer_name"
+                    value=""
+                    class=""
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
 
-                  <div class="">
-                    <input
-                      type="text"
-                      id="customer_phone"
-                      value=""
-                      class=""
-                      placeholder="Phone Number"
-                    />
-                    <label id="egyphone" for="egyphone"></label>
-                  </div>
+                <div class="">
+                  <input
+                    type="text"
+                    id="customer_phone"
+                    value=""
+                    class=""
+                    placeholder="Phone Number"
+                    required
+                  />
+                  <label id="egyphone" for="egyphone"></label>
+                </div>
 
-                  <div class="" style="margin-bottom: 20px">
-                    <input
-                      type="text"
-                      name="customer_email"
-                      id="customer_email"
-                      readonly
-                      requiredvalue=""
-                      class="rns-form-element"
-                      placeholder="Your Email"
-                    />
-                  </div>
+                <div class="" style="margin-bottom: 20px">
+                  <input
+                    type="text"
+                    name="customer_email"
+                    id="customer_email"
+                    readonly
+                    required
+                    value=""
+                    class="rns-form-element"
+                    placeholder="Your Email"
+                  />
+                </div>
 
-                  <div class="">
-                    <b style="font-size: 20px; margin-bottom: 20px"
-                      >Payment Method</b
-                    >
-                  </div>
+                <div class="">
+                  <b style="font-size: 20px; margin-bottom: 20px"
+                    >Payment Method</b
+                  >
+                </div>
 
-                  <div class="">
-                    <div>
-                      <label class="payment-method">
-                        <input
-                          name="payment_method_1"
-                          id="payment_method_1"
-                          value="1"
-                          type="radio"
-                          checked="true"
+                <div class="">
+                  <div>
+                    <label class="payment-method">
+                      <input
+                        name="payment_method_1"
+                        id="payment_method_1"
+                        value="1"
+                        type="radio"
+                        checked="true"
+                      />
+
+                      <div>
+                        <h5 style="margin-top: 40px">Credit/Debit Card</h5>
+                        <img
+                          class="checkout_image_card"
+                          src="payyyyyyyyyyyy.png"
                         />
-
-                        <div>
-                          <h5 style="margin-top: 40px">Credit/Debit Card</h5>
-                          <img
-                            class="checkout_image_card"
-                            src="payyyyyyyyyyyy.png"
-                          />
-                        </div>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div id="payloadbutton" style="margin-top: 30px">
-                    <a
-                      class=""
-                      style="color: white; text-decoration: none"
-                      href="payInfo.html"
-                      >Pay Now</a
-                    >
+                      </div>
+                    </label>
                   </div>
                 </div>
-              </form>
-            </div>
+
+                <div id="payloadbutton" style="margin-top: 30px">
+                  <a
+                    class=""
+                    style="color: white; text-decoration: none"
+                    href="payInfo.html"
+                    >Pay Now</a
+                  >
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <footer>
-      <hr style="opacity: 0.5" />
-      <div class="footer-container">
-        <div class="footer-icons">
-          <a href=""><i class="fab fa-facebook-f"></i></a>
-          <a href=""><i class="fab fa-instagram"></i></a>
-          <a href=""><i class="fab fa-tiktok"></i></a>
-        </div>
-        <div class="footer-nav">
-          <ul>
-            <li><a href="aboutus.html">About us</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="refunds.html">Refunds & Exchanges</a></li>
-            <li><a href="termsofservice.html">Terms of Service</a></li>
-          </ul>
-        </div>
+  </div>
+  <footer>
+    <hr style="opacity: 0.5" />
+    <div class="footer-container">
+      <div class="footer-icons">
+        <a href=""><i class="fab fa-facebook-f"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-tiktok"></i></a>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 All rights reserved by CinemaName</p>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="aboutus.html">About us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="refunds.html">Refunds & Exchanges</a></li>
+          <li><a href="termsofservice.html">Terms of Service</a></li>
+        </ul>
       </div>
-    </footer>
-  </body>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 All rights reserved by CinemaName</p>
+    </div>
+  </footer>
+</body>
 </html>
