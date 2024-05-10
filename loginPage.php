@@ -1,33 +1,19 @@
 <?php 
-session_start();
-include("dbcon.php");
-
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    if(isset($_POST['email']) && isset($_POST['password'])){
-        function validate($data){
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-        }
-        
-        $email = validate($_POST['email']);
-        $pass = validate($_POST['password']);
-        $query = "SELECT * FROM customer WHERE Email='$email' && Password='$pass'";
+require ("dbcon.php");
+if(($_SERVER['REQUEST_METHOD'] === "POST")){
+  $email =$_POST['email'];
+  $pass =$_POST['password'];
+        $query = "select * from customer where Email='$email' && Password='$pass'";
         $result = mysqli_query($db, $query);
-        
-        if(mysqli_num_rows($result) === 1){
-            $row = mysqli_fetch_assoc($result);
-            if($row['Email'] === $email && $row['Password'] === $pass){
-                header("Location:home.html");
-                exit(); 
+        if(mysqli_num_rows($result) >= 1){
+          header("Location: home.html");
             }
-        } else {
-          echo "<script>alert('Please Enter A Valid Email or Password');</script>";
+        else {
+            echo "<script>alert('Invalid Email/Password');</script>";
+        }
       }
-  }
-}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

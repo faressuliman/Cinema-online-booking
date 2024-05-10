@@ -13,32 +13,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if ($pass != $repass) {
         echo '<script> alert("Password doesn\'t match")</script>';
-    } else {
+    } 
+    else{
         $sql = "SELECT * FROM customer WHERE Email = '$email' ";
         $res = mysqli_query($db, $sql) or die(mysqli_error($db));
         if (mysqli_num_rows($res) >= 1) {
             echo '<script>alert("Email already taken")</script>';
-        } else {
-            $sql_cs = "INSERT INTO customer (First_Name, Last_Name, Email, Password) VALUES ('$first_name', '$last_name', '$email', '$pass')";
-            if (mysqli_query($db, $sql_cs)) {          
-                $sql_customer_id = "SELECT Customer_ID FROM customer WHERE Email = '$email'";
-                $result_customer_id = mysqli_query($db, $sql_customer_id);
-                $row_customer_id = mysqli_fetch_assoc($result_customer_id);
-                $customerID = $row_customer_id['Customer_ID'];
-                $sql_insert_phone = "INSERT INTO phone_number (Customer,Phone_No) VALUES ('$customerID','$mobile')";
-                if (!mysqli_query($db, $sql_insert_phone)) {
-                    echo "Error: " . $sql_insert_phone . "<br>" . mysqli_error($db);
-                }
-            } else {
-                echo "Error: " . $sql_cs. "<br>" . mysqli_error($db);
-            }
-        }
-    }
-    header("location:loginPage.php");
-exit();
+        } else { 
+          mysqli_query($db,"insert into customer (First_Name, Last_Name, Email, Password) values ('$first_name', '$last_name', '$email', '$pass')");
+          header( "location:loginPage.php");
+            
+            } 
 }
-
-?>
+}?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
