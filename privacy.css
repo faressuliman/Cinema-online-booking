@@ -12,11 +12,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 section{
     position: relative;
-    left: -75px;
-    top: 50px;
+    
+    left: 27px;
     
 
 }
