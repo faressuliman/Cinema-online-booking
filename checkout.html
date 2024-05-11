@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <link rel="stylesheet" href="checkout.css" />
   <title>checkout</title>
 </head>
+
 <body>
   <header>
     <div class="logo">
@@ -52,91 +51,47 @@
   </script>
   <div class="container">
     <div style="margin-bottom: 120px" class="">
-      <div id="real_checkout">
-        <div class="">
-          <div class="checkout_login" class="">
-            <div style="margin-top: 10px; margin-bottom: 30px" class="">
-              <b style="font-size: 20px">Your Information</b>
-            </div>
-            <form>
-              <div class="">
-                <div class="">
-                  <input
-                    type="text"
-                    name="customer_name"
-                    id="customer_name"
-                    value=""
-                    class=""
-                    placeholder="Your Name"
-                    required
-                  />
-                </div>
-
-                <div class="">
-                  <input
-                    type="text"
-                    id="customer_phone"
-                    value=""
-                    class=""
-                    placeholder="Phone Number"
-                    required
-                  />
-                  <label id="egyphone" for="egyphone"></label>
-                </div>
-
-                <div class="" style="margin-bottom: 20px">
-                  <input
-                    type="text"
-                    name="customer_email"
-                    id="customer_email"
-                    
-                    value=""
-                    class="rns-form-element"
-                    placeholder="Your Email"
-                    required
-                  />
-                </div>
-
-                <div class="">
-                  <b style="font-size: 20px; margin-bottom: 20px"
-                    >Payment Method</b
-                  >
-                </div>
-
-                <div class="">
-                  <div>
-                    <label class="payment-method">
-                      <input
-                        name=""
-                        id=""
-                        value="1"
-                        type="radio"
-                        required
-                      />
-
-                      <div>
-                        <h5 style="margin-top: 40px">Credit/Debit Card</h5>
-                        <img
-                          class="checkout_image_card"
-                          src="payyyyyyyyyyyy.png"
-                        />
-                      </div>
-                    </label>
-                  </div>
-                </div>
-
-                <div id="payloadbutton" style="margin-top: 30px">
-                  <a
-                    class=""
-                    style="color: white; text-decoration: none"
-                    href="payInfo.html"
-                    >Pay Now</a
-                  >
-                </div>
-              </div>
-            </form>
-          </div>
+      <div class="checkout-container">
+        <div class="checkout-header" style="margin-top: 10px; margin-bottom: 30px">
+          <b style="font-size: 20px">Your Information</b>
         </div>
+        <form action="payInfo.html">
+          <div class="form-container">
+            <div class="name-input">
+              <input type="text" name="customer_name" id="customer_name" placeholder="Your Name" required />
+            </div>
+
+            <div class="phone-input">
+              <input type="text" name="customer_phone" id="customer_phone" placeholder="Phone Number" required />
+            </div>
+
+            <div class="email-input" style="margin-bottom: 20px">
+              <input type="text" name="customer_email" id="customer_email" placeholder="Your Email" required />
+            </div>
+
+            <div class="">
+              <b style="font-size: 20px; margin-bottom: 20px">Payment Method</b>
+            </div>
+
+            <div class="paymethod">
+              <div>
+                <label class="payment-method">
+                  <input name="" id="" value="1" type="radio" required />
+
+                  <div>
+                    <h5 style="margin-top: 40px">Credit/Debit Card</h5>
+                    <img class="checkout_image_card" src="payyyyyyyyyyyy.png" />
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div style="margin-top: 30px">
+              <button type="submit" id="payloadbutton">Pay Now</button>
+            </div>
+          </div>
+        </form>
+
       </div>
     </div>
   </div>
@@ -162,4 +117,5 @@
     </div>
   </footer>
 </body>
+
 </html>
