@@ -110,6 +110,17 @@
           videoFrame.src = "";
         }
       });
+      document.querySelectorAll(".abcd").forEach(function (button) {
+        button.addEventListener("click", function () {
+          window.location.href = "booking5.html";
+        });
+      });
+      function selectButton(button) {
+        document.querySelectorAll(".line-butt").forEach(function (btn) {
+          btn.classList.remove("selected");
+        });
+        button.classList.add("selected");
+      }
     </script>
 
     <section>
@@ -262,12 +273,9 @@
         });
       });
       function selectButton(button) {
-        // Remove 'selected' class from all buttons with class 'line-butt'
         document.querySelectorAll(".line-butt").forEach(function (btn) {
           btn.classList.remove("selected");
         });
-
-        // Add 'selected' class to the clicked button
         button.classList.add("selected");
       }
     </script>

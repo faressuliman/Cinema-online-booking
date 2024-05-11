@@ -32,7 +32,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         const seats = document.querySelectorAll(".seat");
         const selectedSeats = [];
-        const maxSeats = 2;
+        const maxSeats = 5;
         const seatPrice = 150;
 
         seats.forEach(function (seat) {
@@ -41,7 +41,7 @@
               selectedSeats.length >= maxSeats &&
               !this.classList.contains("selected")
             ) {
-              alert("You can only book up to 2 seats.");
+              alert("You can only book up to 5 seats.");
               return;
             }
 
@@ -68,11 +68,11 @@
           let totalCost = selectedSeats.length * seatPrice;
           totalCostElement.textContent = totalCost;
 
-          selectedSeats.forEach(function (seatNumber) {
-            const listItem = document.createElement("li");
-            listItem.textContent = "Seat " + seatNumber;
-            selectedSeatsList.appendChild(listItem);
-          });
+          // selectedSeats.forEach(function (seatNumber) {
+          //   const listItem = document.createElement("li");
+          //   listItem.textContent = "Seat " + seatNumber;
+          //   selectedSeatsList.appendChild(listItem);
+          // });
           // Store total cost in URL parameters
           const url = new URL(window.location.href);
           url.searchParams.set("totalCost", totalCost);
@@ -105,7 +105,7 @@
         document
           .getElementById("switchh")
           .addEventListener("click", function () {
-            window.location.href = "book3.html";
+            window.location.href = "book.html";
           });
 
         const showModalButton = document.getElementById("showModalButton");

@@ -103,7 +103,6 @@
             stopVideo();
           }
         };
-
         // Function to stop the video
         function stopVideo() {
           // Set the video source to an empty string
@@ -111,14 +110,16 @@
         }
       });
       function selectButton(button) {
-        // Remove 'selected' class from all buttons with class 'line-butt'
         document.querySelectorAll(".line-butt").forEach(function (btn) {
           btn.classList.remove("selected");
         });
-
-        // Add 'selected' class to the clicked button
         button.classList.add("selected");
       }
+      document.querySelectorAll(".abcd").forEach(function (button) {
+        button.addEventListener("click", function () {
+          window.location.href = "booking4.html";
+        });
+      });
     </script>
 
     <section>
@@ -271,12 +272,5 @@
         </p>
       </div>
     </footer>
-    <script>
-      document.querySelectorAll(".abcd").forEach(function (button) {
-        button.addEventListener("click", function () {
-          window.location.href = "booking4.html";
-        });
-      });
-    </script>
   </body>
 </html>
