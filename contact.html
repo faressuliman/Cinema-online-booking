@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="contact.css" />
     <link rel="stylesheet" href="footer.css" />
     <title>Contact</title>
@@ -16,7 +13,6 @@
       <div class="logo">
         <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
       </div>
-
       <nav class="navigation">
         <a href="home.html">Now Showing</a>
         <a href="comingsoon.html">Coming Soon</a>
@@ -29,36 +25,28 @@
     </header>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("loginnButton")
-          .addEventListener("click", function () {
+        document.getElementById("loginnButton").addEventListener("click", function () {
             window.location.href = "loginPage.html";
           });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("CinemaName")
-          .addEventListener("click", function () {
+        document.getElementById("CinemaName").addEventListener("click", function () {
             window.location.href = "home.html";
           });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("myaccButton")
-          .addEventListener("click", function () {
+        document.getElementById("myaccButton").addEventListener("click", function () {
             window.location.href = "myAcc.html";
           });
       });
     </script>
-
     <main>
       <div class="contact-container">
         <div class="contact-information">
           <div class="info-text">
             <h1 class="h1">Contact Information</h1>
             <p id="p1">
-              <i class="fas fa-map-marker-alt"></i> 23rd street, Somewhere,
-              Alexandria, Egypt.
+              <i class="fas fa-map-marker-alt"></i> 23rd street, Somewhere,Alexandria, Egypt.
             </p>
             <p id="p2">
               <i class="far fa-envelope"></i> cinemabooking@gmail.com
@@ -79,25 +67,10 @@
                 <option value="">Inquiries for Schools</option>
                 <option value="">Inquiries for Companies</option>
               </select>
-              <input
-                type="text"
-                placeholder="Your Name *"
-                class="name"
-                required
-              />
+              <input type="text"placeholder="Your Name *"class="name"required/>
               <div class="email-phone">
-                <input
-                  type="text"
-                  placeholder="Your Email *"
-                  class="email"
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Your Phone *"
-                  class="phone"
-                  required
-                />
+                <input type="text"placeholder="Your Email *"class="email"required/>
+                <input type="text"placeholder="Your Phone *"class="phone"required/>
               </div>
               <textarea placeholder="Type your message..." required></textarea>
               <button type="submit">Submit Contact</button>

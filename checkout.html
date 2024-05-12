@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,13 +8,11 @@
   <link rel="stylesheet" href="checkout.css" />
   <title>checkout</title>
 </head>
-
 <body>
   <header>
     <div class="logo">
       <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
     </div>
-
     <nav class="navigation">
       <a href="home.html">Now Showing</a>
       <a href="comingsoon.html">Coming Soon</a>
@@ -28,23 +25,17 @@
   </header>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      document
-        .getElementById("loginnButton")
-        .addEventListener("click", function () {
+      document.getElementById("loginnButton").addEventListener("click", function () {
           window.location.href = "loginPage.html";
         });
     });
     document.addEventListener("DOMContentLoaded", function () {
-      document
-        .getElementById("CinemaName")
-        .addEventListener("click", function () {
+      document.getElementById("CinemaName").addEventListener("click", function () {
           window.location.href = "home.html";
         });
     });
     document.addEventListener("DOMContentLoaded", function () {
-      document
-        .getElementById("myaccButton")
-        .addEventListener("click", function () {
+      document.getElementById("myaccButton".addEventListener("click", function () {
           window.location.href = "myAcc.html";
         });
     });
@@ -60,24 +51,19 @@
             <div class="name-input">
               <input type="text" name="customer_name" id="customer_name" placeholder="Your Name" required />
             </div>
-
             <div class="phone-input">
               <input type="text" name="customer_phone" id="customer_phone" placeholder="Phone Number" required />
             </div>
-
             <div class="email-input" style="margin-bottom: 20px">
               <input type="text" name="customer_email" id="customer_email" placeholder="Your Email" required />
             </div>
-
             <div class="">
               <b style="font-size: 20px; margin-bottom: 20px">Payment Method</b>
             </div>
-
             <div class="paymethod">
               <div>
                 <label class="payment-method">
                   <input name="" id="" value="1" type="radio" required />
-
                   <div>
                     <h5 style="margin-top: 40px">Credit/Debit Card</h5>
                     <img class="checkout_image_card" src="payyyyyyyyyyyy.png" />
@@ -85,13 +71,11 @@
                 </label>
               </div>
             </div>
-
             <div style="margin-top: 30px">
               <button type="submit" id="payloadbutton">Pay Now</button>
             </div>
           </div>
         </form>
-
       </div>
     </div>
   </div>
@@ -117,5 +101,4 @@
     </div>
   </footer>
 </body>
-
 </html>

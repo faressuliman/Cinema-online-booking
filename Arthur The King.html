@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="gladiator.css" />
     <link rel="stylesheet" href="hhhhhhhh.css" />
@@ -14,11 +12,9 @@
   <body>
     <header style="background-color: transparent">
       <div class="logo">
-        <a href="home.html" style="text-decoration: none"
-          ><h2 id="CinemaName" style="cursor: pointer">OCinema</h2></a
-        >
+        <a href="home.html" style="text-decoration: none">
+          <h2 id="CinemaName" style="cursor: pointer">OCinema</h2></a>
       </div>
-
       <nav class="navigation">
         <a href="home.html">Now Showing</a>
         <a href="comingsoon.html">Coming Soon</a>
@@ -31,28 +27,26 @@
     </header>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("loginnButton")
-          .addEventListener("click", function () {
+        document.getElementById("loginnButton").addEventListener("click", function () {
             window.location.href = "loginPage.html";
           });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("CinemaName")
-          .addEventListener("click", function () {
+        document.getElementById("CinemaName").addEventListener("click", function () {
             window.location.href = "home.html";
           });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("myaccButton")
-          .addEventListener("click", function () {
+        document.getElementById("myaccButton").addEventListener("click", function () {
             window.location.href = "myAcc.html";
           });
       });
+      document.addEventListener("DOMContentLoaded", function () {
+          document.getElementById("watch-butt").addEventListener("click", function () {
+            window.location.href ="https://youtu.be/3cw-Ngp6pHw?si=QzBmfBUbyOFdN5PI";
+          });
+      });
     </script>
-
     <main>
       <div class="container">
         <div class="left-section">
@@ -70,16 +64,6 @@
             </div>
             <div class="third-line">
               <button id="watch-butt" class="watch-butt">Watch Trailer</button>
-              <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  document
-                    .getElementById("watch-butt")
-                    .addEventListener("click", function () {
-                      window.location.href =
-                        "https://youtu.be/3cw-Ngp6pHw?si=QzBmfBUbyOFdN5PI";
-                    });
-                });
-              </script>
             </div>
             <div class="fourth-line">
               <h3>Details</h3>
@@ -88,14 +72,13 @@
               <h4 style="color: hsla(300, 100%, 25%, 0.678)">Synopsis</h4>
               <p>
                 <b
-                  >An adventure racer adopts a stray dog named Arthur to join
-                  him in an epic endurance race.
+                  >An adventure racer adopts a stray dog named Arthur to join him in an epic endurance race.
                 </b>
               </p>
-              <br />
+              <br/>
               <h4 style="color: hsla(300, 100%, 25%, 0.678)">Starring</h4>
               <p><b>Mark Wahlberg - Nathalie Emmanuel - Simu Liu </b></p>
-              <br />
+              <br/>
               <h4 style="color: hsla(300, 100%, 25%, 0.678)">Directed by</h4>
               <p><b>Simon Cellan Jones </b></p>
             </div>
@@ -103,7 +86,6 @@
         </div>
       </div>
     </main>
-
     <footer>
       <hr style="opacity: 0.5" />
       <div class="footer-container">

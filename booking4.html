@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="booking.css" />
     <link rel="stylesheet" href="hhhhhhhh.css" />
     <title>Booking</title>
@@ -17,7 +14,6 @@
       <div class="logo">
         <h2 id="CinemaName" style="cursor: pointer">CinemaName</h2>
       </div>
-
       <nav class="navigation">
         <a href="home.html">Now Showing</a>
         <a href="comingsoon.html">Coming Soon</a>
@@ -34,7 +30,6 @@
         const selectedSeats = [];
         const maxSeats = 5;
         const seatPrice = 150;
-
         seats.forEach(function (seat) {
           seat.addEventListener("click", function () {
             if (
@@ -79,32 +74,22 @@
           history.replaceState(null, "", url);
         }
 
-        document
-          .getElementById("CinemaName")
-          .addEventListener("click", function () {
+        document.getElementById("CinemaName").addEventListener("click", function () {
             window.location.href = "home.html";
           });
 
-        document
-          .getElementById("loginnButton")
-          .addEventListener("click", function () {
+        document.getElementById("loginnButton").addEventListener("click", function () {
             window.location.href = "loginPage.html";
           });
 
-        document
-          .getElementById("myaccButton")
-          .addEventListener("click", function () {
+        document.getElementById("myaccButton").addEventListener("click", function () {
             window.location.href = "myAcc.html";
           });
 
-        document
-          .getElementById("switch")
-          .addEventListener("click", function () {
+        document.getElementById("switch").addEventListener("click", function () {
             window.location.href = "checkout.html";
           });
-        document
-          .getElementById("switchh")
-          .addEventListener("click", function () {
+        document.getElementById("switchh").addEventListener("click", function () {
             window.location.href = "book4.html";
           });
 
@@ -127,18 +112,12 @@
         });
       });
     </script>
-
     <main>
       <div class="container">
         <div class="left-section">
           <div class="image-container">
-            <img
-              style="width: 50%"
-              src="bJ7NPQcqVNERaUehqEBls61euKcPR7JBceoWENtl.jpg"
-              alt=""
-            />
+            <img style="width: 50%"src="bJ7NPQcqVNERaUehqEBls61euKcPR7JBceoWENtl.jpg"alt=""/>
           </div>
-
           <div class="first-line">
             <h1 style="color: #a02d8a">Winnie The Pooh</h1>
           </div>
@@ -159,31 +138,19 @@
                 <button
                   class="butt"
                   id="switch"
-                  style="
-                    margin-left: 0px;
-                    background-color: #a02d8a;
-                    border-color: #a02d8a;
-                    color: white;
-                  "
-                >
+                  style="margin-left: 0px;background-color: #a02d8a;border-color: #a02d8a;color: white;">
                   Checkout
                 </button>
                 <button
                   class="butt"
                   id="switchh"
-                  style="
-                    margin-left: 10px;
-                    background-color: #887c7c;
-                    border-color: #887c7c;
-                  "
-                >
+                  style="margin-left: 10px;background-color: #887c7c;border-color: #887c7c;">
                   Cancel
                 </button>
               </div>
             </div>
           </div>
         </div>
-
         <div class="right-section">
           <div class="screen text-center">
             <div class="screen_text">Screen</div>
@@ -475,10 +442,7 @@
             </div>
           </div>
           <div class="modal-footer text-center mb-3">
-            <button
-              type="button"
-              class="btn btn_primary btn_full text-center skip_button"
-            >
+            <button type="button"class="btn btn_primary btn_full text-center skip_button">
               Skip
             </button>
           </div>
@@ -508,6 +472,5 @@
         </p>
       </div>
     </footer>
-     
   </body>
 </html>

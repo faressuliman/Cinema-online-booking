@@ -5,10 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="style.css" />
     <title>Cinema</title>
     <style>
@@ -61,7 +58,6 @@
       <div class="logo">
         <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
       </div>
-
       <nav class="navigation">
         <a href="home.html">Now Showing</a>
         <a href="comingsoon.html">Coming Soon</a>
@@ -82,7 +78,6 @@
           </div>
         </section>
       </div>
-
       <div class="mySlides" style="background-image: url(alserb.jpg)">
         <section class="nowshowing-image">
           <div class="info">
@@ -92,7 +87,6 @@
           </div>
         </section>
       </div>
-
       <div class="mySlides" style="background-image: url(godzilla.jpg)">
         <section class="nowshowing-image">
           <div class="info">
@@ -102,7 +96,6 @@
           </div>
         </section>
       </div>
-
       <div class="mySlides" style="background-image: url(fasl.jpg)">
         <section class="nowshowing-image">
           <div class="info">
@@ -111,8 +104,7 @@
             <button id="booknow2" class="booknow">Book Now</button>
           </div>
         </section>
-      </div>
-
+    </div>
       <div class="mySlides" style="background-image: url(sheko.jpg)">
         <section class="nowshowing-image">
           <div class="info">
@@ -122,7 +114,6 @@
           </div>
         </section>
       </div>
-
       <div class="manual-navigation">
         <span class="dot" data-slide="1"></span>
         <span class="dot" data-slide="2"></span>
@@ -134,7 +125,6 @@
     <script>
       var slideIndex = 0;
       var slideTimeout;
-
       function showSlide(n) {
         var slides = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("dot");
@@ -181,57 +171,41 @@
           })(i);
         }
 
-        document
-          .getElementById("loginnButton")
-          .addEventListener("click", function () {
+        document.getElementById("loginnButton").addEventListener("click", function () {
             window.location.href = "loginPage.html";
           });
 
-        document
-          .getElementById("CinemaName")
-          .addEventListener("click", function () {
+        document.getElementById("CinemaName").addEventListener("click", function () {
             window.location.href = "home.html";
           });
 
-        document
-          .getElementById("myaccButton")
-          .addEventListener("click", function () {
+        document.getElementById("myaccButton").addEventListener("click", function () {
             window.location.href = "myAcc.html";
           });
       });
 
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("booknow1")
-          .addEventListener("click", function () {
+        document.getElementById("booknow1").addEventListener("click", function () {
             window.location.href = "book.html";
           });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("booknow2")
-          .addEventListener("click", function () {
+        document.getElementById("booknow2").addEventListener("click", function () {
             window.location.href = "book2.html";
           });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("booknow3")
-          .addEventListener("click", function () {
+        document.getElementById("booknow3").addEventListener("click", function () {
             window.location.href = "book3.html";
           });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("booknow4")
-          .addEventListener("click", function () {
+        document.getElementById("booknow4").addEventListener("click", function () {
             window.location.href = "book4.html";
           });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("booknow5")
-          .addEventListener("click", function () {
+        document.getElementById("booknow5").addEventListener("click", function () {
             window.location.href = "book5.html";
           });
       });
@@ -288,7 +262,6 @@
           });
       });
     </script>
-
     <section class="first-category">
       <div class="first-logo">Now Showing</div>
       <div class="content">

@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="gladiator.css" />
     <link rel="stylesheet" href="hhhhhhhh.css" />
     <title>Document</title>
@@ -13,8 +11,8 @@
   <body>
     <header style="background-color: transparent">
       <div class="logo">
-        <a href="home.html" style="text-decoration: none"
-          ><h2 id="CinemaName" style="cursor: pointer">OCinema</h2></a>
+        <a href="home.html" style="text-decoration: none">
+          <h2 id="CinemaName" style="cursor: pointer">OCinema</h2></a>
       </div>
       <nav class="navigation">
         <a href="home.html">Now Showing</a>
@@ -32,30 +30,24 @@
         <span class="close">&times;</span>
         <iframe id="videoPlayer"width="560" height="315"
           src="https://www.youtube.com/embed/PRlBKYQsjXo?si=Z0KB3hNgMI8pnCVP"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+          frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("loginnButton")
-          .addEventListener("click", function () {
+        document.getElementById("loginnButton").addEventListener("click", function () {
             window.location.href = "loginPage.html";
           });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("myaccButton")
-          .addEventListener("click", function () {
+        document.getElementById("myaccButton").addEventListener("click", function () {
             window.location.href = "myAcc.html";
           });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("CinemaName")
-          .addEventListener("click", function () {
+        document.getElementById("CinemaName").addEventListener("click", function () {
             window.location.href = "home.html";
           });
       });

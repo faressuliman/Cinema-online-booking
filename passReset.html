@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="passReset.css" />
     <link rel="stylesheet" href="hhhhhhhh.css" />
     <title>Password Reset</title>
@@ -38,23 +35,17 @@
       //   });
       // });
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("loginnButton")
-          .addEventListener("click", function () {
+        document.getElementById("loginnButton").addEventListener("click", function () {
             window.location.href = "loginPage.html";
           });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("CinemaName")
-          .addEventListener("click", function () {
+        document.getElementById("CinemaName").addEventListener("click", function () {
             window.location.href = "home.html";
           });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("myaccButton")
-          .addEventListener("click", function () {
+        document.getElementById("myaccButton").addEventListener("click", function () {
             window.location.href = "myAcc.html";
           });
       });
@@ -64,13 +55,10 @@
         });
       });
       document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("loginform")
-          .addEventListener("submit", function (event) {
+        document.getElementById("loginform").addEventListener("submit", function (event) {
             event.preventDefault();
             const modalContainer = document.getElementById("modalContainer");
             const modalContent = document.querySelector(".modal-content");
-
             modalContainer.style.display = "flex";
             modalContent.classList.add("sinin");
           });
@@ -99,26 +87,11 @@
             <form method="POST" class="registerform" id="loginform">
               <div class="form-group">
                 <label for="email"><i ></i></label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  class="emaill"
-                  placeholder="Your Email"
-                  required
-                />
+                <input type="email"name="email"id="email"
+                  class="emaill"placeholder="Your Email" required/>
               </div>
-              <div
-                class="form-group form-button"
-                style="margin-top: 7px; margin-left: 100px"
-              >
-                <input
-                  type="submit"
-                  name="signin"
-                  id="signin"
-                  value="Reset Your Password"
-                  class="sinin"
-                />
+              <div class="form-group form-button"style="margin-top: 7px; margin-left: 100px">
+                <input type="submit"name="signin"id="signin"class="sinin"/>
               </div>
             </form>
           </div>
@@ -139,11 +112,7 @@
           </div>
         </div>
         <div class="modal-footer text-center mb-3">
-          <button
-            type="button"
-            class="btn btn_primary btn_full text-center skip_button"
-            id="close"
-          >
+          <button type="button"class="btn btn_primary btn_full text-center skip_button"id="close">
             Close
           </button>
         </div>
