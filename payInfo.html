@@ -3,23 +3,6 @@
   <head>
     <link rel="stylesheet" href="payInfo.css" />
     <link rel="stylesheet" href="hhhhhhhh.css" />
-    <script>
-      function validateForm() {
-        var cardNumber = document.getElementById("number").value;
-        var cardHolderName = document.getElementsByName("name")[0].value;
-        var expiry = document.getElementById("mmyy").value;
-        var cvv = document.getElementById("cvv").value;
-        // if (cardNumber == "" || cardHolderName == "" || expiry == "" || cvv == "") {
-        //   alert("Please fill in all required fields");
-        //   return false;
-        // }
-        if (cardNumber.length !== 16) {
-          alert("Please enter a valid card number");
-          return false;
-        }
-        return true;
-      }
-    </script>
   </head>
   <body>
     <form action="">
@@ -63,5 +46,22 @@
         </div>
       </div>
     </form>
+    <script>
+      function validateForm() {
+        var cardNumber = document.getElementById("number").value;
+        var cardHolderName = document.getElementsByName("name")[0].value;
+        var expiry = document.getElementById("mmyy").value;
+        var cvv = document.getElementById("cvv").value;
+        // if (cardNumber == "" || cardHolderName == "" || expiry == "" || cvv == "") {
+        //   alert("Please fill in all required fields");
+        //   return false;
+        // }
+        if (cardNumber.length !== 16) {
+          alert("Please enter a valid card number");
+          return false;
+        }
+        return true;
+      }
+    </script>
   </body>
 </html>

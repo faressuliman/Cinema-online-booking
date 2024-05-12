@@ -39,23 +39,6 @@ if(($_SERVER['REQUEST_METHOD'] === "POST")){
         <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
       </div>
     </header>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("loginnButton").addEventListener("click", function () {
-            window.location.href = "loginPage.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("CinemaName").addEventListener("click", function () {
-            window.location.href = "home.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("myaccButton").addEventListener("click", function () {
-            window.location.href = "myAcc.html";
-          });
-      });
-    </script>
     <div class="">
       <div class="container">
         <div class="left-section">
@@ -122,6 +105,23 @@ if(($_SERVER['REQUEST_METHOD'] === "POST")){
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("loginnButton").addEventListener("click", function () {
+            window.location.href = "loginPage.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CinemaName").addEventListener("click", function () {
+            window.location.href = "home.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("myaccButton").addEventListener("click", function () {
+            window.location.href = "myAcc.html";
+          });
+      });
+    </script>
     <footer>
       <hr style="opacity: 0.5" />
       <div class="footer-container">

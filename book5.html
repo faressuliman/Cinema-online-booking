@@ -33,88 +33,6 @@
           </iframe>
       </div>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("loginnButton").addEventListener("click", function () {
-            window.location.href = "loginPage.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("myaccButton").addEventListener("click", function () {
-            window.location.href = "myAcc.html";
-          });
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("CinemaName").addEventListener("click", function () {
-            window.location.href = "home.html";
-          });
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get the modal
-        var modal = document.getElementById("myModal");
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("watch-butt");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // Get the video iframe
-        var videoFrame = document.getElementById("videoPlayer");
-
-        // Original video source URL
-        var originalSrc = videoFrame.src;
-
-        // When the user clicks the button, open the modal
-        btn.onclick = function () {
-          modal.style.display = "block";
-          // Set the video source back to the original URL
-          videoFrame.src = originalSrc;
-        };
-
-        // When the user clicks on <span> (x) or outside of the modal, close the modal and stop the video
-        span.onclick = function () {
-          modal.style.display = "none";
-          stopVideo();
-        };
-
-        window.onclick = function (event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-            stopVideo();
-          }
-        };
-
-        // Function to stop the video
-        function stopVideo() {
-          // Set the video source to an empty string
-          videoFrame.src = "";
-        }
-      });
-      document.querySelectorAll(".abcd").forEach(function (button) {
-        button.addEventListener("click", function () {
-          window.location.href = "booking5.html";
-        });
-      });
-      function selectButton(button) {
-        document.querySelectorAll(".line-butt").forEach(function (btn) {
-          btn.classList.remove("selected");
-        });
-        button.classList.add("selected");
-      }
-      document.querySelectorAll(".abcd").forEach(function (button) {
-        button.addEventListener("click", function () {
-          window.location.href = "booking5.html";
-        });
-      });
-      function selectButton(button) {
-        document.querySelectorAll(".line-butt").forEach(function (btn) {
-          btn.classList.remove("selected");
-        });
-        button.classList.add("selected");
-      }
-    </script>
     <section>
       <div class="book-content">
         <div class="card">
@@ -234,7 +152,88 @@
           </div>
         </div>
       </div>
-    </section>
+    </section><script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("loginnButton").addEventListener("click", function () {
+            window.location.href = "loginPage.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("myaccButton").addEventListener("click", function () {
+            window.location.href = "myAcc.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CinemaName").addEventListener("click", function () {
+            window.location.href = "home.html";
+          });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("watch-butt");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Get the video iframe
+        var videoFrame = document.getElementById("videoPlayer");
+
+        // Original video source URL
+        var originalSrc = videoFrame.src;
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+          modal.style.display = "block";
+          // Set the video source back to the original URL
+          videoFrame.src = originalSrc;
+        };
+
+        // When the user clicks on <span> (x) or outside of the modal, close the modal and stop the video
+        span.onclick = function () {
+          modal.style.display = "none";
+          stopVideo();
+        };
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+            stopVideo();
+          }
+        };
+
+        // Function to stop the video
+        function stopVideo() {
+          // Set the video source to an empty string
+          videoFrame.src = "";
+        }
+      });
+      document.querySelectorAll(".abcd").forEach(function (button) {
+        button.addEventListener("click", function () {
+          window.location.href = "booking5.html";
+        });
+      });
+      function selectButton(button) {
+        document.querySelectorAll(".line-butt").forEach(function (btn) {
+          btn.classList.remove("selected");
+        });
+        button.classList.add("selected");
+      }
+      document.querySelectorAll(".abcd").forEach(function (button) {
+        button.addEventListener("click", function () {
+          window.location.href = "booking5.html";
+        });
+      });
+      function selectButton(button) {
+        document.querySelectorAll(".line-butt").forEach(function (btn) {
+          btn.classList.remove("selected");
+        });
+        button.classList.add("selected");
+      }
+    </script>
     <footer>
       <hr style="opacity: 0.5" />
       <div class="footer-container">

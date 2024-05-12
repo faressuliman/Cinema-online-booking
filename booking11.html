@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="booking.css" />
     <link rel="stylesheet" href="hhhhhhhh.css" />
     <title>Booking</title>
@@ -25,98 +24,11 @@
         <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
       </div>
     </header>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const seats = document.querySelectorAll(".seat");
-        const selectedSeats = [];
-        const maxSeats = 5;
-        const seatPrice = 150;
-        seats.forEach(function (seat) {
-          seat.addEventListener("click", function () {
-            if (
-              selectedSeats.length >= maxSeats &&
-              !this.classList.contains("selected")
-            ) {
-              alert("You can only book up to 5 seats.");
-              return;
-            }
-
-            this.classList.toggle("selected");
-            const seatNumber = this.dataset.seat;
-            if (this.classList.contains("selected")) {
-              selectedSeats.push(seatNumber);
-            } else {
-              const index = selectedSeats.indexOf(seatNumber);
-              if (index !== -1) {
-                selectedSeats.splice(index, 1);
-              }
-            }
-            updateSelectedSeats();
-          });
-        });
-
-        function updateSelectedSeats() {
-          const selectedSeatsList =
-            document.getElementById("selectedSeatsList");
-          const totalCostElement = document.getElementById("totalCost");
-          selectedSeatsList.innerHTML = "";
-          let totalCost = selectedSeats.length * seatPrice;
-          totalCostElement.textContent = totalCost;
-          // selectedSeats.forEach(function (seatNumber) {
-          //   const listItem = document.createElement("li");
-          //   listItem.textContent = "Seat " + seatNumber;
-          //   selectedSeatsList.appendChild(listItem);
-          // });
-          // Store total cost in URL parameters
-          const url = new URL(window.location.href);
-          url.searchParams.set("totalCost", totalCost);
-          history.replaceState(null, "", url);
-        }
-
-        document.getElementById("CinemaName").addEventListener("click", function () {
-            window.location.href = "home.html";
-          });
-
-        document.getElementById("loginnButton").addEventListener("click", function () {
-            window.location.href = "loginPage.html";
-          });
-
-        document.getElementById("myaccButton").addEventListener("click", function () {
-            window.location.href = "myAcc.html";
-          });
-
-        document.getElementById("switch").addEventListener("click", function () {
-            window.location.href = "checkout.html";
-          });
-        document.getElementById("switchh").addEventListener("click", function () {
-            window.location.href = "card6.html";
-          });
-
-        const showModalButton = document.getElementById("showModalButton");
-        const modalContainer = document.getElementById("modalContainer");
-        const modalContent = document.querySelector(".modal-content");
-        // Event listener to show modal when button clicked
-        showModalButton.addEventListener("click", function () {
-          modalContainer.style.display = "flex"; // show the modal container
-          modalContent.classList.add("show"); // add the 'show' class to display the modal content
-        });
-        // Close modal when close button or outside modal clicked
-        const skipButton = document.querySelector(".skip_button");
-        skipButton.addEventListener("click", function () {
-          modalContainer.style.display = "none";
-          modalContent.classList.remove("show");
-        });
-      });
-    </script>
     <main>
       <div class="container">
         <div class="left-section">
           <div class="image-container">
-            <img
-              style="width: 50%"
-              src="Barbie And Stacie To The Rescue.jpg"
-              alt=""
-            />
+            <img style="width: 38%"src="Barbie And Stacie To The Rescue.jpg"alt=""/>
           </div>
           <div class="first-line">
             <h1 style="color: #a02d8a">Barbie And Stacie</h1>
@@ -443,6 +355,88 @@
         </div>
       </div>
     </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const seats = document.querySelectorAll(".seat");
+        const selectedSeats = [];
+        const maxSeats = 5;
+        const seatPrice = 150;
+        seats.forEach(function (seat) {
+          seat.addEventListener("click", function () {
+            if (
+              selectedSeats.length >= maxSeats &&
+              !this.classList.contains("selected")
+            ) {
+              alert("You can only book up to 5 seats.");
+              return;
+            }
+
+            this.classList.toggle("selected");
+            const seatNumber = this.dataset.seat;
+            if (this.classList.contains("selected")) {
+              selectedSeats.push(seatNumber);
+            } else {
+              const index = selectedSeats.indexOf(seatNumber);
+              if (index !== -1) {
+                selectedSeats.splice(index, 1);
+              }
+            }
+            updateSelectedSeats();
+          });
+        });
+
+        function updateSelectedSeats() {
+  const selectedSeatsList = document.getElementById("selectedSeatsList");
+  const totalCostElement = document.getElementById("totalCost");
+
+  // Clear the existing content of the selected seats list
+  selectedSeatsList.innerHTML = "";
+
+  let totalCost = selectedSeats.length * seatPrice;
+  totalCostElement.textContent = totalCost;
+
+  // Append new seat list items without clearing the existing ones
+  selectedSeats.forEach(function (seatNumber) {
+    const listItem = document.createElement("li");
+    listItem.textContent = "Seat " + seatNumber;
+    selectedSeatsList.appendChild(listItem);
+  });
+}
+        document.getElementById("CinemaName").addEventListener("click", function () {
+            window.location.href = "home.html";
+          });
+
+        document.getElementById("loginnButton").addEventListener("click", function () {
+            window.location.href = "loginPage.html";
+          });
+
+        document.getElementById("myaccButton").addEventListener("click", function () {
+            window.location.href = "myAcc.html";
+          });
+
+        document.getElementById("switch").addEventListener("click", function () {
+            window.location.href = "checkout.html";
+          });
+        document.getElementById("switchh").addEventListener("click", function () {
+            window.location.href = "card6.html";
+          });
+
+        const showModalButton = document.getElementById("showModalButton");
+        const modalContainer = document.getElementById("modalContainer");
+        const modalContent = document.querySelector(".modal-content");
+        // Event listener to show modal when button clicked
+        showModalButton.addEventListener("click", function () {
+          modalContainer.style.display = "flex"; // show the modal container
+          modalContent.classList.add("show"); // add the 'show' class to display the modal content
+        });
+        // Close modal when close button or outside modal clicked
+        const skipButton = document.querySelector(".skip_button");
+        skipButton.addEventListener("click", function () {
+          modalContainer.style.display = "none";
+          modalContent.classList.remove("show");
+        });
+      });
+    </script>
     <footer>
       <hr style="opacity: 0.5" />
       <div class="footer-container">
