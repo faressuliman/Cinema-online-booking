@@ -294,11 +294,11 @@ footer {
 }
 section{
 display: flex;
-flex-direction: column;
+flex-direction: row;
 
 
 align-items: center;
-margin-left: -85%;
+margin-left: 100px;
 min-height: calc(100vh - 200px);
 }
 section strong{
@@ -315,4 +315,11 @@ section div{
     font-size: 1.2rem;
     font-weight: 590;
     margin-left: -0.8%;
+}
+.anim{
+ height: 600px;
+ width: 890px;
+ position: relative;
+ left: 90%;
+ top: -100px;
 }
