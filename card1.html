@@ -299,16 +299,34 @@
         // Add 'selected' class to the clicked button
         button.classList.add("selected");
       }
-      document.querySelectorAll(".abcd").forEach(function (button) {
-        button.addEventListener("click", function () {
-          window.location.href = "booking2.html";
-        });
-      });
+      
       document.querySelectorAll(".abcd").forEach(function (button) {
         button.addEventListener("click", function () {
           window.location.href = "booking6.html";
         });
       });
+
+      
+    document.querySelectorAll(".abcd").forEach(function (button) {
+      button.disabled = true;
+    });
+
+    
+    document.querySelectorAll(".line-butt").forEach(function (button) {
+      button.addEventListener("click", function () {
+        
+        document.querySelectorAll(".abcd").forEach(function (button) {
+          button.disabled = false;
+        });
+      });
+    });
+
+    
+    document.querySelectorAll(".abcd").forEach(function (button) {
+      button.addEventListener("click", function () {
+        window.location.href = "booking6.html";
+      });
+    });
     </script>
     <footer>
       <hr style="opacity: 0.5" />

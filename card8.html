@@ -247,10 +247,23 @@
       }
       
       document.querySelectorAll(".abcd").forEach(function (button) {
-        button.addEventListener("click", function () {
-          window.location.href = "booking13.html";
+      button.disabled = true;
+    });
+
+    document.querySelectorAll(".line-butt").forEach(function (button) {
+      button.addEventListener("click", function () {
+
+        document.querySelectorAll(".abcd").forEach(function (button) {
+          button.disabled = false;
         });
       });
+    });
+
+    document.querySelectorAll(".abcd").forEach(function (button) {
+      button.addEventListener("click", function () {
+        window.location.href = "booking13.html";
+      });
+    });
     </script>
   </body>
 </html>
