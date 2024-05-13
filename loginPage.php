@@ -65,7 +65,7 @@ if(($_SERVER['REQUEST_METHOD'] === "POST")){
               <input type="hidden"name="_token"value="pWq4HX8tMeM8xB9QO4YlZLjRhZ6wedVNy0jEgqsq"/>
               <div class="form-group">
                 <label for="email"><i class=""></i></label>
-                <input id="email"name="email"type="text"class="textelement"value=""requiredplaceholder="Email Or Phone Number"required/>
+                <input id="email"name="email"type="text"class="textelement"value=""placeholder="Your Email"required/>
               </div>
               <div class="form-group">
                 <label for="password"><i class="zmdi zmdi-lock"></i></label>
