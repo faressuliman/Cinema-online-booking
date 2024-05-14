@@ -157,7 +157,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           event.preventDefault();
           var name = document.getElementById("name").value;
           localStorage.setItem("name", name);
-          window.location.href = "loginPage.html";
+          window.location.href = "loginPage.php";
         });
     </script>
     <footer>
