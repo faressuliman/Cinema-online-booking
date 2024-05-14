@@ -1,39 +1,25 @@
 <?php 
-require("dbcon.php");
-
-// Start or resume session
-session_start();
-
-// Check if the user is already logged in
-if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-    // If logged in, redirect to home page or wherever you want
-    header("Location: home.html");
-    exit;
-}
-
-if($_SERVER['REQUEST_METHOD'] === "POST") {
-    $email = $_POST['email'];
-    $pass = $_POST['password'];
-    $query = "SELECT * FROM customer WHERE Email='$email' && Password='$pass'";
-    $result = mysqli_query($db, $query);
-    if(mysqli_num_rows($result) >= 1) {
-        // If login successful, set session variable
-        $_SESSION['loggedin'] = true;
-        header("Location: home.html");
-        exit;
-    } else {
-        echo "<script>alert('Invalid Email/Password');</script>";
-    }
-}
+require ("dbcon.php");
+if(($_SERVER['REQUEST_METHOD'] === "POST")){
+  $email =$_POST['email'];
+  $pass =$_POST['password'];
+        $query = "select * from customer where Email='$email' && Password='$pass'";
+        $result = mysqli_query($db, $query);
+        if(mysqli_num_rows($result) >= 1){
+          header("Location: home.html");
+            }
+        else {
+            echo "<script>alert('Invalid Email/Password');</script>";
+        }
+      }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="loginPage.css" />
     <link rel="stylesheet" href="hhhhhhhh.css" />
     <title>Sign In</title>
@@ -49,16 +35,8 @@ if($_SERVER['REQUEST_METHOD'] === "POST") {
         <a href="contact.html">Contact</a>
       </nav>
       <div class="login">
-        <?php
-        // Check if the user is logged in
-        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-            // If logged in, display the "MY ACCOUNT" button
-            echo '<button id="myaccButton">MY ACCOUNT</button>';
-        } else {
-            // If not logged in, display the login button
-            echo '<button id="loginnButton"><i class="fas fa-user"></i>LOG IN</button>';
-        }
-        ?>
+        <button id="myaccButton">MY ACCOUNT</button>
+        <button id="loginnButton"><i class="fas fa-user"></i>LOG IN</button>
       </div>
     </header>
     <div class="">
