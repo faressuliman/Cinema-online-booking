@@ -52,7 +52,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
       </div>
     </header>
-    <div class="the_body m-0 p-0">
+    <div class="">
       <div class="container">
         <div class="left-section">
           <div>
@@ -127,7 +127,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("loginnButton").addEventListener("click", function () {
-            window.location.href = "loginPage.html";
+            window.location.href = "loginPage.php";
           });
       });
       document.addEventListener("DOMContentLoaded", function () {
@@ -143,15 +143,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
       //       document.getElementById("login-form").addEventListener("submit", function(event) {
       //     event.preventDefault();
-
       //     // Get user input
       //     var email = document.getElementById("email").value;
       //     var password = document.getElementById("password").value;
-
       //     // Store user data securely in localStorage
       //     localStorage.setItem("userEmail", email);
       //     localStorage.setItem("userPassword", password);
-
       //     // Redirect to login page
       //     window.location.href = "loginPage.html";
       // });
