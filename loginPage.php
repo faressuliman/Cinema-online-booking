@@ -36,7 +36,7 @@ if(($_SERVER['REQUEST_METHOD'] === "POST")){
       </nav>
       <div class="login">
         <button id="myaccButton">MY ACCOUNT</button>
-        <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
+        <button id="loginnButton"><i class="fas fa-user"></i>LOG IN</button>
       </div>
     </header>
     <div class="">
@@ -65,7 +65,7 @@ if(($_SERVER['REQUEST_METHOD'] === "POST")){
               <input type="hidden"name="_token"value="pWq4HX8tMeM8xB9QO4YlZLjRhZ6wedVNy0jEgqsq"/>
               <div class="form-group">
                 <label for="email"><i class=""></i></label>
-                <input id="email"name="email"type="text"class="textelement"value=""placeholder="Your Email"required/>
+                <input id="email"name="email"type="email"class="textelement"value=""placeholder="Your Email"required/>
               </div>
               <div class="form-group">
                 <label for="password"><i class="zmdi zmdi-lock"></i></label>

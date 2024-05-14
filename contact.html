@@ -20,7 +20,7 @@
       </nav>
       <div class="login">
         <button id="myaccButton">MY ACCOUNT</button>
-        <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
+        <button id="loginnButton"><i class="fas fa-user"></i>LOG IN</button>
       </div>
     </header>
     <main>
@@ -52,12 +52,32 @@
               </select>
               <input type="text"placeholder="Your Name *"class="name"required/>
               <div class="email-phone">
-                <input type="text"placeholder="Your Email *"class="email"required/>
-                <input type="text"placeholder="Your Phone *"class="phone"required/>
+                <input type="email"placeholder="Your Email *"class="email"required/>
+                <input type="number"placeholder="Your Phone *"class="phone"required/>
               </div>
               <textarea placeholder="Type your message..." required></textarea>
-              <button type="submit">Submit Contact</button>
+              <button id="showModalButton" type="submit">Submit Contact</button>
             </form>
+          </div>
+        </div>
+        <div id="modalContainer" class="modal-container">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" style="color: #a02d8a">
+                Thanks for contacting us. 
+              </h3>
+              <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="text-center">
+                We've received your contact,someone from out team will contact you soon via email.
+              </div>
+            </div>
+            <div class="modal-footer text-center mb-3">
+              <button type="button"class="btn btn_primary btn_full text-center skip_button">
+                Ok
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -78,6 +98,24 @@
             window.location.href = "myAcc.html";
           });
       });
+
+        const showModalButton = document.getElementById("showModalButton");
+        const modalContainer = document.getElementById("modalContainer");
+        const modalContent = document.querySelector(".modal-content");
+
+        // Event listener to show modal when button clicked
+        showModalButton.addEventListener("click", function () {
+          modalContainer.style.display = "flex"; // show the modal container
+          modalContent.classList.add("show"); // add the 'show' class to display the modal content
+        });
+
+        // Close modal when close button or outside modal clicked
+        const skipButton = document.querySelector(".skip_button");
+
+        skipButton.addEventListener("click", function () {
+          modalContainer.style.display = "none";
+          modalContent.classList.remove("show");
+        });
     </script>
     <footer>
       <hr style="opacity: 0.5" />

@@ -16,7 +16,7 @@
             <form id="paymob_checkout" onsubmit="return validateForm()">
               <div class="card-num-input">
                 <input placeholder="Card Number"type="tel"name="number"
-                  id="number"class="card-num"required/>
+                  id="number"class="card-num"required maxlength="16"/>
               </div>
               <div class="card-num-input">
                 <input placeholder="Card Holder Name"type="text"
@@ -24,7 +24,7 @@
               </div>
               <div class="input-containers">
                 <input placeholder="MM/YY"type="tel"name="expiry"
-                  id="mmyy"requiredmaxlength="5 "style="margin-right: 20px"/>
+                  id="mmyy"maxlength="5 "style="margin-right: 20px" required/>
                 <input placeholder="CVV"type="tel"name="cvc"
                   paymob_field="card_cvn"id="cvv"maxlength="3"required/>
               </div>

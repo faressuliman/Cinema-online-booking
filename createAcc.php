@@ -78,7 +78,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                   <input type="text"name="name"class="rns-form-element"id="name"value=""placeholder="Your Name"required/>
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="text"name="mobile"class="rns-form-element"id="mobile"value=""placeholder="Your Mobile Number"required/>
+                  <input type="text"name="mobile"class="rns-form-element"id="mobile"value=""placeholder="Your Mobile Number"required maxlength="11"/>
                 </div>
                 <div class="form-group col-md-12">
                   <label for="email"></label>
