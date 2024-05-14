@@ -55,7 +55,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       </nav>
       <div class="login">
         <button id="myaccButton">MY ACCOUNT</button>
-        <button id="loginnButton"><i class="fas fa-user"></i> Login</button>
+        <button id="loginnButton"><i class="fas fa-user" style="margin-right: 5px;"></i>LOG IN</button>
       </div>
     </header>
     <script>
