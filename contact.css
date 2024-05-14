@@ -303,6 +303,6 @@ body {
   }
   
   .skip_button:hover {
-    background-color: purple;
+    background-color: hsl(300, 100%, 34%);
     cursor: pointer;
   }
