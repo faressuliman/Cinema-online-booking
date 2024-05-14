@@ -1,6 +1,5 @@
 <?php
 require "dbcon.php";
-
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $name = $_POST["name"];
     $mobile = $_POST["mobile"];
@@ -21,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo '<script>alert("Email already taken")</script>';
         } else { 
           mysqli_query($db,"insert into customer (First_Name, Last_Name, Email, Password) values ('$first_name', '$last_name', '$email', '$pass')");
-          header( "location:loginPage.php");
+          require "loginPage.php";
             
             } 
 }
@@ -29,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
