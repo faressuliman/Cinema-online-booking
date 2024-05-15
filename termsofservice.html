@@ -23,17 +23,35 @@
         min-height: 90vh;
       }
       section h2 {
-        top: 15%;
-        left: 47px;
+        
         color: #a02d8a;
         font-size: 40px;
       }
       .anim{
         height: 600px;
         width: 800px;
-        position: relative;
-        left: 50%;
+        position: absolute;
+        bottom: 30%;
+        left: 55%;
 
+      }
+      #left-sec{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 15%;
+        left: 47px;
+      }
+      .terms{
+        margin-top: 80px;
+        margin-left: 7px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .terms h3{
+        color: #a02d8a;
       }
     </style>
   </head>
@@ -53,8 +71,41 @@
       </div>
     </header>
     <section>
-      <div>
+      <div id="left-sec">
       <h2 style="position: absolute">Terms of Service</h2>
+      <div class="terms">
+      <div>
+        <h3>1. Acceptance of Terms</h3>
+        <p>By using the Services, you acknowledge that you have read, understood, and agree to these Terms and our Privacy Policy.
+        </p>
+      </div>
+      <div>
+        <h3>2. Changes to Terms</h3>
+        <p>We may modify these Terms at any time. Any changes will be effective immediately upon posting. Your continued use of the Services after the changes have been posted will constitute your acceptance of the modified Terms.</p>
+      </div>
+      <div>
+      <h3>3. User Accounts</h3>
+      <p>Registration: You may need to create an account to access certain features of our Services. You agree to provide accurate and complete information during registration.
+        Responsibility: You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.
+        Termination: We reserve the right to suspend or terminate your account at our discretion, without notice, if we believe you have violated these Terms.
+        </p>
+      </div>
+
+      <div>
+        <h3>4. Use of Services</h3>
+        <p>License: We grant you a limited, non-exclusive, non-transferable, revocable license to use our Services for personal, non-commercial purposes.
+          Prohibited Conduct: You agree not to engage in any activity that interferes with or disrupts the Services, or that violates any applicable laws or regulations. Prohibited conduct includes, but is not limited to, hacking, unauthorized access, and use of bots.</p>
+      </div>
+
+      <div>
+        <h3>5. Disclaimers and Limitation of Liability</h3>
+        <p>Disclaimers: Our Services are provided "as is" without warranties of any kind. We do not warrant that the Services will be uninterrupted or error-free.
+          Limitation of Liability: To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of the Services.
+          </p>
+      </div>
+    </div>
+
+
     </div>
     <div class="anim">
 <style>svg#freepik_stories-accept-terms:not(.animated) .animable {opacity: 0;}svg#freepik_stories-accept-terms.animated #freepik--Plants--inject-16 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) lightSpeedRight;animation-delay: 0.5s;opacity: 0}svg#freepik_stories-accept-terms.animated #freepik--Device--inject-16 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown,3s Infinite  linear heartbeat;animation-delay: 0.5s,1.5s;opacity: 0}svg#freepik_stories-accept-terms.animated #freepik--Screen--inject-16 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) zoomOut;animation-delay: 0.2s;opacity: 0}svg#freepik_stories-accept-terms.animated #freepik--Terms--inject-16 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) zoomIn,1.5s Infinite  linear floating;animation-delay: 0s,1s;}svg#freepik_stories-accept-terms.animated #freepik--speach-bubble--inject-16 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideUp;animation-delay: 0.8s;opacity: 0}svg#freepik_stories-accept-terms.animated #freepik--Character--inject-16 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) zoomOut;animation-delay: 0s;}            @keyframes lightSpeedRight {              from {                transform: translate3d(50%, 0, 0) skewX(-20deg);                opacity: 0;              }              60% {                transform: skewX(10deg);                opacity: 1;              }              80% {                transform: skewX(-2deg);              }              to {                opacity: 1;                transform: translate3d(0, 0, 0);              }            }                    @keyframes slideDown {                0% {                    opacity: 0;                    transform: translateY(-30px);                }                100% {                    opacity: 1;                    transform: translateY(0);                }            }                    @keyframes heartbeat {                0% {                    transform: scale(1);                }                10% {                    transform: scale(1.1);                }                30% {                    transform: scale(1);                }                40% {                    transform: scale(1);                }                50% {                    transform: scale(1.1);                }                60% {                    transform: scale(1);                }                100% {                    transform: scale(1);                }            }                    @keyframes zoomOut {                0% {                    opacity: 0;                    transform: scale(1.5);                }                100% {                    opacity: 1;                    transform: scale(1);                }            }                    @keyframes zoomIn {                0% {                    opacity: 0;                    transform: scale(0.5);                }                100% {                    opacity: 1;                    transform: scale(1);                }            }                    @keyframes floating {                0% {                    opacity: 1;                    transform: translateY(0px);                }                50% {                    transform: translateY(-10px);                }                100% {                    opacity: 1;                    transform: translateY(0px);                }            }                    @keyframes slideUp {                0% {                    opacity: 0;                    transform: translateY(30px);                }                100% {                    opacity: 1;                    transform: inherit;                }            }        </style>
