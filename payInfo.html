@@ -13,7 +13,7 @@
         <div class="containers">
           <img src="4.png" class="visa-image" alt="Visa Card Image" />
           <div class="form-container">
-            <form id="paymob_checkout" onsubmit="return validateForm()">
+            <form id="paymob_checkout" >
               <div class="card-num-input">
                 <input placeholder="Card Number"type="tel"name="number"
                   id="number"class="card-num"required maxlength="16"/>
@@ -47,21 +47,17 @@
       </div>
     </form>
     <script>
-      function validateForm() {
-        var cardNumber = document.getElementById("number").value;
-        var cardHolderName = document.getElementsByName("name")[0].value;
-        var expiry = document.getElementById("mmyy").value;
-        var cvv = document.getElementById("cvv").value;
-        // if (cardNumber == "" || cardHolderName == "" || expiry == "" || cvv == "") {
-        //   alert("Please fill in all required fields");
-        //   return false;
-        // }
+      // function validateForm() {
+      //   var cardNumber = document.getElementById("number").value;
+      //   var cardHolderName = document.getElementsByName("name")[0].value;
+      //   var expiry = document.getElementById("mmyy").value;
+      //   var cvv = document.getElementById("cvv").value;
         if (cardNumber.length !== 16) {
           alert("Please enter a valid card number");
           return false;
         }
         return true;
-      }
+      
     </script>
   </body>
 </html>
