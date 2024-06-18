@@ -25,7 +25,7 @@ header{
 }
 
 .navigation {
-    margin-left: 50px;
+    margin-left: 150px;
 }
 .navigation a{
     padding-left: 50px;
@@ -56,7 +56,7 @@ header{
 .login button:hover{
     color: #f0f0f0;
     background-color: #A02D8A;
-    cursor: pointer;#A02D8A
+    cursor: pointer;
 }
 #myaccButton{
     margin-right: 100px;

@@ -141,7 +141,7 @@ if(($_SERVER['REQUEST_METHOD'] === "POST")){
       </div>
       <div class="footer-bottom">
         <p style="color: #a02d8a">
-          &copy; 2024 All right reserved by OCinema
+          &copy; 2024 All rights reserved by OCinema
         </p>
       </div>
     </footer>

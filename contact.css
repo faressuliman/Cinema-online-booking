@@ -18,7 +18,7 @@ header{
     align-items: center;
     flex-direction: row;
     height: 9vh;
-    border-bottom:1px #f0f0f0 solid;
+    
     
   }
   
@@ -28,7 +28,7 @@ header{
   }
   
   .navigation {
-    margin-left: 50px;
+    margin-left: 150px;
   }
   .navigation a{
     padding-left: 50px;
