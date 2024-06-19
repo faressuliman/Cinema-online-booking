@@ -82,7 +82,7 @@ if(($_SERVER['REQUEST_METHOD'] === "POST")){
             <div class="row" id="roww">
               <div class="">
                 <span class="dont-have-account">Don't have an account?
-                  <a href="createAcc.html"class="create-account"style="text-decoration: none">Create An Account</a>-
+                  <a href="createAcc.html"class="create-account"style="text-decoration: none">Create An Account</a> -
                   <a href="passReset.html"class="forgot-password"style="text-decoration: none">Forgot Password?</a></span>
               </div>
               <div class="">

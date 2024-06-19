@@ -8,7 +8,7 @@
     scroll-behavior: smooth; 
 }
 body{
-    background-color: #f9f9f9;
+    background-color: hsl(0, 0%, 100%);
 }
 section{
     display: flex;
