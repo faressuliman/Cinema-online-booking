@@ -155,6 +155,10 @@ body {
     border: 0px;
 }
 
+#register:hover {
+  background-color: purple;
+}
+
 #email,
 #password,
 #name,

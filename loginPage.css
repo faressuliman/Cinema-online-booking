@@ -166,6 +166,10 @@ body {
     border: 0px;
   }
 
+  #signin:hover {
+    background-color: purple;
+  }
+
   .social-login {
     text-align: center;
   }
