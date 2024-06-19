@@ -6,7 +6,7 @@
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="gladiator.css" />
     <link rel="stylesheet" href="hhhhhhhh.css" />
-    <title>Document</title>
+    <title>السرب</title>
   </head>
   <body>
     <header style="background-color: transparent">
@@ -24,6 +24,15 @@
         <button id="loginnButton"><i class="fas fa-user" style="margin-right: 5px;"></i>LOG IN</button>
       </div>
     </header>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/K0RLXlcfyFc?si=hd4WEtqFcqM5tmTj"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
     <main>
       <div class="container">
         <div class="left-section">
@@ -88,11 +97,49 @@
             window.location.href = "myAcc.html";
           });
       });
+
       document.addEventListener("DOMContentLoaded", function () {
-          document.getElementById("watch-butt").addEventListener("click", function () {
-            window.location.href = "https://youtu.be/-GRRA558ojg";
-          });
-      });
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("watch-butt");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // Get the video iframe
+      var videoFrame = document.getElementById("videoPlayer");
+
+      // Original video source URL
+      var originalSrc = videoFrame.src;
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+        // Set the video source back to the original URL
+        videoFrame.src = originalSrc;
+      };
+
+      // When the user clicks on <span> (x) or outside of the modal, close the modal and stop the video
+      span.onclick = function () {
+        modal.style.display = "none";
+        stopVideo();
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          stopVideo();
+        }
+      };
+
+      // Function to stop the video
+      function stopVideo() {
+        // Set the video source to an empty string
+        videoFrame.src = "";
+      }
+    });
     </script>
     <footer>
       <hr style="opacity: 0.5" />
