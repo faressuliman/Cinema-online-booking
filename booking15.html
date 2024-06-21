@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <link rel="stylesheet" href="booking.css" />
     <link rel="stylesheet" href="hhhhhhhh.css" />
     <title>Booking</title>
@@ -21,7 +24,9 @@
       </nav>
       <div class="login">
         <button id="myaccButton">MY ACCOUNT</button>
-        <button id="loginnButton"><i class="fas fa-user" style="margin-right: 5px;"></i>LOG IN</button>
+        <button id="loginnButton">
+          <i class="fas fa-user" style="margin-right: 5px"></i>LOG IN
+        </button>
       </div>
     </header>
     <main>
@@ -47,10 +52,27 @@
                 <h4>Total Cost: <span id="totalCost">0</span> LE</h4>
               </div>
               <div>
-                <button class="butt"id="switch"style="margin-left: 0px;background-color: #a02d8a;border-color: #a02d8a;color: white;">
+                <button
+                  class="butt"
+                  id="switch"
+                  style="
+                    margin-left: 0px;
+                    background-color: #a02d8a;
+                    border-color: #a02d8a;
+                    color: white;
+                  "
+                >
                   Checkout
                 </button>
-                <button class="butt"id="switchh"style="margin-left: 10px;background-color: #887c7c;border-color: #887c7c;">
+                <button
+                  class="butt"
+                  id="switchh"
+                  style="
+                    margin-left: 10px;
+                    background-color: #887c7c;
+                    border-color: #887c7c;
+                  "
+                >
                   Cancel
                 </button>
               </div>
@@ -61,7 +83,7 @@
           <div class="screen text-center">
             <div class="screen_text">Screen</div>
             <div class="screen_place">
-              <img src="screen.png" class="text-center" id="imgsz" alt=""/>
+              <img src="screen.png" class="text-center" id="imgsz" alt="" />
               <div class="booking-section" id="toppp">
                 <div class="seats-container">
                   <div class="regular-seats">
@@ -348,7 +370,10 @@
             </div>
           </div>
           <div class="modal-footer text-center mb-3">
-            <button type="button"class="btn btn_primary btn_full text-center skip_button">
+            <button
+              type="button"
+              class="btn btn_primary btn_full text-center skip_button"
+            >
               Skip
             </button>
           </div>
@@ -387,39 +412,50 @@
         });
 
         function updateSelectedSeats() {
-  const selectedSeatsList = document.getElementById("selectedSeatsList");
-  const totalCostElement = document.getElementById("totalCost");
+          const selectedSeatsList =
+            document.getElementById("selectedSeatsList");
+          const totalCostElement = document.getElementById("totalCost");
 
-  // Clear the existing content of the selected seats list
-  selectedSeatsList.innerHTML = "";
+          // Clear the existing content of the selected seats list
+          selectedSeatsList.innerHTML = "";
 
-  let totalCost = selectedSeats.length * seatPrice;
-  totalCostElement.textContent = totalCost;
+          let totalCost = selectedSeats.length * seatPrice;
+          totalCostElement.textContent = totalCost;
 
-  // Append new seat list items without clearing the existing ones
-  selectedSeats.forEach(function (seatNumber) {
-    const listItem = document.createElement("li");
-    listItem.textContent = "Seat " + seatNumber;
-    selectedSeatsList.appendChild(listItem);
-  });
-}
+          // Append new seat list items without clearing the existing ones
+          selectedSeats.forEach(function (seatNumber) {
+            const listItem = document.createElement("li");
+            listItem.textContent = "Seat " + seatNumber;
+            selectedSeatsList.appendChild(listItem);
+          });
+        }
 
-        document.getElementById("CinemaName").addEventListener("click", function () {
+        document
+          .getElementById("CinemaName")
+          .addEventListener("click", function () {
             window.location.href = "home.html";
           });
 
-        document.getElementById("loginnButton").addEventListener("click", function () {
+        document
+          .getElementById("loginnButton")
+          .addEventListener("click", function () {
             window.location.href = "loginPage.html";
           });
 
-        document.getElementById("myaccButton").addEventListener("click", function () {
+        document
+          .getElementById("myaccButton")
+          .addEventListener("click", function () {
             window.location.href = "myAcc.html";
           });
 
-        document.getElementById("switch").addEventListener("click", function () {
+        document
+          .getElementById("switch")
+          .addEventListener("click", function () {
             window.location.href = "checkout.html";
           });
-        document.getElementById("switchh").addEventListener("click", function () {
+        document
+          .getElementById("switchh")
+          .addEventListener("click", function () {
             window.location.href = "card10.html";
           });
 
@@ -460,9 +496,13 @@
         </div>
       </div>
       <div class="footer-bottom">
+<<<<<<< Updated upstream
         <p style="color: purple">
           &copy; 2024 All rights reserved by OCinema
         </p>
+=======
+        <p style="color: purple">&copy; 2024 All right reserved by OCinema</p>
+>>>>>>> Stashed changes
       </div>
     </footer>
   </body>
