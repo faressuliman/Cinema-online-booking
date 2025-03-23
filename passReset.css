@@ -142,12 +142,13 @@ footer {
     margin-top: 0px;
     background-color: #f0f0f0;
     margin-bottom: 0;
+    padding-bottom: 10px;
 }
 
 .footer-container {
     width: 100%;
     padding: 15px;
-
+    
 }
 
 .footer-icons {
