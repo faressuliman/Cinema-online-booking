@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/book.css" />
+    <link rel="stylesheet" href="../css/card1.css" />
+    <title>Cinema</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
+      </div>
+      <nav class="navigation">
+        <a href="../index.html">Now Showing</a>
+        <a href="../html/comingsoon.html">Coming Soon</a>
+        <a href="../html/contact.html">Contact</a>
+      </nav>
+      <div class="login">
+        <button id="myaccButton">MY ACCOUNT</button>
+        <button id="loginnButton"><i class="fas fa-user" style="margin-right: 5px;"></i>LOG IN</button>
+      </div>
+    </header>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe 
+          id="videoPlayer"width="560"height="315"src="https://www.youtube.com/embed/QF-oyCwaArU?si=8SH3s1YoNQI_hPXP"frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("loginnButton").addEventListener("click", function () {
+            window.location.href = "../html/loginPage.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("myaccButton").addEventListener("click", function () {
+            window.location.href = "../html/myAcc.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CinemaName").addEventListener("click", function () {
+            window.location.href = "../index.html";
+          });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("watch-butt");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Get the video iframe
+        var videoFrame = document.getElementById("videoPlayer");
+
+        // Original video source URL
+        var originalSrc = videoFrame.src;
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+          modal.style.display = "block";
+          // Set the video source back to the original URL
+          videoFrame.src = originalSrc;
+        };
+
+        // When the user clicks on <span> (x) or outside of the modal, close the modal and stop the video
+        span.onclick = function () {
+          modal.style.display = "none";
+          stopVideo();
+        };
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+            stopVideo();
+          }
+        };
+
+        // Function to stop the video
+        function stopVideo() {
+          // Set the video source to an empty string
+          videoFrame.src = "";
+        }
+      });
+      function selectButton(button) {
+        // Remove 'selected' class from all buttons with class 'line-butt'
+        document.querySelectorAll(".line-butt").forEach(function (btn) {
+          btn.classList.remove("selected");
+        });
+
+        // Add 'selected' class to the clicked button
+        button.classList.add("selected");
+      }
+      document.querySelectorAll(".abcd").forEach(function (button) {
+        button.addEventListener("click", function () {
+          window.location.href = "../html/booking2.html";
+        });
+      });
+      document.querySelectorAll(".abcd").forEach(function (button) {
+        button.addEventListener("click", function () {
+          window.location.href = "../html/booking6.html";
+        });
+      });
+    </script>
+    <section>
+      <div class="book-content">
+        <div class="card">
+          <div class="book-image"><img src="../images/TheNun.jpg" alt="" /></div>
+        </div>
+        <div class="right-side">
+          <h2 style="color: #a02d8a; font-size: 40px; font-weight: 550">
+            The Nun
+          </h2>
+          <div class="second-line">
+            <div>Action</div>
+            <ul class="list-one">
+              <li>Rated +18</li>
+            </ul>
+            <ul class="list-two">
+              <li>120 Mins</li>
+            </ul>
+          </div>
+          <div class="third-line">
+            <button id="watch-butt" class="watch-butt">Watch Trailer</button>
+          </div>
+          <div class="fourth-line">
+            <div>Showtimes</div>
+            <hr />
+          </div>
+          <div class="fifth-line">
+            <div class="line-content">
+              <div class="line-card">
+                <button class="line-butt" onclick="selectButton(this)">
+                  <div>
+                    <div class="thu">Thu</div>
+                    <div class="day">25</div>
+                    <div class="apr">Apr</div>
+                  </div>
+                </button>
+              </div>
+              <div class="line-card">
+                <button class="line-butt" onclick="selectButton(this)">
+                  <div>
+                    <div class="thu">Fri</div>
+                    <div class="day">26</div>
+                    <div class="apr">Tue</div>
+                  </div>
+                </button>
+              </div>
+              <div class="line-card">
+                <button class="line-butt" onclick="selectButton(this)">
+                  <div>
+                    <div class="thu">Sat</div>
+                    <div class="day">27</div>
+                    <div class="apr">Apr</div>
+                  </div>
+                </button>
+              </div>
+              <div class="line-card">
+                <button class="line-butt" onclick="selectButton(this)">
+                  <div>
+                    <div class="thu">Sun</div>
+                    <div class="day">28</div>
+                    <div class="apr">Apr</div>
+                  </div>
+                </button>
+              </div>
+              <div class="line-card">
+                <button class="line-butt" onclick="selectButton(this)">
+                  <div>
+                    <div class="thu">Mon</div>
+                    <div class="day">29</div>
+                    <div class="apr">Apr</div>
+                  </div>
+                </button>
+              </div>
+              <div class="line-card">
+                <button class="line-butt" onclick="selectButton(this)">
+                  <div>
+                    <div class="thu">Tue</div>
+                    <div class="day">30</div>
+                    <div class="apr">Apr</div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="sixth-line">
+            <div class="sixth-content">
+              <strong>SanStephano</strong>
+              <div class="regular">
+                <div>Regular</div>
+                <ul class="sixth-list">
+                  <li>Premium</li>
+                </ul>
+              </div>
+              <div class="sixth-button">
+                <button class="abcd">9.30 PM (2D)</button>
+                <button class="abcd">12 AM (2D)</button>
+              </div>
+            </div>
+            <br />
+            <hr />
+            <div class="sixth-content">
+              <strong>Madinaty</strong>
+              <div class="regular">
+                <div>Regular</div>
+                <ul class="sixth-list">
+                  <li>Premium</li>
+                </ul>
+              </div>
+              <div>
+                <div class="sixth-button">
+                  <button class="abcd">8.30 PM (2D)</button>
+                  <button class="abcd">11 AM (2D)</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("loginnButton").addEventListener("click", function () {
+            window.location.href = "../html/loginPage.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("myaccButton").addEventListener("click", function () {
+            window.location.href = "../html/myAcc.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CinemaName").addEventListener("click", function () {
+            window.location.href = "../index.html";
+          });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("watch-butt");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Get the video iframe
+        var videoFrame = document.getElementById("videoPlayer");
+
+        // Original video source URL
+        var originalSrc = videoFrame.src;
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+          modal.style.display = "block";
+          // Set the video source back to the original URL
+          videoFrame.src = originalSrc;
+        };
+
+        // When the user clicks on <span> (x) or outside of the modal, close the modal and stop the video
+        span.onclick = function () {
+          modal.style.display = "none";
+          stopVideo();
+        };
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+            stopVideo();
+          }
+        };
+
+        // Function to stop the video
+        function stopVideo() {
+          // Set the video source to an empty string
+          videoFrame.src = "";
+        }
+      });
+      function selectButton(button) {
+        // Remove 'selected' class from all buttons with class 'line-butt'
+        document.querySelectorAll(".line-butt").forEach(function (btn) {
+          btn.classList.remove("selected");
+        });
+
+        // Add 'selected' class to the clicked button
+        button.classList.add("selected");
+      }
+      
+      document.querySelectorAll(".abcd").forEach(function (button) {
+        button.addEventListener("click", function () {
+          window.location.href = "../html/booking6.html";
+        });
+      });
+
+      
+    document.querySelectorAll(".abcd").forEach(function (button) {
+      button.disabled = true;
+    });
+
+    
+    document.querySelectorAll(".line-butt").forEach(function (button) {
+      button.addEventListener("click", function () {
+        
+        document.querySelectorAll(".abcd").forEach(function (button) {
+          button.disabled = false;
+        });
+      });
+    });
+
+    
+    document.querySelectorAll(".abcd").forEach(function (button) {
+      button.addEventListener("click", function () {
+        window.location.href = "../html/booking6.html";
+      });
+    });
+    </script>
+    <footer>
+      <hr style="opacity: 0.5" />
+      <div class="footer-container">
+        <div class="footer-icons">
+          <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="../html/aboutus.html">About us</a></li>
+            <li><a href="../html/privacy.html">Privacy Policy</a></li>
+            <li><a href="../html/refunds.html">Refunds & Exchanges</a></li>
+            <li><a href="../html/termsofservice.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="color: #a02d8a">
+          &copy; 2024 All rights reserved by OCinema
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+

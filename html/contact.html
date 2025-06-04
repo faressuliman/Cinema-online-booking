@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <header style="background-color: transparent">
+      <div class="logo">
+        <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
+      </div>
+      <nav class="navigation">
+        <a href="../index.html">Now Showing</a>
+        <a href="../html/comingsoon.html">Coming Soon</a>
+        <a href="../html/contact.html">Contact</a>
+      </nav>
+      <div class="login">
+        <button id="myaccButton">MY ACCOUNT</button>
+        <button id="loginnButton"><i class="fas fa-user" style="margin-right: 5px;"></i>LOG IN</button>
+      </div>
+    </header>
+    <main>
+      <div class="contact-container">
+        <div class="contact-information">
+          <div class="info-text">
+            <h1 class="h1">Contact Information</h1>
+            <p id="p1">
+              <i class="fas fa-map-marker-alt"></i> 23rd street, Somewhere, Alexandria, Egypt.
+            </p>
+            <p id="p2">
+              <i class="far fa-envelope"></i> OCinema@gmail.com
+            </p>
+          </div>
+        </div>
+        <div class="contact-us">
+          <div class="contact-header">
+            <h1>Contact Us</h1>
+            <h3>We are here to help! What do you need?</h3>
+          </div>
+          <div class="contact-form">
+            <form method="POST" class="registerform" id="loginform">
+              <select>
+                <option value selected disabled>Please choose a Topic</option>
+                <option>General Inquiry</option>
+                <option>Online Booking Issues</option>
+                <option>Inquiries for Schools</option>
+                <option>Inquiries for Companies</option>
+              </select>
+              <input type="text"placeholder="Your Name *"class="name"required/>
+              <div class="email-phone">
+                <input type="email"placeholder="Your Email *"class="email"required/>
+                <input type="number"placeholder="Your Phone *"class="phone"required/>
+              </div>
+              <textarea placeholder="Type your message..." required></textarea>
+              <button id="showModalButton" type="submit"class="sinin" >Submit Contact</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="modalContainer" class="modal-container" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" style="color: #a02d8a">
+            Thanks for contacting us
+          </h3>
+          <button type="button" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center">
+            We've received your contact, someone from our team will contact you soon via email.
+          </div>
+        </div>
+        <div class="modal-footer text-center mb-3">
+          <button type="button"class="btn btn_primary btn_full text-center skip_button" id="close">
+            Ok
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("loginnButton").addEventListener("click", function () {
+            window.location.href = "../html/loginPage.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CinemaName").addEventListener("click", function () {
+            window.location.href = "../index.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("myaccButton").addEventListener("click", function () {
+            window.location.href = "../html/myAcc.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("close").addEventListener("click", function () {
+          window.location.href = "../html/contact.html";
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("loginform").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const modalContainer = document.getElementById("modalContainer");
+            const modalContent = document.querySelector(".modal-content");
+            modalContainer.style.display = "flex";
+            modalContent.classList.add("sinin");
+          });
+      });
+    </script>
+    <footer>
+      <hr style="opacity: 0.5" />
+      <div class="footer-container">
+        <div class="footer-icons">
+          <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="../html/aboutus.html">About us</a></li>
+            <li><a href="../html/privacy.html">Privacy Policy</a></li>
+            <li><a href="../html/refunds.html">Refunds & Exchanges</a></li>
+            <li><a href="../html/termsofservice.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="color: #a02d8a">
+          &copy; 2024 All rights reserved by OCinema
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+

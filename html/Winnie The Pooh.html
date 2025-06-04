@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/gladiator.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <title>Winnie The Pooh :Blood And Honey 2</title>
+  </head>
+  <body>
+    <header style="background-color: transparent">
+      <div class="logo">
+        <a href="../html/../../index.html" style="text-decoration: none">
+          <h2 id="CinemaName" style="cursor: pointer">OCinema</h2></a
+        >
+      </div>
+      <nav class="navigation">
+        <a href="../html/../../index.html">Now Showing</a>
+        <a href="../html/comingsoon.html">Coming Soon</a>
+        <a href="../html/contact.html">Contact</a>
+      </nav>
+      <div class="login">
+        <button id="myaccButton">MY ACCOUNT</button>
+        <button id="loginnButton">
+          <i class="fas fa-user" style="margin-right: 5px"></i>LOG IN
+        </button>
+      </div>
+    </header>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe
+          id="videoPlayer"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/PRlBKYQsjXo?si=Z0KB3hNgMI8pnCVP"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
+    <main>
+      <div class="container">
+        <div class="left-section">
+          <div class="image-container">
+            <img src="../images/Winnie The Pooh.jpg" alt="winnie photo" />
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="info">
+            <h2 style="color: #a02d8a; font-size: 40px; font-weight: 550">
+              Winnie The Pooh :Blood And Honey 2
+            </h2>
+            <div class="second-line">
+              <p style="color: grey">Animated • Rated +12 • 100 Mins</p>
+            </div>
+            <div class="third-line">
+              <button id="watch-butt" class="watch-butt">Watch Trailer</button>
+            </div>
+            <div class="fourth-line">
+              <h3>Details</h3>
+              <hr style="opacity: 0.5" />
+              <br />
+              <h4 style="color: hsla(300, 100%, 25%, 0.678)">Synopsis</h4>
+              <p>
+                <b>
+                  In the Hundred Acre Wood, the once peaceful domain of Winnie
+                  the Pooh and his friends, a mysterious force threatens to
+                  consume everything in darkness. As Pooh and his companions
+                  grapple with this new threat, they uncover dark secrets buried
+                  within the forest's depths. To save their home, they must
+                  embark on a perilous journey through treacherous terrain,
+                  encountering strange creatures and facing their deepest fears.
+                  But as they delve deeper, they realize that the true source of
+                  the darkness lies within themselves.
+                </b>
+              </p>
+              <br />
+              <h4 style="color: hsla(300, 100%, 25%, 0.678)">Starring</h4>
+              <p><b>Scott Chambers - Ryan Oliva </b></p>
+              <br />
+              <h4 style="color: hsla(300, 100%, 25%, 0.678)">Directed by</h4>
+              <p><b>Rhys Frake-Waterfield</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("loginnButton")
+          .addEventListener("click", function () {
+            window.location.href = "../html/loginPage.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("myaccButton")
+          .addEventListener("click", function () {
+            window.location.href = "../html/myAcc.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("CinemaName")
+          .addEventListener("click", function () {
+            window.location.href = "../html/../../index.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("watch-butt");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Get the video iframe
+        var videoFrame = document.getElementById("videoPlayer");
+
+        // Original video source URL
+        var originalSrc = videoFrame.src;
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+          modal.style.display = "block";
+          // Set the video source back to the original URL
+          videoFrame.src = originalSrc;
+        };
+
+        // When the user clicks on <span> (x) or outside of the modal, close the modal and stop the video
+        span.onclick = function () {
+          modal.style.display = "none";
+          stopVideo();
+        };
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+            stopVideo();
+          }
+        };
+
+        // Function to stop the video
+        function stopVideo() {
+          // Set the video source to an empty string
+          videoFrame.src = "";
+        }
+      });
+    </script>
+    <footer>
+      <hr style="opacity: 0.5" />
+      <div class="footer-container">
+        <div class="footer-icons">
+          <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="../html/aboutus.html">About us</a></li>
+            <li><a href="../html/privacy.html">Privacy Policy</a></li>
+            <li><a href="../html/refunds.html">Refunds & Exchanges</a></li>
+            <li><a href="../html/termsofservice.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="color: #a02d8a">
+          &copy; 2024 All rights reserved by OCinema
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+

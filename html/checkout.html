@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="../css/checkout.css" />
+  <title>checkout</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
+    </div>
+    <nav class="navigation">
+      <a href="../index.html">Now Showing</a>
+      <a href="../html/comingsoon.html">Coming Soon</a>
+      <a href="../html/contact.html">Contact</a>
+    </nav>
+    <div class="login">
+      <button id="myaccButton">MY ACCOUNT</button>
+      <button id="loginnButton"><i class="fas fa-user" style="margin-right: 5px;"></i>LOG IN</button>
+    </div>
+  </header>
+  <div class="container">
+    <div style="margin-bottom: 120px" class="">
+      <div class="checkout-container">
+        <div class="checkout-header" style="margin-top: 10px; margin-bottom: 30px">
+          <b style="font-size: 20px">Your Information</b>
+        </div>
+        <form action="payInfo.html">
+          <div class="form-container">
+            <div class="name-input">
+              <input type="text" name="customer_name" id="customer_name" placeholder="Your Name" required />
+            </div>
+            <div class="phone-input">
+              <input type="text" name="customer_phone" id="customer_phone" placeholder="Your Phone Number" required />
+            </div>
+            <div class="email-input" style="margin-bottom: 20px">
+              <input type="text" name="customer_email" id="customer_email" placeholder="Your Email" required />
+            </div>
+            <div class="">
+              <b style="font-size: 20px; margin-bottom: 20px">Payment Method</b>
+            </div>
+            <div class="paymethod">
+              <div>
+                <label class="payment-method">
+                  <input name="" id="" value="1" type="radio" required />
+                  <div>
+                    <h5 style="margin-top: 40px">Credit/Debit Card</h5>
+                    <img class="checkout_image_card" src="../images/payyyyyyyyyyyy.png" />
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div style="margin-top: 30px">
+              <button type="submit" id="payloadbutton">Pay Now</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("loginnButton").addEventListener("click", function () {
+          window.location.href = "../html/loginPage.html";
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("CinemaName").addEventListener("click", function () {
+          window.location.href = "../index.html";
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("myaccButton").addEventListener("click", function () {
+          window.location.href = "../html/myAcc.html";
+        });
+    });
+  </script>
+  <footer>
+    <hr style="opacity: 0.5" />
+    <div class="footer-container">
+      <div class="footer-icons">
+        <a href=""><i class="fab fa-facebook-f"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-tiktok"></i></a>
+      </div>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="../html/aboutus.html">About us</a></li>
+          <li><a href="../html/privacy.html">Privacy Policy</a></li>
+          <li><a href="../html/refunds.html">Refunds & Exchanges</a></li>
+          <li><a href="../html/termsofservice.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 All rights reserved by OCinema</p>
+    </div>
+  </footer>
+</body>
+</html>
+

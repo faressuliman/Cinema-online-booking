@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/loginPage.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <title>Sign In</title>
+  </head>
+  <body>
+    <header style="background-color: transparent">
+      <div class="logo">
+        <h2 id="CinemaName" style="cursor: pointer">OCinema</h2>
+      </div>
+      <nav class="navigation">
+        <a href="../index.html">Now Showing</a>
+        <a href="../html/comingsoon.html">Coming Soon</a>
+        <a href="../html/contact.html">Contact</a>
+      </nav>
+      <div class="login">
+        <button id="myaccButton">MY ACCOUNT</button>
+        <button id="loginnButton"><i class="fas fa-user" style="margin-right: 5px;"></i>LOG IN</button>
+      </div>
+    </header>
+    <div class="">
+      <div class="container">
+        <div class="left-section">
+          <div class="inner-content">
+            <p style="text-align: center; font-weight: 600; margin-left: 270px">
+              Welcome to OCinema, where you can enjoy the bestmovies
+            </p>
+            <p style="text-align: center; font-weight: 600; margin-left: 270px">
+              from around the world in a comfortable and elegant setting.
+            </p>
+            <div class="maintagcontact" style="width: 100%; text-align: center">
+              <img src="../images/chair.jpg" width="265" alt=""/>
+            </div>
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="signin-form">
+            <h2
+              style="margin-bottom: 30px;font-family: Verdana, Geneva, Tahoma, sans-serif;">
+              Sign in
+            </h2>
+            <form method="POST" id="login-form" action="">
+              <input type="hidden"name="_token"value="pWq4HX8tMeM8xB9QO4YlZLjRhZ6wedVNy0jEgqsq"/>
+              <div class="form-group">
+                <label for="email"><i class=""></i></label>
+                <input id="email"name="email"type="email"class="textelement"value="" placeholder="Your Email" required/>
+              </div>
+              <div class="form-group">
+                <label for="password"><i ></i></label>
+                <input id="password"type="password"name="password"class="textelement"placeholder="Your Password"required/>
+              </div>
+              <div
+                class="form-group text-right"
+                style="text-align: right;font-size: 14px;margin-top: 5px;margin-bottom: 25px;">
+                <input type="checkbox" name="remember" id="remember" class="" />
+                <label for="remember-me" class="">Remember me</label
+                >
+              </div>
+              <div class="" style="margin-bottom: 20px">
+                <input type="submit"name="signin"id="signin"class="btn_primary"value="Sign in"/>
+              </div>
+            </form>
+            <div class="row" id="roww">
+              <div class="">
+                <span class="dont-have-account">Don't have an account?
+                  <a href="../html/createAcc.html"class="create-account"style="text-decoration: none">Create An Account</a> -
+                  <a href="../html/passReset.html"class="forgot-password"style="text-decoration: none">Forgot Password?</a>
+                  </span>
+              </div>
+              <div class="">
+                <div class="social-login">
+                  <ul class="social_login no-bullet">
+                    <li class="pt-1 orc">
+                      <b><span style="color: #a02d8a; padding-left: 25px">OR CONNECT WITH</span></b>
+                    </li>
+                    <li>
+                      <a href="https://google.com/"><img src="../images/google.png" class="social-icon" alt=""/></a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com"><img src="../images/twitter.png" class="social-icon" alt=""/></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("loginnButton").addEventListener("click", function () {
+            window.location.href = "../html/loginPage.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("CinemaName").addEventListener("click", function () {
+            window.location.href = "../index.html";
+          });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("myaccButton").addEventListener("click", function () {
+            window.location.href = "../html/myAcc.html";
+          });
+      });
+    </script>
+    <footer>
+      <hr style="opacity: 0.5" />
+      <div class="footer-container">
+        <div class="footer-icons">
+          <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="../html/aboutus.html">About us</a></li>
+            <li><a href="../html/privacy.html">Privacy Policy</a></li>
+            <li><a href="../html/refunds.html">Refunds & Exchanges</a></li>
+            <li><a href="../html/termsofservice.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="color: #a02d8a">
+          &copy; 2024 All rights reserved by OCinema
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
