@@ -6,6 +6,7 @@ This project is built using modern web technologies, including HTML, CSS, JavaSc
 
 Features
 1- Browse Movies: View a list of available movies with details like title, description, and showtimes.
-1- Seat Selection: Choose your preferred seats from an interactive seating layout.
+2- Seat Selection: Choose your preferred seats from an interactive seating layout.
 3- Online Booking: Book tickets and receive a confirmation.
+
 ![Screenshot_25-2-2025_225617_127 0 0 1](https://github.com/user-attachments/assets/3a8862a1-e7d7-4258-85f1-139ba6f7586d)
