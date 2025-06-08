@@ -1,5 +1,3 @@
-Cinema Online Booking
-Description
 The Cinema Online Booking project is a web application designed to allow users to browse movies, view showtimes, and book tickets online. It provides a user-friendly interface for customers to select their preferred seats, choose payment options, and receive confirmation of their bookings.
 
 This project is built using modern web technologies, including HTML, CSS, JavaScript, php It demonstrates skills in front-end development, user interface design, and integration with backend services.
